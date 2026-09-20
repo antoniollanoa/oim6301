@@ -777,11 +777,5 @@ def _(mo):
     return
 
 
-@app.cell
-def _(freight_charges):
-    print(f"There are {len(freight_charges)} charges in freight_charges.")
-    return
-
-
 if __name__ == "__main__":
     app.run()
