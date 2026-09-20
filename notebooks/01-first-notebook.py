@@ -49,6 +49,18 @@ def _():
     return (mo,)
 
 
+@app.cell
+def _():
+    1+2
+    return
+
+
+@app.cell
+def _():
+    print('hello world!')
+    return
+
+
 @app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""
@@ -121,6 +133,30 @@ def _(mo):
     return
 
 
+@app.cell
+def _(freight_charges):
+    freight_charges[0]
+    return
+
+
+@app.cell
+def _(freight_charges):
+    len(freight_charges)
+    return
+
+
+@app.cell
+def _(total):
+    total
+    return
+
+
+@app.cell
+def _(freight_charges):
+    total = sum(freight_charges)
+    return (total,)
+
+
 @app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""
@@ -145,6 +181,15 @@ def _(mo):
     typing inside one cell. Use the **undo** button at the bottom right, which stays
     there until you close the notebook, or `Ctrl+K` and search for undo.*
     """)
+    return
+
+
+@app.cell
+def _():
+    ##1. The items list gets updated with the new number and everything gets recalculated.
+    ##2. The cells went blank and values are gone.
+    ##3. An error message appears saying it redefines variables from other cells. 
+    ##4. It stills run even when it is below eht total cell.
     return
 
 
@@ -206,6 +251,86 @@ def _(mo):
     return
 
 
+@app.cell
+def _(freight_charges):
+    ##1. The last number in the freight_charges cell.
+    freight_charges[-1]
+    return
+
+
+@app.cell
+def _(freight_charges):
+    ##2. The first 3 numbers in the freight_charges cell.
+    freight_charges[:3]
+    return
+
+
+@app.cell
+def _(orders):
+    ##3. Results in the first number of both.
+    orders[0]
+    return
+
+
+@app.cell
+def _(freight_charges):
+    freight_charges[0]
+    return
+
+
+@app.cell
+def _():
+    ##4. It counts 11 now, the number of letters in the word "Confections"
+    category = "Confections"
+    return (category,)
+
+
+@app.cell
+def _(category):
+    len(category)
+    return
+
+
+@app.cell
+def _(orders):
+    ##5. It does run given that the values in orders are numbers. 
+    sum(orders)
+    return
+
+
+@app.cell
+def _(orders):
+    ##6. It duplicates the list
+    orders * 2
+    return
+
+
+@app.cell
+def _(freight_charges, orders):
+    ##6. It joins the lists
+    orders + freight_charges
+    return
+
+
+@app.cell
+def _(freight_charges):
+    ##7. It sorts the list
+    sorted(freight_charges)
+    return
+
+
+@app.cell
+def _():
+    return
+
+
+@app.cell
+def _(freight_charges):
+    ##6. It sorts the list in reverse, biggest to smaller number. freight_charges did not change, only its order.
+    sorted(freight_charges, reverse=True)
+    return
+
+
 @app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""
@@ -246,6 +371,20 @@ def _(mo):
     return
 
 
+@app.cell
+def _():
+    ##1. Joins but numbers as text
+    "16.75" + "22.25"
+    return
+
+
+@app.cell
+def _():
+    ##.2 Error because it combines number and text.
+    16.75 + "22.25"
+    return
+
+
 @app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""
@@ -277,6 +416,24 @@ def _(mo):
 
     📖 Handbook: Python §3 Expressions and operators
     """)
+    return
+
+
+@app.cell
+def _(freight_charges):
+    freight_charges[0] > 20
+    return
+
+
+@app.cell
+def _(freight_charges):
+    freight_charges[-1] == max(freight_charges)
+    return
+
+
+@app.cell
+def _(freight_charges):
+    type(freight_charges[-1] == max(freight_charges))
     return
 
 
@@ -315,6 +472,12 @@ def _(mo):
 
     Your sentence should show `$120.50` and `$24.10`. If it does not, the experiments above left something changed: check that `freight_charges` still starts with `16.75` and that your `total` cell is still there.
     """)
+    return
+
+
+@app.cell
+def _(freight_charges, total):
+    print(f"The total freight is ${total:.2f} and the average charge is ${total / len(freight_charges):.2f}.")
     return
 
 
@@ -368,6 +531,22 @@ def _(mo):
     return
 
 
+@app.cell
+def _(freight_charges):
+    under_25 = []
+    for charge in freight_charges:
+        if charge < 25:
+            under_25.append(charge)
+    under_25
+    return (under_25,)
+
+
+@app.cell
+def _(under_25):
+    print(f"The charges below 25 are {len(under_25)} and the total charge is ${sum(under_25):.2f}.")
+    return
+
+
 @app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""
@@ -406,6 +585,24 @@ def _(mo):
     return
 
 
+@app.cell
+def _():
+    ##1. No package exists with the name "pandsa".
+    return
+
+
+@app.cell
+def _():
+    ##2. The file cannot be found.
+    return
+
+
+@app.cell
+def _():
+    ##3. There is an error in the syntaxis of the command cell (its missing the closing bracket).
+    return
+
+
 @app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""
@@ -415,6 +612,12 @@ def _(mo):
 
     `max(["9.50", "16.75", "22.25"])`
     """)
+    return
+
+
+@app.cell
+def _():
+    max(["9.50", "16.75", "22.25"])
     return
 
 
@@ -464,6 +667,14 @@ def _(mo):
     return
 
 
+@app.cell
+def _():
+    ##1. Python names line 3: total = sum(freight_charges)
+    ##2. I would change line 2, given that it combines numbers with strings ("pending"), so the sum cannot be calculated.
+    ##3. I would change "pending" either to 0 or delete it from the list. The reason for this is that we do not have a value for that, so I believe it would be safe to not include it or just to state that there is no vale for it so use 0.
+    return
+
+
 @app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""
@@ -490,6 +701,18 @@ def _(mo):
 
     The square brackets inside `_ax.bar(...)` are a **list comprehension**, which **iterates** over `orders` and turns each number into text.
     """)
+    return
+
+
+@app.cell
+def _(freight_charges, orders):
+    import matplotlib.pyplot as plt
+
+    _fig, _ax = plt.subplots(figsize=(6, 2.6))
+    _ax.bar([str(_o) for _o in orders], freight_charges)
+    _ax.set_ylabel("freight")
+    _fig
+
     return
 
 
@@ -551,6 +774,12 @@ def _(mo):
     > - Answer a second question that needs something not covered yet, such as which month changed most from the one before, and explain the agent's line in your own words
     > - Send the notebook to somebody outside this course and write down the question they asked
     """)
+    return
+
+
+@app.cell
+def _(freight_charges):
+    print(f"There are {len(freight_charges)} charges in freight_charges.")
     return
 
 
