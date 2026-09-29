@@ -78,23 +78,30 @@ def _(mo):
 
 @app.cell
 def _():
-    #cost = 16.75 ##This is a statement. It has an effect. It assigns values to whatever is on the left. = means assignment.
-    #tax = 3.25
-    #total_cost = cost + tax
-    #print(f'The cost is ${cost:.2f}. Total is ${total_cost:.2f}')
+    cost = input('Enter the cost: ')
+    tax = input('Enter the tax: ')
+    return cost, tax
+
+
+@app.cell
+def _(cost):
+    cost*2
+    ##Cost is a string so it concatenates cost twice.
+    return
+
+
+@app.cell
+def _(cost, tax):
+    ##Both cost and tax have to be converted into float in order to add. Not int since they have decimal points.
+    total_cost = float(cost) + float(tax)
+    print(total_cost)
     return
 
 
 @app.cell
 def _():
-    cost = input('Enter the cost: ')
-    return
-
-
-@app.cell
-def _(X):
     x = 5/2
-    print(X)
+    print(x)
     type(x)
     return (x,)
 
@@ -125,6 +132,28 @@ def _(freight_charges):
         print(f'Tax on this charge: ${freight_tax:.2f}')
         total_charge = charge + freight_tax
         print(f'Total charge is ${total_charge:.2f}.')
+    return
+
+
+@app.cell
+def _(freight_charges):
+    step = 0
+    for freight_charge in freight_charges:
+        step = step + 1
+        print(f"--- Pass {step} ---")
+        print(f"freight_charge is now:{freight_charge}")
+        _tax = freight_charge * 0.0625
+        print(f"tax on this charge: {_tax}")
+        _total = freight_charge + _tax
+        print(f"total charge: {_total}")
+    return
+
+
+@app.cell
+def _(freight_charges):
+    for step_2, freight_charge_2 in enumerate(freight_charges, start=1):
+        print(f"--- Pass {step_2} ---")
+        print(f"freight_charge is now: {freight_charge_2}")
     return
 
 
@@ -210,10 +239,28 @@ def _(mo):
 
 
 @app.cell
+def _(charges):
+    charges[0]
+    charges[-1]
+    charges[5]
+    return
+
+
+@app.cell
+def _(charges):
+    total = 0
+    for chargex in charges:
+        if chargex < 25:
+            total = total + chargex
+    total
+    return
+
+
+@app.cell
 def _():
     charges = [16.75, 22.25, 25.00, 20.25, 36.25]
     charges
-    return
+    return (charges,)
 
 
 @app.cell(hide_code=True)
@@ -256,13 +303,13 @@ def _(mo):
     it, write under the letter, and press `Ctrl+Enter`. Code still goes in cells of your
     own, added with the **+** button.
 
-    **A ·**
+    **A ·** When a score satisfies two of these tests at once, the one that decides what gets printed is the first one that matches top to bottom.
 
-    **C ·**
+    **C ·** The append() method adds 1 item, whatever is passed to it.
 
-    **D ·**
+    **D ·** `tickers.sort()` printed `None` because this command sorts the original list without creating a new one and returns `None`, so when we ask Python to print the result of `.sort()`, it prints `None`, while `sorted(tickers)` preserves the original list and creates and returns a new sorted list, resulting in the sorted list being printed.
 
-    **E ·**
+    **E ·** You would want two names to refer to the same list on purpose when you want changes made through either name to affect the same data.
     """)
     return
 
@@ -291,11 +338,21 @@ def _(mo):
 
 @app.cell
 def _():
-    score = 95
+    score = 55
     if score >= 60 and score <90:
         print("Pass")
+    if score <60:
+        print("Fail")
     elif score >= 90:
         print("A")
+    return
+
+
+@app.cell(hide_code=True)
+def _(mo):
+    mo.md(r"""
+    `Q.` When a score satisfies two of these tests at once, the one that decides what gets printed is the first one that matches top to bottom.
+    """)
     return
 
 
@@ -323,6 +380,37 @@ def _(mo):
 def _():
     statuses = ["shipped", "pending", "shipped", "cancelled", "shipped"]
     statuses
+    return (statuses,)
+
+
+@app.cell
+def _(statuses):
+    shipped_count = 0
+
+    for status in statuses:
+        if status == "shipped":
+            shipped_count += 1
+
+    shipped_count
+    return (shipped_count,)
+
+
+@app.cell
+def _(statuses):
+    not_shipped_count = 0
+
+    for status_2 in statuses:
+        if status_2 != "shipped":
+            not_shipped_count +=1
+
+    not_shipped_count
+    return
+
+
+@app.cell
+def _(shipped_count, statuses):
+    percentage_shipped = (shipped_count / len(statuses)) *100
+    print(percentage_shipped)
     return
 
 
@@ -350,8 +438,22 @@ def _(mo):
 @app.cell
 def _():
     order_lines = ["notebook", "pen"]
-    order_lines.append(["stapler", "tape"])
+    order_lines.extend(["stapler", "tape"])
     len(order_lines)
+    return (order_lines,)
+
+
+@app.cell
+def _(order_lines):
+    print(order_lines[2])
+    return
+
+
+@app.cell(hide_code=True)
+def _(mo):
+    mo.md(r"""
+    `Q.` The append() method adds 1 item, whatever is passed to it.
+    """)
     return
 
 
@@ -379,9 +481,17 @@ def _(mo):
 @app.cell
 def _():
     tickers = ["NVDA", "AAPL", "MSFT"]
-    print(sorted(tickers))
+    print(sorted(tickers, reverse=True))
     print(tickers.sort())
-    tickers
+    print(tickers)
+    return
+
+
+@app.cell(hide_code=True)
+def _(mo):
+    mo.md(r"""
+    `Q.` `tickers.sort()` printed `None` because this command sorts the original list without creating a new one and returns `None`, so when we ask Python to print the result of `.sort()`, it prints `None`, while `sorted(tickers)` preserves the original list and creates and returns a new sorted list, resulting in the sorted list being printed.
+    """)
     return
 
 
@@ -415,9 +525,23 @@ def _(mo):
 @app.cell
 def _():
     prices = [12.50, 8.00, 19.99]
-    sale_prices = prices
+    sale_prices = prices[:]
     sale_prices.append(4.99)
     prices
+    return prices, sale_prices
+
+
+@app.cell
+def _(prices, sale_prices):
+    print(prices is sale_prices)
+    return
+
+
+@app.cell(hide_code=True)
+def _(mo):
+    mo.md(r"""
+    `Q.` You would want two names to refer to the same list on purpose when you want changes made through either name to affect the same data.
+    """)
     return
 
 
@@ -452,6 +576,33 @@ def _():
 @app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""
+    `Q.` "100" + "50" concatenates both values, resulting in "10050", which is reasonable for text because Python simply joins the first string with the second.
+    """)
+    return
+
+
+@app.cell
+def _():
+    print(int("100") + int("50"))
+    print(100 + 50)
+    return
+
+
+@app.cell
+def _():
+    print(int("100.5"))
+    return
+
+
+@app.cell
+def _():
+    print(float("100.5"))
+    return
+
+
+@app.cell(hide_code=True)
+def _(mo):
+    mo.md(r"""
     > **Advanced · G · Off the end.** `charges` in section 2 holds last week's five freight
     > charges. This one has no cell of its own, because every line in it fails on
     > purpose and a notebook that raises on load is a nuisance.
@@ -468,6 +619,56 @@ def _(mo):
     > `3 of 5 orders shipped (60%)`. An f-string is the short way to build a sentence out of
     > values, and it was section 5 of last week's notebook.
     """)
+    return
+
+
+@app.cell
+def _(charges):
+    charges[5]
+    return
+
+
+@app.cell(hide_code=True)
+def _(mo):
+    mo.md(r"""
+    `Q.` Even though the list contians five charges, there is no item at index 5 because Python starts counting the list starting from 0, so the valid indices are 0, 1, 2, 3, and 4.
+    """)
+    return
+
+
+@app.cell
+def _(charges):
+    charges[4]
+    return
+
+
+@app.cell
+def _(charges):
+    charges[-1]
+    return
+
+
+@app.cell
+def _(charges):
+    charges[-6]
+    return
+
+
+@app.cell(hide_code=True)
+def _(mo):
+    mo.md(r"""
+    `Q.` If we use the - sign for counting the charges, Python counts backwards. Since there are only 5 items in the list, the negative indices go from -1 to -5, so -6 would mean one position before the beginning of the list, which does not exist.
+    """)
+    return
+
+
+@app.cell
+def _(statuses):
+    shipped = statuses.count("shipped")
+    total = len(statuses)
+    percentage = shipped / total * 100
+
+    print(f"{shipped} of {total} orders shipped ({percentage:.0f}%)")
     return
 
 
