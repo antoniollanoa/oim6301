@@ -731,6 +731,14 @@ def _(mo):
     return
 
 
+@app.cell
+def _(first_order):
+    first_order["Freight"]
+    ##first_order["freight"]
+    first_order[0]
+    return
+
+
 @app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""
@@ -820,6 +828,43 @@ def _(mo):
     return
 
 
+@app.cell
+def _(orders):
+    no_shipped_date = 0
+
+    for order2 in orders:
+        if order2["ShippedDate"] is None:
+            no_shipped_date += 1
+
+    no_shipped_date
+    return
+
+
+@app.cell
+def _(orders):
+    total_freight = 0
+
+    for order in orders:
+        total_freight += order["Freight"]
+
+    total_freight
+    return
+
+
+@app.cell
+def _(orders):
+    largest_freight = 0
+    largest_order = None
+
+    for order3 in orders:
+        if order3["Freight"] > largest_freight:
+            largest_freight = order3["Freight"]
+            largest_order = order3["OrderID"]
+
+    print(largest_order, largest_freight)
+    return
+
+
 @app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""
@@ -842,8 +887,7 @@ def _(mo):
     mo.md(r"""
     *One row is ...*
 
-    *(Replace this line with your own sentence. If this cell shows you code instead of
-    text, use the cell menu to turn it into a markdown cell.)*
+    A single order being shipped to a customer, including its freight cost and shipping information.
     """)
     return
 
@@ -881,6 +925,103 @@ def _():
         {"Symbol": "TSLA", "Shares": 150, "Price": 255.70},
     ]
     portfolio
+    return (portfolio,)
+
+
+@app.cell(hide_code=True)
+def _(mo):
+    mo.md(r"""
+    `Q.` For each holding, multiply the number of shares by the price per share.
+    This gives the total cost of each holding.
+    Then, add the costs of all six holdings together.
+    The result is the total cost to buy the whole portfolio.
+    """)
+    return
+
+
+@app.cell
+def _(portfolio):
+    total_portfolio_cost = 0
+    for holding in portfolio:
+        holding_cost = holding["Shares"] * holding["Price"]
+        total_portfolio_cost = total_portfolio_cost + holding_cost
+
+    print(f"Total cost to buy the whole portfolio: ${total_portfolio_cost:.2f}")
+    return
+
+
+@app.cell(hide_code=True)
+def _(mo):
+    mo.md(r"""
+    **Step 3 · what each line does**
+
+    - `total_portfolio_cost = 0` — starts a running total at zero, the same pattern as `total` in
+      Section 2.
+    - `for holding in portfolio:` — takes one record (one holding) at a time from the list.
+    - `holding["Shares"] * holding["Price"]` — reads two fields out of that one record, by name,
+      and multiplies them. This is the line you likely would not have written yet: `holding` is a
+      **record**, so its fields come out with `["Shares"]`, not `[0]`.
+    - `total_portfolio_cost = total_portfolio_cost + holding_cost` — adds this holding's cost onto
+      the running total, the same running-total line as last week.
+    - The `print` line runs once, after the loop ends, and shows the final total to two decimal
+      places.
+    """)
+    return
+
+
+@app.cell(hide_code=True)
+def _(mo):
+    mo.md(r"""
+    **Step 4 · a similar problem, for you to solve**
+
+    A small grocery order, each item with a quantity and a unit price:
+
+    ```python
+    grocery_order = [
+        {"Item": "Apples", "Quantity": 6, "UnitPrice": 0.50},
+        {"Item": "Bread", "Quantity": 2, "UnitPrice": 3.25},
+        {"Item": "Milk", "Quantity": 1, "UnitPrice": 4.10},
+    ]
+    ```
+
+    **What does the whole order cost?** Write it yourself, in a cell of your own, the same
+    shape as the portfolio loop above: a running total that starts at zero, a `for` loop
+    over the records, and `["Quantity"] * ["UnitPrice"]` read out of each record by name.
+
+    *Check yourself: $13.60.*
+    """)
+    return
+
+
+@app.cell(hide_code=True)
+def _(mo):
+    mo.md(r"""
+    `Q.` For each item, multiply the quantity by the unit price.
+    This gives the total cost of each item.
+    Then, add the costs of all three items together.
+    The result is the total cost of the grocery order.
+    """)
+    return
+
+
+@app.cell
+def _():
+    grocery_order = [
+        {"Item": "Apples", "Quantity": 6, "UnitPrice": 0.50},
+        {"Item": "Bread", "Quantity": 2, "UnitPrice": 3.25},
+        {"Item": "Milk", "Quantity": 1, "UnitPrice": 4.10},
+    ]
+    return (grocery_order,)
+
+
+@app.cell
+def _(grocery_order):
+    total_grocery_cost = 0
+    for item in grocery_order:
+        item_cost = item["Quantity"] * item["UnitPrice"]
+        total_grocery_cost = total_grocery_cost + item_cost
+
+    print(f"Total cost of the grocery order: ${total_grocery_cost:.2f}")
     return
 
 
@@ -932,6 +1073,133 @@ def _(mo):
         _where = f"could not write into {_data_dir.name}/: {_error}"
 
     _where
+    return (portfolio_csv,)
+
+
+@app.cell(hide_code=True)
+def _(mo):
+    mo.md(r"""
+    **Step 1 · by hand, in words**
+
+    Open the file and read it line by line. The first line is the header (the column
+    names), so skip it. For each line after that, split it on the commas to pull out the
+    name, the shares, and the price as text. Convert shares to a whole number and price
+    to a decimal number, multiply them, and add that onto a running total that started at
+    zero. Print each row as you go, then print the total once the loop ends.
+    """)
+    return
+
+
+@app.cell
+def _(portfolio_csv):
+    with open(portfolio_csv) as _file:
+        _file_lines = _file.readlines()
+
+    file_total_cost = 0
+    print("name     shares     price")
+    for _line in _file_lines[1:]:
+        _name, _shares, _price = _line.strip().split(",")
+        _shares = int(_shares)
+        _price = float(_price)
+        print(f"{_name:<8} {_shares:>6} {_price:>10.2f}")
+        file_total_cost = file_total_cost + _shares * _price
+
+    print(f"Total cost: ${file_total_cost:.2f}")
+    return
+
+
+@app.cell(hide_code=True)
+def _(mo):
+    mo.md(r"""
+    **Step 3 · what each line does**
+
+    - `with open(portfolio_csv) as _file:` — opens the file so Python can read it, and closes
+      it automatically when the indented block ends. `with` is new; it is simply the safe
+      way to open a file.
+    - `_file_lines = _file.readlines()` — reads every line of the file into a list, one
+      string per line. This is a list, the same kind of thing as `freight_charges`.
+    - `file_total_cost = 0` — the running total, starting at zero, same as every other total
+      in this notebook.
+    - `for _line in _file_lines[1:]:` — loops over the list of lines, but `[1:]` is a slice
+      that skips the first line (the header `name,shares,price`), since it is not data.
+    - `_line.strip().split(",")` — `strip()` removes the invisible newline character at the
+      end of the line, and `split(",")` cuts the line into three pieces wherever there is a
+      comma. Three names on the left of `=` catch the three pieces at once.
+    - `_shares = int(_shares)` and `_price = float(_price)` — everything read from a file
+      arrives as text, even `"100"` and `"173.93"`, so these two lines convert them to a
+      whole number and a decimal number before any arithmetic is done on them.
+    - `file_total_cost = file_total_cost + _shares * _price` — the same running-total line
+      as the portfolio loop above, now fed by numbers that came from a file instead of being
+      typed into Python directly.
+    - Names starting with `_` (`_file`, `_line`, `_shares`) are private to this cell. That
+      lets this cell reuse names like `_price` without clashing with any other cell in the
+      notebook.
+    """)
+    return
+
+
+@app.cell
+def _(mo):
+    _grocery_lines = ["item,quantity,unitprice"]
+    for _item in [
+        ("Apples", 6, 0.50), ("Bread", 2, 3.25), ("Milk", 1, 4.10),
+    ]:
+        _grocery_lines.append(f"{_item[0]},{_item[1]},{_item[2]}")
+
+    _grocery_data_dir = mo.notebook_dir().parent / "data"
+    try:
+        _grocery_data_dir.mkdir(parents=True, exist_ok=True)
+        grocery_csv = _grocery_data_dir / "grocery.csv"
+        grocery_csv.write_text("\n".join(_grocery_lines) + "\n")
+        _grocery_where = f"wrote {grocery_csv.parent.name}/{grocery_csv.name}"
+    except OSError as _error:
+        _grocery_where = f"could not write into {_grocery_data_dir.name}/: {_error}"
+
+    _grocery_where
+    return (grocery_csv,)
+
+
+@app.cell(hide_code=True)
+def _(mo):
+    mo.md(r"""
+    **Step 4 · a similar problem, for you to solve**
+
+    The cell below writes a small grocery order to `data/grocery.csv`, in the same shape
+    as `portfolio.csv`: a header line, then one line per item.
+
+    ```text
+    item,quantity,unitprice
+    Apples,6,0.50
+    Bread,2,3.25
+    Milk,1,4.10
+    ```
+
+    **Open that file, read every line, and print the table and the total.** Write it
+    yourself, in a cell of your own, the same shape as the portfolio-from-a-file cell
+    above: `open()` with `with`, `.readlines()`, a slice `[1:]` to skip the header,
+    `.strip().split(",")` on each line, `int()` on the quantity and `float()` on the unit
+    price, and a running total that starts at zero.
+
+    *Check yourself: $13.60, the same total as the grocery order in Section 6.*
+    """)
+    return
+
+
+@app.cell
+def _(grocery_csv):
+    with open(grocery_csv) as _gfile:
+        _grocery_lines_in = _gfile.readlines()
+
+    grocery_total_cost = 0
+    print("item     quantity     unitprice")
+    for _gline in _grocery_lines_in[1:]:
+        _gitem, _gquantity, _gunitprice = _gline.strip().split(",")
+        _gquantity = int(_gquantity)
+        _gunitprice = float(_gunitprice)
+        print(f"{_gitem:<8} {_gquantity:>8} {_gunitprice:>12.2f}")
+        grocery_total_cost = grocery_total_cost + _gquantity * _gunitprice
+
+    print(f"Total cost: ${grocery_total_cost:.2f}")
     return
 
 

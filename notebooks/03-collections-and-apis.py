@@ -157,7 +157,8 @@ def _(mo):
 
     Several questions below ask for a sentence. This cell is where they go. Click into it, write under the letter, and press `Ctrl+Enter` (Windows) or `Cmd+Enter` (macOS).
 
-    **B ·**
+    **B ·** France, Germany, Brazil, and the USA had the most orders, with 4 orders each.
+
 
     **C ·**
 
@@ -194,6 +195,61 @@ def _():
     return (closing_prices,)
 
 
+@app.cell
+def _(closing_prices):
+    closing_prices["AAPL"]
+    return
+
+
+@app.cell
+def _(closing_prices):
+    closing_prices["TSLA"]
+    return
+
+
+@app.cell
+def _(closing_prices):
+    closing_prices.get("TSLA")
+    return
+
+
+@app.cell
+def _(closing_prices):
+    above_200 = []
+
+    for ticker in closing_prices:
+        if closing_prices[ticker] > 200:
+            above_200.append(ticker)
+
+    above_200
+    return
+
+
+@app.cell
+def _(closing_prices):
+    highest_price = 0
+    highest_ticker = None
+
+    for ticker2 in closing_prices:
+        if closing_prices[ticker2] > highest_price:
+            highest_price = closing_prices[ticker2]
+            highest_ticker = ticker2
+
+    print(highest_ticker, highest_price)
+    return
+
+
+@app.cell
+def _(closing_prices):
+    new_prices = {}
+
+    for ticker3 in closing_prices:
+        new_prices[ticker3] = closing_prices[ticker3] * 1.10
+
+    new_prices
+    return
+
+
 @app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""
@@ -219,6 +275,28 @@ def _():
     ]
     len(ship_countries)
     return (ship_countries,)
+
+
+@app.cell
+def _(ship_countries):
+    country_counts = {}
+
+    for country in ship_countries:
+        if country in country_counts:
+            country_counts[country] += 1
+        else:
+            country_counts[country] = 1
+
+    country_counts
+    return
+
+
+@app.cell(hide_code=True)
+def _(mo):
+    mo.md(r"""
+    `Q.` France, Germany, Brazil, and the USA had the most orders, with 4 orders each.
+    """)
+    return
 
 
 @app.cell(hide_code=True)
