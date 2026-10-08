@@ -296,6 +296,14 @@ def _(mo):
     return
 
 
+@app.cell(hide_code=True)
+def _(mo):
+    mo.md(r"""
+    `Workout Performance Evaluation and Conclusion`
+    """)
+    return
+
+
 @app.cell
 def _(
     average_round_time,
@@ -337,8 +345,41 @@ def _(mo):
     return
 
 
+@app.cell(hide_code=True)
+def _(mo):
+    mo.md(r"""
+    `Required Pace Calculation Verification`
+    """)
+    return
+
+
 @app.cell
 def _():
+    expected_pace = 80
+
+    check_time = 20 * 60
+    calculated_pace = check_time / 15
+
+    print(f"Expected pace:   {expected_pace:.2f} seconds")
+    print(f"Calculated pace: {calculated_pace:.2f} seconds")
+    return
+
+
+@app.cell(hide_code=True)
+def _(mo):
+    mo.md(r"""
+    `Cumulative Time Calculation Verification`
+    """)
+    return
+
+
+@app.cell
+def _(round_times):
+    expected_round_3_total = 216
+    calculated_round_3_total = round_times[0] + round_times[1] + round_times[2]
+
+    print(f"Expected time after round 3:   {expected_round_3_total} seconds")
+    print(f"Calculated time after round 3: {calculated_round_3_total} seconds")
     return
 
 
