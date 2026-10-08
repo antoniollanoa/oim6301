@@ -200,13 +200,15 @@ def _(mo):
 
 @app.cell
 def _(required_pace, round_times, time_cap_seconds):
-    # Initialize all tracking variables to zero
-    cumulative_time = 0
-    completed_rounds = 0
-    total_round_time = 0
-    first_behind_round = 0
+    # Initialize all tracking variables to zero before analyzing the workout
+    cumulative_time = 0       # Total time spent completing rounds so far
+    completed_rounds = 0      # Number of rounds completed within the 20-minute limit
+    total_round_time = 0      # Sum of all individual round times
+    first_behind_round = 0    # First round where the athlete falls behind the target pace
 
-    # Define table column headers and their widths
+    # Print the table headers to organize the workout results
+    # The numbers after > define the space reserved for each column
+    # The > symbol aligns the text to the right
     print(
         f"{'Round':>5} "
         f"{'Round Time':>12} "
@@ -216,31 +218,54 @@ def _(required_pace, round_times, time_cap_seconds):
         f"{'Status':>10}"
     )
 
-    # Print separator line for table formatting
+    # Print a horizontal line to separate the headers from the results
     print("-" * 70)
 
-    # Define round_time
+    # Loop through every round, starting at round 1
+    # len(round_times) counts how many rounds are stored in the list
     for round_number in range(1, len(round_times) + 1):
+
+        # Get the time for the current round from the list
+        # Subtract 1 because Python list indexes start at 0
         round_time = round_times[round_number - 1]
 
+        # Add the current round time to the total elapsed workout time
         cumulative_time = cumulative_time + round_time
+
+        # Add the current round time to calculate the average later
         total_round_time = total_round_time + round_time
 
+        # Calculate when the athlete should finish this round
+        # Example: Round 3 should finish at 3 * 80 = 240 seconds
         target_time = round_number * required_pace
+
+        # Compare actual elapsed time with the target time
+        # Negative difference means ahead; positive means behind
         difference = cumulative_time - target_time
 
+        # Determine whether the athlete is ahead, behind, or on pace
         if cumulative_time < target_time:
             status = "Ahead"
+
         elif cumulative_time > target_time:
             status = "Behind"
+
+            # Record the first round where the athlete falls behind
+            # Only update this variable if no previous round was behind
             if first_behind_round == 0:
                 first_behind_round = round_number
+
         else:
             status = "On pace"
 
+        # Count the round only if it finishes within the workout time limit
+        # For Cindy, the time limit is 1,200 seconds (20 minutes)
         if cumulative_time <= time_cap_seconds:
             completed_rounds = round_number
 
+        # Print the results for the current round as one table row
+        # .2f displays numbers with two decimal places
+        # > aligns the values to the right for a cleaner table
         print(
             f"{round_number:>5} "
             f"{round_time:>12.2f} "
@@ -459,29 +484,48 @@ def _(mo):
 
 @app.cell
 def _(aggressive_times, controlled_times, time_cap_seconds):
-    aggressive_total = 0
-    aggressive_rounds = 0
+    # Initialize the tracking variables for the aggressive strategy
+    aggressive_total = 0     # Total time spent completing all aggressive rounds
+    aggressive_rounds = 0    # Number of rounds completed within the time limit
 
+    # Loop through each round time in the aggressive strategy list
     for aggressive_round_time in aggressive_times:
+
+        # Add the current round time to the total elapsed time
         aggressive_total = aggressive_total + aggressive_round_time
 
+        # Check if the round was completed within the 20-minute time limit
         if aggressive_total <= time_cap_seconds:
+
+            # Count the round only if it was completed within the time limit
             aggressive_rounds = aggressive_rounds + 1
 
 
-    controlled_total = 0
-    controlled_rounds = 0
+    # Initialize the tracking variables for the controlled strategy
+    controlled_total = 0     # Total time spent completing all controlled rounds
+    controlled_rounds = 0    # Number of rounds completed within the time limit
 
+    # Loop through each round time in the controlled strategy list
     for controlled_round_time in controlled_times:
+
+        # Add the current round time to the total elapsed time
         controlled_total = controlled_total + controlled_round_time
 
+        # Check if the round was completed within the 20-minute time limit
         if controlled_total <= time_cap_seconds:
+
+            # Count the round only if it was completed within the time limit
             controlled_rounds = controlled_rounds + 1
 
 
+    # Calculate the average time per round for both strategies
+    # Divide the total time by the number of rounds in each list
     aggressive_average = aggressive_total / len(aggressive_times)
     controlled_average = controlled_total / len(controlled_times)
 
+    # Print the table headers to organize the comparison results
+    # < aligns text to the left, while > aligns text to the right
+    # The numbers define the space reserved for each column
     print(
         f"{'Strategy':<15} "
         f"{'Avg. Round':>12} "
@@ -489,8 +533,11 @@ def _(aggressive_times, controlled_times, time_cap_seconds):
         f"{'Rounds in Cap':>15}"
     )
 
+    # Print a horizontal line to separate the headers from the results
     print("-" * 58)
 
+    # Print the aggressive strategy results
+    # .2f displays the average round time with two decimal places
     print(
         f"{'Aggressive':<15} "
         f"{aggressive_average:>12.2f} "
@@ -498,6 +545,8 @@ def _(aggressive_times, controlled_times, time_cap_seconds):
         f"{aggressive_rounds:>15}"
     )
 
+    # Print the controlled strategy results using the same table format
+    # This makes it easier to compare both strategies side by side
     print(
         f"{'Controlled':<15} "
         f"{controlled_average:>12.2f} "
