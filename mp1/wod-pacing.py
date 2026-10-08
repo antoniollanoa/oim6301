@@ -125,7 +125,40 @@ def _(mo):
 
 @app.cell
 def _():
-    # Your inputs.
+    workout_name = "Cindy"
+    time_cap_minutes = 20
+    target_rounds = 15
+
+    movements = [
+        ("Pull-ups", 5),
+        ("Push-ups", 10),
+        ("Air squats", 15)
+    ]
+
+    round_times = [
+        70, 72, 74, 75, 76,
+        78, 80, 81, 83, 84,
+        86, 88, 90, 92, 95
+    ]
+    return (
+        movements,
+        round_times,
+        target_rounds,
+        time_cap_minutes,
+        workout_name,
+    )
+
+
+@app.cell
+def _(movements, target_rounds, time_cap_minutes, workout_name):
+    print(f"Workout: {workout_name}")
+    print(f"Time cap: {time_cap_minutes} minutes")
+    print(f"Target: {target_rounds} rounds")
+    print()
+
+    print("Movements:")
+    for movement, reps in movements:
+        print(f"{movement}: {reps} reps")
     return
 
 
@@ -139,8 +172,83 @@ def _(mo):
     return
 
 
+@app.cell(hide_code=True)
+def _(mo):
+    mo.md(r"""
+    `1. Calculate Required Pace per Round`
+    """)
+    return
+
+
 @app.cell
-def _():
+def _(target_rounds, time_cap_minutes):
+    time_cap_seconds = time_cap_minutes * 60
+    required_pace = time_cap_seconds / target_rounds
+
+    print(f"Total available time: {time_cap_seconds} seconds")
+    print(f"Required pace: {required_pace:.2f} seconds per round")
+    return required_pace, time_cap_seconds
+
+
+@app.cell(hide_code=True)
+def _(mo):
+    mo.md(r"""
+    `2. Round-by-Round Pacing Analysis`
+    """)
+    return
+
+
+@app.cell
+def _(required_pace, round_times, time_cap_seconds):
+    # Initialize all tracking variables to zero
+    cumulative_time = 0
+    completed_rounds = 0
+    total_round_time = 0
+    first_behind_round = 0
+
+    # Define table column headers and their widths
+    print(
+        f"{'Round':>5} "
+        f"{'Round Time':>12} "
+        f"{'Total Time':>12} "
+        f"{'Target Time':>13} "
+        f"{'Difference':>12} "
+        f"{'Status':>10}"
+    )
+
+    # Print separator line for table formatting
+    print("-" * 70)
+
+    # Define round_time
+    for round_number in range(1, len(round_times) + 1):
+        round_time = round_times[round_number - 1]
+
+        cumulative_time = cumulative_time + round_time
+        total_round_time = total_round_time + round_time
+
+        target_time = round_number * required_pace
+        difference = cumulative_time - target_time
+
+        if cumulative_time < target_time:
+            status = "Ahead"
+        elif cumulative_time > target_time:
+            status = "Behind"
+            if first_behind_round == 0:
+                first_behind_round = round_number
+        else:
+            status = "On pace"
+
+        if cumulative_time <= time_cap_seconds:
+            completed_rounds = round_number
+
+        print(
+            f"{round_number:>5} "
+            f"{round_time:>12.2f} "
+            f"{cumulative_time:>12.2f} "
+            f"{target_time:>13.2f} "
+            f"{difference:>12.2f} "
+            f"{status:>10}"
+        )
     return
 
 
