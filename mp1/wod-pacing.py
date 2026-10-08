@@ -532,5 +532,47 @@ def _(aggressive_rounds, controlled_rounds):
     return
 
 
+@app.cell(hide_code=True)
+def _(mo):
+    mo.md(r"""
+    `4. Pacing Strategy Comparison Visualization`
+    """)
+    return
+
+
+@app.cell
+def _(aggressive_times, controlled_times):
+    # Import the library for creating graphs
+    import matplotlib.pyplot as plt
+
+    # Create the round numbers
+    graph_round_numbers = list(range(1, len(aggressive_times) + 1))
+
+    # Plot both pacing strategies
+    plt.plot(graph_round_numbers, aggressive_times, label="Aggressive")
+    plt.plot(graph_round_numbers, controlled_times, label="Controlled")
+
+    # Add the graph title and labels
+    plt.title("Aggressive vs. Controlled Pacing")
+    plt.xlabel("Round Number")
+    plt.ylabel("Time per Round (seconds)")
+
+    # Display the legend and grid
+    plt.legend()
+    plt.grid(True)
+
+    # Show the graph
+    plt.show()
+    return
+
+
+@app.cell(hide_code=True)
+def _(mo):
+    mo.md(r"""
+    I also created a line graph to compare how the round times change under both pacing strategies. The graph shows that the aggressive strategy starts with faster rounds but becomes much slower toward the end. In comparison, the controlled strategy maintains a more consistent pace throughout the workout. This helps explain why managing pace is important during a 20-minute AMRAP workout.
+    """)
+    return
+
+
 if __name__ == "__main__":
     app.run()
