@@ -249,7 +249,12 @@ def _(required_pace, round_times, time_cap_seconds):
             f"{difference:>12.2f} "
             f"{status:>10}"
         )
-    return completed_rounds, cumulative_time, total_round_time
+    return (
+        completed_rounds,
+        cumulative_time,
+        first_behind_round,
+        total_round_time,
+    )
 
 
 @app.cell(hide_code=True)
@@ -278,7 +283,7 @@ def _(
     print(f"Target rounds:         {target_rounds}")
     print(f"Completed rounds:      {completed_rounds}")
     print(f"Total time:            {cumulative_time} seconds")
-    return
+    return (average_round_time,)
 
 
 @app.cell(hide_code=True)
@@ -292,7 +297,33 @@ def _(mo):
 
 
 @app.cell
-def _():
+def _(
+    average_round_time,
+    completed_rounds,
+    first_behind_round,
+    required_pace,
+    target_rounds,
+    workout_name,
+):
+    if completed_rounds >= target_rounds:
+        print(
+            f"The athlete achieved the target of {target_rounds} rounds of "
+            f"{workout_name}. The required pace was {required_pace:.2f} seconds "
+            f"per round, while the actual average pace was "
+            f"{average_round_time:.2f} seconds per round."
+        )
+    else:
+        print(
+            f"The athlete did not achieve the target of {target_rounds} rounds of "
+            f"{workout_name}. The athlete completed {completed_rounds} full rounds. "
+            f"The required pace was {required_pace:.2f} seconds per round, while "
+            f"the actual average pace was {average_round_time:.2f} seconds per round."
+        )
+
+    if first_behind_round > 0:
+        print(f"The athlete first fell behind the target pace during round {first_behind_round}.")
+    else:
+        print("The athlete never fell behind the target cumulative pace.")
     return
 
 
