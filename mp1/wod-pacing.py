@@ -398,10 +398,137 @@ def _(mo):
 @app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""
+    The AI suggested calculating the required pace by converting the workout time from minutes to seconds and dividing it by the target number of rounds. I wanted to make sure this calculation was correct before using it in the rest of my project. To verify it, I calculated the pace manually using the Cindy workout, which has a 20-minute time limit and a target of 15 rounds. First, I multiplied 20 minutes by 60 to get 1,200 seconds. Then, I divided 1,200 by 15 and got 80 seconds per round. After that, I created a separate Python cell to compare my expected result of 80 seconds with the result calculated by the code. Both results were the same, which confirmed that the AI's calculation was correct. This process is shown in the **Required Pace Calculation Verification** cell of my Marimo notebook.
+    """)
+    return
+
+
+@app.cell(hide_code=True)
+def _(mo):
+    mo.md(r"""
     ## 8. Going Further
 
     *Take at least one step past the main task, in any direction, and use your agent as much as you like. It does not have to work. State what you tried, what you found, and where it is in this notebook.*
     """)
+    return
+
+
+@app.cell(hide_code=True)
+def _(mo):
+    mo.md(r"""
+    For the Going Further section, I decided to explore how different pacing strategies could affect an athlete's performance during the Cindy workout. I compared two strategies: aggressive and controlled. In the aggressive strategy, the athlete starts by completing rounds quickly but gradually takes more time as the workout continues. In the controlled strategy, the athlete maintains a more consistent pace from the beginning to the end.
+
+    To compare both strategies, I created two lists with different round times and used Python loops to calculate the average time per round, the total workout time, and the number of rounds completed within the 20-minute limit. The results showed that the aggressive strategy completed 13 rounds, while the controlled strategy completed 15 rounds. This helped me understand that starting a workout too fast may cause an athlete to slow down significantly in later rounds. On the other hand, maintaining a steady pace can help the athlete manage their energy and complete more rounds.
+
+    This comparison goes beyond the main task because instead of only analyzing one workout performance, I tested two different approaches to see which one produced better results. The code and results can be found in the **Going Further – Pacing Strategy Comparison** section of my Marimo notebook.
+    """)
+    return
+
+
+@app.cell(hide_code=True)
+def _(mo):
+    mo.md(r"""
+    `1. Define Aggressive and Controlled Pacing Strategies`
+    """)
+    return
+
+
+@app.cell
+def _():
+    aggressive_times = [
+        60, 62, 65, 68, 72,
+        76, 82, 88, 95, 102,
+        110, 118, 125, 130, 135
+    ]
+
+    controlled_times = [
+        76, 77, 77, 78, 78,
+        79, 79, 80, 80, 80,
+        81, 81, 82, 82, 83
+    ]
+    return aggressive_times, controlled_times
+
+
+@app.cell(hide_code=True)
+def _(mo):
+    mo.md(r"""
+    `2. Aggressive vs. Controlled Pacing Performance Comparison`
+    """)
+    return
+
+
+@app.cell
+def _(aggressive_times, controlled_times, time_cap_seconds):
+    aggressive_total = 0
+    aggressive_rounds = 0
+
+    for aggressive_round_time in aggressive_times:
+        aggressive_total = aggressive_total + aggressive_round_time
+
+        if aggressive_total <= time_cap_seconds:
+            aggressive_rounds = aggressive_rounds + 1
+
+
+    controlled_total = 0
+    controlled_rounds = 0
+
+    for controlled_round_time in controlled_times:
+        controlled_total = controlled_total + controlled_round_time
+
+        if controlled_total <= time_cap_seconds:
+            controlled_rounds = controlled_rounds + 1
+
+
+    aggressive_average = aggressive_total / len(aggressive_times)
+    controlled_average = controlled_total / len(controlled_times)
+
+    print(
+        f"{'Strategy':<15} "
+        f"{'Avg. Round':>12} "
+        f"{'Total Time':>12} "
+        f"{'Rounds in Cap':>15}"
+    )
+
+    print("-" * 58)
+
+    print(
+        f"{'Aggressive':<15} "
+        f"{aggressive_average:>12.2f} "
+        f"{aggressive_total:>12} "
+        f"{aggressive_rounds:>15}"
+    )
+
+    print(
+        f"{'Controlled':<15} "
+        f"{controlled_average:>12.2f} "
+        f"{controlled_total:>12} "
+        f"{controlled_rounds:>15}"
+    )
+    return aggressive_rounds, controlled_rounds
+
+
+@app.cell(hide_code=True)
+def _(mo):
+    mo.md(r"""
+    `3. Pacing Strategy Results and Conclusion`
+    """)
+    return
+
+
+@app.cell
+def _(aggressive_rounds, controlled_rounds):
+    print(
+        f"The aggressive strategy completed {aggressive_rounds} rounds "
+        f"within the 20-minute limit, while the controlled strategy "
+        f"completed {controlled_rounds} rounds."
+    )
+
+    if aggressive_rounds > controlled_rounds:
+        print("The aggressive strategy completed more rounds.")
+    elif controlled_rounds > aggressive_rounds:
+        print("The controlled strategy completed more rounds.")
+    else:
+        print("Both strategies completed the same number of rounds.")
     return
 
 
