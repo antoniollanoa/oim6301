@@ -249,6 +249,35 @@ def _(required_pace, round_times, time_cap_seconds):
             f"{difference:>12.2f} "
             f"{status:>10}"
         )
+    return completed_rounds, cumulative_time, total_round_time
+
+
+@app.cell(hide_code=True)
+def _(mo):
+    mo.md(r"""
+    `3. Workout Performance Summary`
+    """)
+    return
+
+
+@app.cell
+def _(
+    completed_rounds,
+    cumulative_time,
+    required_pace,
+    round_times,
+    target_rounds,
+    time_cap_seconds,
+    total_round_time,
+):
+    average_round_time = total_round_time / len(round_times)
+    time_difference = time_cap_seconds - cumulative_time
+
+    print(f"Required average pace: {required_pace:.2f} seconds per round")
+    print(f"Actual average pace:   {average_round_time:.2f} seconds per round")
+    print(f"Target rounds:         {target_rounds}")
+    print(f"Completed rounds:      {completed_rounds}")
+    print(f"Total time:            {cumulative_time} seconds")
     return
 
 
