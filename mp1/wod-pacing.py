@@ -380,13 +380,22 @@ def _(mo):
 
 @app.cell
 def _():
+    # Define the expected pace based on manual calculation
     expected_pace = 80
 
+    # Calculate the required pace using the workout inputs
     check_time = 20 * 60
     calculated_pace = check_time / 15
 
+    # Display both results for comparison
     print(f"Expected pace:   {expected_pace:.2f} seconds")
     print(f"Calculated pace: {calculated_pace:.2f} seconds")
+
+    # Check if the expected and calculated values match
+    if expected_pace == calculated_pace:
+        print("Verification passed: Both pace calculations match.")
+    else:
+        print("Verification failed: The pace calculations are different.")
     return
 
 
@@ -400,11 +409,46 @@ def _(mo):
 
 @app.cell
 def _(round_times):
+    # Define the expected cumulative time after the first three rounds
     expected_round_3_total = 216
+
+    # Calculate the cumulative time by adding the first three round times
     calculated_round_3_total = round_times[0] + round_times[1] + round_times[2]
 
+    # Display both results for comparison
     print(f"Expected time after round 3:   {expected_round_3_total} seconds")
     print(f"Calculated time after round 3: {calculated_round_3_total} seconds")
+
+    # Check if the expected and calculated values match
+    if expected_round_3_total == calculated_round_3_total:
+        print("Verification passed: Both cumulative times match.")
+    else:
+        print("Verification failed: The cumulative times are different.")
+    return
+
+
+@app.cell(hide_code=True)
+def _(mo):
+    mo.md(r"""
+    `Independent Total Workout Time Verification`
+    """)
+    return
+
+
+@app.cell
+def _(cumulative_time, round_times):
+    # Calculate the total workout time independently
+    manual_total = sum(round_times)
+
+    # Display both results to compare them
+    print(f"Independent total: {manual_total} seconds")
+    print(f"Main loop total:   {cumulative_time} seconds")
+
+    # Check whether both calculations match
+    if manual_total == cumulative_time:
+        print("Verification passed: Both totals match.")
+    else:
+        print("Verification failed: The totals are different.")
     return
 
 
@@ -423,7 +467,7 @@ def _(mo):
 @app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""
-    The AI suggested calculating the required pace by converting the workout time from minutes to seconds and dividing it by the target number of rounds. I wanted to make sure this calculation was correct before using it in the rest of my project. To verify it, I calculated the pace manually using the Cindy workout, which has a 20-minute time limit and a target of 15 rounds. First, I multiplied 20 minutes by 60 to get 1,200 seconds. Then, I divided 1,200 by 15 and got 80 seconds per round. After that, I created a separate Python cell to compare my expected result of 80 seconds with the result calculated by the code. Both results were the same, which confirmed that the AI's calculation was correct. This process is shown in the **Required Pace Calculation Verification** cell of my Marimo notebook.
+    The AI suggested calculating the total workout time by adding each round's time using a loop. Although the AI's calculation was correct, I wanted to verify it independently before relying on the results. To do this, I used Python's built-in `sum()` function to add all 15 round times directly from the list, instead of using the loop from my main analysis. I then created a separate Python cell to compare the total calculated using `sum()` with the cumulative time calculated by the original loop. Both methods produced the same result of 1,184 seconds, confirming that the AI's calculation was correct. This verification is shown in the **Independent Total Workout Time Verification** cell of my Marimo notebook.
     """)
     return
 
