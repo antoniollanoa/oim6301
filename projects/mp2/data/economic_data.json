@@ -1,2402 +1,4802 @@
 [
   {
-    "country_code": "ARG",
-    "country": "Argentina",
-    "year": 2000,
-    "indicator_code": "FP.CPI.TOTL.ZG",
-    "indicator": "Inflation",
-    "value": null
-  },
-  {
-    "country_code": "ARG",
-    "country": "Argentina",
-    "year": 2000,
-    "indicator_code": "NY.GDP.MKTP.KD.ZG",
-    "indicator": "GDP Growth",
-    "value": -0.78899893905691
-  },
-  {
-    "country_code": "ARG",
-    "country": "Argentina",
-    "year": 2000,
-    "indicator_code": "SL.UEM.TOTL.ZS",
-    "indicator": "Unemployment",
-    "value": 15
-  },
-  {
-    "country_code": "ARG",
-    "country": "Argentina",
-    "year": 2001,
-    "indicator_code": "FP.CPI.TOTL.ZG",
-    "indicator": "Inflation",
-    "value": null
-  },
-  {
-    "country_code": "ARG",
-    "country": "Argentina",
-    "year": 2001,
-    "indicator_code": "NY.GDP.MKTP.KD.ZG",
-    "indicator": "GDP Growth",
-    "value": -4.40883968258557
-  },
-  {
-    "country_code": "ARG",
-    "country": "Argentina",
-    "year": 2001,
-    "indicator_code": "SL.UEM.TOTL.ZS",
-    "indicator": "Unemployment",
-    "value": 17.32
-  },
-  {
-    "country_code": "ARG",
-    "country": "Argentina",
-    "year": 2002,
-    "indicator_code": "FP.CPI.TOTL.ZG",
-    "indicator": "Inflation",
-    "value": null
-  },
-  {
-    "country_code": "ARG",
-    "country": "Argentina",
-    "year": 2002,
-    "indicator_code": "NY.GDP.MKTP.KD.ZG",
-    "indicator": "GDP Growth",
-    "value": -10.8944848285903
-  },
-  {
-    "country_code": "ARG",
-    "country": "Argentina",
-    "year": 2002,
-    "indicator_code": "SL.UEM.TOTL.ZS",
-    "indicator": "Unemployment",
-    "value": 19.59
-  },
-  {
-    "country_code": "ARG",
-    "country": "Argentina",
-    "year": 2003,
-    "indicator_code": "FP.CPI.TOTL.ZG",
-    "indicator": "Inflation",
-    "value": null
-  },
-  {
-    "country_code": "ARG",
-    "country": "Argentina",
-    "year": 2003,
-    "indicator_code": "NY.GDP.MKTP.KD.ZG",
-    "indicator": "GDP Growth",
-    "value": 8.83704079576924
-  },
-  {
-    "country_code": "ARG",
-    "country": "Argentina",
-    "year": 2003,
-    "indicator_code": "SL.UEM.TOTL.ZS",
-    "indicator": "Unemployment",
-    "value": 15.36
-  },
-  {
-    "country_code": "ARG",
-    "country": "Argentina",
-    "year": 2004,
-    "indicator_code": "FP.CPI.TOTL.ZG",
-    "indicator": "Inflation",
-    "value": null
-  },
-  {
-    "country_code": "ARG",
-    "country": "Argentina",
-    "year": 2004,
-    "indicator_code": "NY.GDP.MKTP.KD.ZG",
-    "indicator": "GDP Growth",
-    "value": 9.02957330068152
-  },
-  {
-    "country_code": "ARG",
-    "country": "Argentina",
-    "year": 2004,
-    "indicator_code": "SL.UEM.TOTL.ZS",
-    "indicator": "Unemployment",
-    "value": 13.522
-  },
-  {
-    "country_code": "ARG",
-    "country": "Argentina",
-    "year": 2005,
-    "indicator_code": "FP.CPI.TOTL.ZG",
-    "indicator": "Inflation",
-    "value": null
-  },
-  {
-    "country_code": "ARG",
-    "country": "Argentina",
-    "year": 2005,
-    "indicator_code": "NY.GDP.MKTP.KD.ZG",
-    "indicator": "GDP Growth",
-    "value": 8.85165992013437
-  },
-  {
-    "country_code": "ARG",
-    "country": "Argentina",
-    "year": 2005,
-    "indicator_code": "SL.UEM.TOTL.ZS",
-    "indicator": "Unemployment",
-    "value": 11.506
-  },
-  {
-    "country_code": "ARG",
-    "country": "Argentina",
-    "year": 2006,
-    "indicator_code": "FP.CPI.TOTL.ZG",
-    "indicator": "Inflation",
-    "value": null
-  },
-  {
-    "country_code": "ARG",
-    "country": "Argentina",
-    "year": 2006,
-    "indicator_code": "NY.GDP.MKTP.KD.ZG",
-    "indicator": "GDP Growth",
-    "value": 8.04715150043027
-  },
-  {
-    "country_code": "ARG",
-    "country": "Argentina",
-    "year": 2006,
-    "indicator_code": "SL.UEM.TOTL.ZS",
-    "indicator": "Unemployment",
-    "value": 10.078
-  },
-  {
-    "country_code": "ARG",
-    "country": "Argentina",
-    "year": 2007,
-    "indicator_code": "FP.CPI.TOTL.ZG",
-    "indicator": "Inflation",
-    "value": null
-  },
-  {
-    "country_code": "ARG",
-    "country": "Argentina",
-    "year": 2007,
-    "indicator_code": "NY.GDP.MKTP.KD.ZG",
-    "indicator": "GDP Growth",
-    "value": 9.00765087504757
-  },
-  {
-    "country_code": "ARG",
-    "country": "Argentina",
-    "year": 2007,
-    "indicator_code": "SL.UEM.TOTL.ZS",
-    "indicator": "Unemployment",
-    "value": 8.47
-  },
-  {
-    "country_code": "ARG",
-    "country": "Argentina",
-    "year": 2008,
-    "indicator_code": "FP.CPI.TOTL.ZG",
-    "indicator": "Inflation",
-    "value": null
-  },
-  {
-    "country_code": "ARG",
-    "country": "Argentina",
-    "year": 2008,
-    "indicator_code": "NY.GDP.MKTP.KD.ZG",
-    "indicator": "GDP Growth",
-    "value": 4.05723310346406
-  },
-  {
-    "country_code": "ARG",
-    "country": "Argentina",
-    "year": 2008,
-    "indicator_code": "SL.UEM.TOTL.ZS",
-    "indicator": "Unemployment",
-    "value": 7.837
-  },
-  {
-    "country_code": "ARG",
-    "country": "Argentina",
-    "year": 2009,
-    "indicator_code": "FP.CPI.TOTL.ZG",
-    "indicator": "Inflation",
-    "value": null
-  },
-  {
-    "country_code": "ARG",
-    "country": "Argentina",
-    "year": 2009,
-    "indicator_code": "NY.GDP.MKTP.KD.ZG",
-    "indicator": "GDP Growth",
-    "value": -5.91852507634947
-  },
-  {
-    "country_code": "ARG",
-    "country": "Argentina",
-    "year": 2009,
-    "indicator_code": "SL.UEM.TOTL.ZS",
-    "indicator": "Unemployment",
-    "value": 8.645
-  },
-  {
-    "country_code": "ARG",
-    "country": "Argentina",
-    "year": 2010,
-    "indicator_code": "FP.CPI.TOTL.ZG",
-    "indicator": "Inflation",
-    "value": null
-  },
-  {
-    "country_code": "ARG",
-    "country": "Argentina",
-    "year": 2010,
-    "indicator_code": "NY.GDP.MKTP.KD.ZG",
-    "indicator": "GDP Growth",
-    "value": 10.1253981561002
-  },
-  {
-    "country_code": "ARG",
-    "country": "Argentina",
-    "year": 2010,
-    "indicator_code": "SL.UEM.TOTL.ZS",
-    "indicator": "Unemployment",
-    "value": 7.714
-  },
-  {
-    "country_code": "ARG",
-    "country": "Argentina",
-    "year": 2011,
-    "indicator_code": "FP.CPI.TOTL.ZG",
-    "indicator": "Inflation",
-    "value": null
-  },
-  {
-    "country_code": "ARG",
-    "country": "Argentina",
-    "year": 2011,
-    "indicator_code": "NY.GDP.MKTP.KD.ZG",
-    "indicator": "GDP Growth",
-    "value": 6.00395169280579
-  },
-  {
-    "country_code": "ARG",
-    "country": "Argentina",
-    "year": 2011,
-    "indicator_code": "SL.UEM.TOTL.ZS",
-    "indicator": "Unemployment",
-    "value": 7.18
-  },
-  {
-    "country_code": "ARG",
-    "country": "Argentina",
-    "year": 2012,
-    "indicator_code": "FP.CPI.TOTL.ZG",
-    "indicator": "Inflation",
-    "value": null
-  },
-  {
-    "country_code": "ARG",
-    "country": "Argentina",
-    "year": 2012,
-    "indicator_code": "NY.GDP.MKTP.KD.ZG",
-    "indicator": "GDP Growth",
-    "value": -1.0264204544321
-  },
-  {
-    "country_code": "ARG",
-    "country": "Argentina",
-    "year": 2012,
-    "indicator_code": "SL.UEM.TOTL.ZS",
-    "indicator": "Unemployment",
-    "value": 7.217
-  },
-  {
-    "country_code": "ARG",
-    "country": "Argentina",
-    "year": 2013,
-    "indicator_code": "FP.CPI.TOTL.ZG",
-    "indicator": "Inflation",
-    "value": null
-  },
-  {
-    "country_code": "ARG",
-    "country": "Argentina",
-    "year": 2013,
-    "indicator_code": "NY.GDP.MKTP.KD.ZG",
-    "indicator": "GDP Growth",
-    "value": 2.40532378079436
-  },
-  {
-    "country_code": "ARG",
-    "country": "Argentina",
-    "year": 2013,
-    "indicator_code": "SL.UEM.TOTL.ZS",
-    "indicator": "Unemployment",
-    "value": 7.1
-  },
-  {
-    "country_code": "ARG",
-    "country": "Argentina",
-    "year": 2014,
-    "indicator_code": "FP.CPI.TOTL.ZG",
-    "indicator": "Inflation",
-    "value": null
-  },
-  {
-    "country_code": "ARG",
-    "country": "Argentina",
-    "year": 2014,
-    "indicator_code": "NY.GDP.MKTP.KD.ZG",
-    "indicator": "GDP Growth",
-    "value": -2.51261532081394
-  },
-  {
-    "country_code": "ARG",
-    "country": "Argentina",
-    "year": 2014,
-    "indicator_code": "SL.UEM.TOTL.ZS",
-    "indicator": "Unemployment",
-    "value": 7.268
-  },
-  {
-    "country_code": "ARG",
-    "country": "Argentina",
-    "year": 2015,
-    "indicator_code": "FP.CPI.TOTL.ZG",
-    "indicator": "Inflation",
-    "value": null
-  },
-  {
-    "country_code": "ARG",
-    "country": "Argentina",
-    "year": 2015,
-    "indicator_code": "NY.GDP.MKTP.KD.ZG",
-    "indicator": "GDP Growth",
-    "value": 2.73115982828944
-  },
-  {
-    "country_code": "ARG",
-    "country": "Argentina",
-    "year": 2015,
-    "indicator_code": "SL.UEM.TOTL.ZS",
-    "indicator": "Unemployment",
-    "value": 7.577
-  },
-  {
-    "country_code": "ARG",
-    "country": "Argentina",
-    "year": 2016,
-    "indicator_code": "FP.CPI.TOTL.ZG",
-    "indicator": "Inflation",
-    "value": null
-  },
-  {
-    "country_code": "ARG",
-    "country": "Argentina",
-    "year": 2016,
-    "indicator_code": "NY.GDP.MKTP.KD.ZG",
-    "indicator": "GDP Growth",
-    "value": -2.08032784377811
-  },
-  {
-    "country_code": "ARG",
-    "country": "Argentina",
-    "year": 2016,
-    "indicator_code": "SL.UEM.TOTL.ZS",
-    "indicator": "Unemployment",
-    "value": 8.088
-  },
-  {
-    "country_code": "ARG",
-    "country": "Argentina",
-    "year": 2017,
-    "indicator_code": "FP.CPI.TOTL.ZG",
-    "indicator": "Inflation",
-    "value": null
-  },
-  {
-    "country_code": "ARG",
-    "country": "Argentina",
-    "year": 2017,
-    "indicator_code": "NY.GDP.MKTP.KD.ZG",
-    "indicator": "GDP Growth",
-    "value": 2.81850297775918
-  },
-  {
-    "country_code": "ARG",
-    "country": "Argentina",
-    "year": 2017,
-    "indicator_code": "SL.UEM.TOTL.ZS",
-    "indicator": "Unemployment",
-    "value": 8.347
-  },
-  {
-    "country_code": "ARG",
-    "country": "Argentina",
-    "year": 2018,
-    "indicator_code": "FP.CPI.TOTL.ZG",
-    "indicator": "Inflation",
-    "value": 34.2772237131003
-  },
-  {
-    "country_code": "ARG",
-    "country": "Argentina",
-    "year": 2018,
-    "indicator_code": "NY.GDP.MKTP.KD.ZG",
-    "indicator": "GDP Growth",
-    "value": -2.61739646282038
-  },
-  {
-    "country_code": "ARG",
-    "country": "Argentina",
-    "year": 2018,
-    "indicator_code": "SL.UEM.TOTL.ZS",
-    "indicator": "Unemployment",
-    "value": 9.22
-  },
-  {
-    "country_code": "ARG",
-    "country": "Argentina",
-    "year": 2019,
-    "indicator_code": "FP.CPI.TOTL.ZG",
-    "indicator": "Inflation",
-    "value": 53.5483043492339
-  },
-  {
-    "country_code": "ARG",
-    "country": "Argentina",
-    "year": 2019,
-    "indicator_code": "NY.GDP.MKTP.KD.ZG",
-    "indicator": "GDP Growth",
-    "value": -2.00086100285785
-  },
-  {
-    "country_code": "ARG",
-    "country": "Argentina",
-    "year": 2019,
-    "indicator_code": "SL.UEM.TOTL.ZS",
-    "indicator": "Unemployment",
-    "value": 9.843
-  },
-  {
-    "country_code": "ARG",
-    "country": "Argentina",
-    "year": 2020,
-    "indicator_code": "FP.CPI.TOTL.ZG",
-    "indicator": "Inflation",
-    "value": 42.0150947376509
-  },
-  {
-    "country_code": "ARG",
-    "country": "Argentina",
-    "year": 2020,
-    "indicator_code": "NY.GDP.MKTP.KD.ZG",
-    "indicator": "GDP Growth",
-    "value": -9.9004848136464
-  },
-  {
-    "country_code": "ARG",
-    "country": "Argentina",
-    "year": 2020,
-    "indicator_code": "SL.UEM.TOTL.ZS",
-    "indicator": "Unemployment",
-    "value": 11.461
-  },
-  {
-    "country_code": "ARG",
-    "country": "Argentina",
-    "year": 2021,
-    "indicator_code": "FP.CPI.TOTL.ZG",
-    "indicator": "Inflation",
-    "value": 48.4093786255199
-  },
-  {
-    "country_code": "ARG",
-    "country": "Argentina",
-    "year": 2021,
-    "indicator_code": "NY.GDP.MKTP.KD.ZG",
-    "indicator": "GDP Growth",
-    "value": 10.4418119882506
-  },
-  {
-    "country_code": "ARG",
-    "country": "Argentina",
-    "year": 2021,
-    "indicator_code": "SL.UEM.TOTL.ZS",
-    "indicator": "Unemployment",
-    "value": 8.736
-  },
-  {
-    "country_code": "ARG",
-    "country": "Argentina",
-    "year": 2022,
-    "indicator_code": "FP.CPI.TOTL.ZG",
-    "indicator": "Inflation",
-    "value": 72.430757531824
-  },
-  {
-    "country_code": "ARG",
-    "country": "Argentina",
-    "year": 2022,
-    "indicator_code": "NY.GDP.MKTP.KD.ZG",
-    "indicator": "GDP Growth",
-    "value": 6.02074537534855
-  },
-  {
-    "country_code": "ARG",
-    "country": "Argentina",
-    "year": 2022,
-    "indicator_code": "SL.UEM.TOTL.ZS",
-    "indicator": "Unemployment",
-    "value": 6.805
-  },
-  {
-    "country_code": "ARG",
-    "country": "Argentina",
-    "year": 2023,
-    "indicator_code": "FP.CPI.TOTL.ZG",
-    "indicator": "Inflation",
-    "value": 133.488935594175
-  },
-  {
-    "country_code": "ARG",
-    "country": "Argentina",
-    "year": 2023,
-    "indicator_code": "NY.GDP.MKTP.KD.ZG",
-    "indicator": "GDP Growth",
-    "value": -1.85578803046339
-  },
-  {
-    "country_code": "ARG",
-    "country": "Argentina",
-    "year": 2023,
-    "indicator_code": "SL.UEM.TOTL.ZS",
-    "indicator": "Unemployment",
-    "value": 6.139
-  },
-  {
-    "country_code": "ARG",
-    "country": "Argentina",
-    "year": 2024,
-    "indicator_code": "FP.CPI.TOTL.ZG",
-    "indicator": "Inflation",
-    "value": 219.883929014578
-  },
-  {
-    "country_code": "ARG",
-    "country": "Argentina",
-    "year": 2024,
-    "indicator_code": "NY.GDP.MKTP.KD.ZG",
-    "indicator": "GDP Growth",
-    "value": -1.34293072157739
-  },
-  {
-    "country_code": "ARG",
-    "country": "Argentina",
-    "year": 2024,
-    "indicator_code": "SL.UEM.TOTL.ZS",
-    "indicator": "Unemployment",
-    "value": 7.15
-  },
-  {
-    "country_code": "BRA",
-    "country": "Brazil",
-    "year": 2000,
-    "indicator_code": "FP.CPI.TOTL.ZG",
-    "indicator": "Inflation",
-    "value": 7.04414105947265
-  },
-  {
-    "country_code": "BRA",
-    "country": "Brazil",
-    "year": 2000,
-    "indicator_code": "NY.GDP.MKTP.KD.ZG",
-    "indicator": "GDP Growth",
-    "value": 4.38794944745618
-  },
-  {
-    "country_code": "BRA",
-    "country": "Brazil",
-    "year": 2000,
-    "indicator_code": "SL.UEM.TOTL.ZS",
-    "indicator": "Unemployment",
-    "value": 10.889
-  },
-  {
-    "country_code": "BRA",
-    "country": "Brazil",
-    "year": 2001,
-    "indicator_code": "FP.CPI.TOTL.ZG",
-    "indicator": "Inflation",
-    "value": 6.84035902487523
-  },
-  {
-    "country_code": "BRA",
-    "country": "Brazil",
-    "year": 2001,
-    "indicator_code": "NY.GDP.MKTP.KD.ZG",
-    "indicator": "GDP Growth",
-    "value": 1.38989640095637
-  },
-  {
-    "country_code": "BRA",
-    "country": "Brazil",
-    "year": 2001,
-    "indicator_code": "SL.UEM.TOTL.ZS",
-    "indicator": "Unemployment",
-    "value": 10.649
-  },
-  {
-    "country_code": "BRA",
-    "country": "Brazil",
-    "year": 2002,
-    "indicator_code": "FP.CPI.TOTL.ZG",
-    "indicator": "Inflation",
-    "value": 8.45016437708331
-  },
-  {
-    "country_code": "BRA",
-    "country": "Brazil",
-    "year": 2002,
-    "indicator_code": "NY.GDP.MKTP.KD.ZG",
-    "indicator": "GDP Growth",
-    "value": 3.05346185909312
-  },
-  {
-    "country_code": "BRA",
-    "country": "Brazil",
-    "year": 2002,
-    "indicator_code": "SL.UEM.TOTL.ZS",
-    "indicator": "Unemployment",
-    "value": 10.641
-  },
-  {
-    "country_code": "BRA",
-    "country": "Brazil",
-    "year": 2003,
-    "indicator_code": "FP.CPI.TOTL.ZG",
-    "indicator": "Inflation",
-    "value": 14.7149197228147
-  },
-  {
-    "country_code": "BRA",
-    "country": "Brazil",
-    "year": 2003,
-    "indicator_code": "NY.GDP.MKTP.KD.ZG",
-    "indicator": "GDP Growth",
-    "value": 1.14082899824888
-  },
-  {
-    "country_code": "BRA",
-    "country": "Brazil",
-    "year": 2003,
-    "indicator_code": "SL.UEM.TOTL.ZS",
-    "indicator": "Unemployment",
-    "value": 11.168
-  },
-  {
-    "country_code": "BRA",
-    "country": "Brazil",
-    "year": 2004,
-    "indicator_code": "FP.CPI.TOTL.ZG",
-    "indicator": "Inflation",
-    "value": 6.59718509985963
-  },
-  {
-    "country_code": "BRA",
-    "country": "Brazil",
-    "year": 2004,
-    "indicator_code": "NY.GDP.MKTP.KD.ZG",
-    "indicator": "GDP Growth",
-    "value": 5.75996463670954
-  },
-  {
-    "country_code": "BRA",
-    "country": "Brazil",
-    "year": 2004,
-    "indicator_code": "SL.UEM.TOTL.ZS",
-    "indicator": "Unemployment",
-    "value": 10.072
-  },
-  {
-    "country_code": "BRA",
-    "country": "Brazil",
-    "year": 2005,
-    "indicator_code": "FP.CPI.TOTL.ZG",
-    "indicator": "Inflation",
-    "value": 6.86953720898964
-  },
-  {
-    "country_code": "BRA",
-    "country": "Brazil",
-    "year": 2005,
-    "indicator_code": "NY.GDP.MKTP.KD.ZG",
-    "indicator": "GDP Growth",
-    "value": 3.20213206130431
-  },
-  {
-    "country_code": "BRA",
-    "country": "Brazil",
-    "year": 2005,
-    "indicator_code": "SL.UEM.TOTL.ZS",
-    "indicator": "Unemployment",
-    "value": 10.551
-  },
-  {
-    "country_code": "BRA",
-    "country": "Brazil",
-    "year": 2006,
-    "indicator_code": "FP.CPI.TOTL.ZG",
-    "indicator": "Inflation",
-    "value": 4.18356812896909
-  },
-  {
-    "country_code": "BRA",
-    "country": "Brazil",
-    "year": 2006,
-    "indicator_code": "NY.GDP.MKTP.KD.ZG",
-    "indicator": "GDP Growth",
-    "value": 3.96198871122617
-  },
-  {
-    "country_code": "BRA",
-    "country": "Brazil",
-    "year": 2006,
-    "indicator_code": "SL.UEM.TOTL.ZS",
-    "indicator": "Unemployment",
-    "value": 9.692
-  },
-  {
-    "country_code": "BRA",
-    "country": "Brazil",
-    "year": 2007,
-    "indicator_code": "FP.CPI.TOTL.ZG",
-    "indicator": "Inflation",
-    "value": 3.64127299102652
-  },
-  {
-    "country_code": "BRA",
-    "country": "Brazil",
-    "year": 2007,
-    "indicator_code": "NY.GDP.MKTP.KD.ZG",
-    "indicator": "GDP Growth",
-    "value": 6.06987060678338
-  },
-  {
-    "country_code": "BRA",
-    "country": "Brazil",
-    "year": 2007,
-    "indicator_code": "SL.UEM.TOTL.ZS",
-    "indicator": "Unemployment",
-    "value": 9.28
-  },
-  {
-    "country_code": "BRA",
-    "country": "Brazil",
-    "year": 2008,
-    "indicator_code": "FP.CPI.TOTL.ZG",
-    "indicator": "Inflation",
-    "value": 5.67859390284168
-  },
-  {
-    "country_code": "BRA",
-    "country": "Brazil",
-    "year": 2008,
-    "indicator_code": "NY.GDP.MKTP.KD.ZG",
-    "indicator": "GDP Growth",
-    "value": 5.09419544658736
-  },
-  {
-    "country_code": "BRA",
-    "country": "Brazil",
-    "year": 2008,
-    "indicator_code": "SL.UEM.TOTL.ZS",
-    "indicator": "Unemployment",
-    "value": 8.268
-  },
-  {
-    "country_code": "BRA",
-    "country": "Brazil",
-    "year": 2009,
-    "indicator_code": "FP.CPI.TOTL.ZG",
-    "indicator": "Inflation",
-    "value": 4.88803479876798
-  },
-  {
-    "country_code": "BRA",
-    "country": "Brazil",
-    "year": 2009,
-    "indicator_code": "NY.GDP.MKTP.KD.ZG",
-    "indicator": "GDP Growth",
-    "value": -0.125812002161169
-  },
-  {
-    "country_code": "BRA",
-    "country": "Brazil",
-    "year": 2009,
-    "indicator_code": "SL.UEM.TOTL.ZS",
-    "indicator": "Unemployment",
-    "value": 9.419
-  },
-  {
-    "country_code": "BRA",
-    "country": "Brazil",
-    "year": 2010,
-    "indicator_code": "FP.CPI.TOTL.ZG",
-    "indicator": "Inflation",
-    "value": 5.03872690108074
-  },
-  {
-    "country_code": "BRA",
-    "country": "Brazil",
-    "year": 2010,
-    "indicator_code": "NY.GDP.MKTP.KD.ZG",
-    "indicator": "GDP Growth",
-    "value": 7.52822581815364
-  },
-  {
-    "country_code": "BRA",
-    "country": "Brazil",
-    "year": 2010,
-    "indicator_code": "SL.UEM.TOTL.ZS",
-    "indicator": "Unemployment",
-    "value": 8.42
-  },
-  {
-    "country_code": "BRA",
-    "country": "Brazil",
-    "year": 2011,
-    "indicator_code": "FP.CPI.TOTL.ZG",
-    "indicator": "Inflation",
-    "value": 6.6364496221309
-  },
-  {
-    "country_code": "BRA",
-    "country": "Brazil",
-    "year": 2011,
-    "indicator_code": "NY.GDP.MKTP.KD.ZG",
-    "indicator": "GDP Growth",
-    "value": 3.97442307944702
-  },
-  {
-    "country_code": "BRA",
-    "country": "Brazil",
-    "year": 2011,
-    "indicator_code": "SL.UEM.TOTL.ZS",
-    "indicator": "Unemployment",
-    "value": 7.578
-  },
-  {
-    "country_code": "BRA",
-    "country": "Brazil",
-    "year": 2012,
-    "indicator_code": "FP.CPI.TOTL.ZG",
-    "indicator": "Inflation",
-    "value": 5.40349914036997
-  },
-  {
-    "country_code": "BRA",
-    "country": "Brazil",
-    "year": 2012,
-    "indicator_code": "NY.GDP.MKTP.KD.ZG",
-    "indicator": "GDP Growth",
-    "value": 1.92117598576537
-  },
-  {
-    "country_code": "BRA",
-    "country": "Brazil",
-    "year": 2012,
-    "indicator_code": "SL.UEM.TOTL.ZS",
-    "indicator": "Unemployment",
-    "value": 7.251
-  },
-  {
-    "country_code": "BRA",
-    "country": "Brazil",
-    "year": 2013,
-    "indicator_code": "FP.CPI.TOTL.ZG",
-    "indicator": "Inflation",
-    "value": 6.204310666401
-  },
-  {
-    "country_code": "BRA",
-    "country": "Brazil",
-    "year": 2013,
-    "indicator_code": "NY.GDP.MKTP.KD.ZG",
-    "indicator": "GDP Growth",
-    "value": 3.00482266944432
-  },
-  {
-    "country_code": "BRA",
-    "country": "Brazil",
-    "year": 2013,
-    "indicator_code": "SL.UEM.TOTL.ZS",
-    "indicator": "Unemployment",
-    "value": 7.071
-  },
-  {
-    "country_code": "BRA",
-    "country": "Brazil",
-    "year": 2014,
-    "indicator_code": "FP.CPI.TOTL.ZG",
-    "indicator": "Inflation",
-    "value": 6.32904015516138
-  },
-  {
-    "country_code": "BRA",
-    "country": "Brazil",
-    "year": 2014,
-    "indicator_code": "NY.GDP.MKTP.KD.ZG",
-    "indicator": "GDP Growth",
-    "value": 0.503955740242247
-  },
-  {
-    "country_code": "BRA",
-    "country": "Brazil",
-    "year": 2014,
-    "indicator_code": "SL.UEM.TOTL.ZS",
-    "indicator": "Unemployment",
-    "value": 6.755
-  },
-  {
-    "country_code": "BRA",
-    "country": "Brazil",
-    "year": 2015,
-    "indicator_code": "FP.CPI.TOTL.ZG",
-    "indicator": "Inflation",
-    "value": 9.02990102416136
-  },
-  {
-    "country_code": "BRA",
-    "country": "Brazil",
-    "year": 2015,
-    "indicator_code": "NY.GDP.MKTP.KD.ZG",
-    "indicator": "GDP Growth",
-    "value": -3.54576339269425
-  },
-  {
-    "country_code": "BRA",
-    "country": "Brazil",
-    "year": 2015,
-    "indicator_code": "SL.UEM.TOTL.ZS",
-    "indicator": "Unemployment",
-    "value": 8.538
-  },
-  {
-    "country_code": "BRA",
-    "country": "Brazil",
-    "year": 2016,
-    "indicator_code": "FP.CPI.TOTL.ZG",
-    "indicator": "Inflation",
-    "value": 8.73914352329393
-  },
-  {
-    "country_code": "BRA",
-    "country": "Brazil",
-    "year": 2016,
-    "indicator_code": "NY.GDP.MKTP.KD.ZG",
-    "indicator": "GDP Growth",
-    "value": -3.27591690782192
-  },
-  {
-    "country_code": "BRA",
-    "country": "Brazil",
-    "year": 2016,
-    "indicator_code": "SL.UEM.TOTL.ZS",
-    "indicator": "Unemployment",
-    "value": 11.58
-  },
-  {
-    "country_code": "BRA",
-    "country": "Brazil",
-    "year": 2017,
-    "indicator_code": "FP.CPI.TOTL.ZG",
-    "indicator": "Inflation",
-    "value": 3.44637335032669
-  },
-  {
-    "country_code": "BRA",
-    "country": "Brazil",
-    "year": 2017,
-    "indicator_code": "NY.GDP.MKTP.KD.ZG",
-    "indicator": "GDP Growth",
-    "value": 1.32286905404399
-  },
-  {
-    "country_code": "BRA",
-    "country": "Brazil",
-    "year": 2017,
-    "indicator_code": "SL.UEM.TOTL.ZS",
-    "indicator": "Unemployment",
-    "value": 12.792
-  },
-  {
-    "country_code": "BRA",
-    "country": "Brazil",
-    "year": 2018,
-    "indicator_code": "FP.CPI.TOTL.ZG",
-    "indicator": "Inflation",
-    "value": 3.66485028376728
-  },
-  {
-    "country_code": "BRA",
-    "country": "Brazil",
-    "year": 2018,
-    "indicator_code": "NY.GDP.MKTP.KD.ZG",
-    "indicator": "GDP Growth",
-    "value": 1.783666761634
-  },
-  {
-    "country_code": "BRA",
-    "country": "Brazil",
-    "year": 2018,
-    "indicator_code": "SL.UEM.TOTL.ZS",
-    "indicator": "Unemployment",
-    "value": 12.329
-  },
-  {
-    "country_code": "BRA",
-    "country": "Brazil",
-    "year": 2019,
-    "indicator_code": "FP.CPI.TOTL.ZG",
-    "indicator": "Inflation",
-    "value": 3.73297621216893
-  },
-  {
-    "country_code": "BRA",
-    "country": "Brazil",
-    "year": 2019,
-    "indicator_code": "NY.GDP.MKTP.KD.ZG",
-    "indicator": "GDP Growth",
-    "value": 1.22077782360842
-  },
-  {
-    "country_code": "BRA",
-    "country": "Brazil",
-    "year": 2019,
-    "indicator_code": "SL.UEM.TOTL.ZS",
-    "indicator": "Unemployment",
-    "value": 11.936
-  },
-  {
-    "country_code": "BRA",
-    "country": "Brazil",
-    "year": 2020,
-    "indicator_code": "FP.CPI.TOTL.ZG",
-    "indicator": "Inflation",
-    "value": 3.21176803803376
-  },
-  {
-    "country_code": "BRA",
-    "country": "Brazil",
-    "year": 2020,
-    "indicator_code": "NY.GDP.MKTP.KD.ZG",
-    "indicator": "GDP Growth",
-    "value": -3.2767587964736
-  },
-  {
-    "country_code": "BRA",
-    "country": "Brazil",
-    "year": 2020,
-    "indicator_code": "SL.UEM.TOTL.ZS",
-    "indicator": "Unemployment",
-    "value": 13.697
-  },
-  {
-    "country_code": "BRA",
-    "country": "Brazil",
-    "year": 2021,
-    "indicator_code": "FP.CPI.TOTL.ZG",
-    "indicator": "Inflation",
-    "value": 8.30165975585673
-  },
-  {
-    "country_code": "BRA",
-    "country": "Brazil",
-    "year": 2021,
-    "indicator_code": "NY.GDP.MKTP.KD.ZG",
-    "indicator": "GDP Growth",
-    "value": 4.76260437908608
-  },
-  {
-    "country_code": "BRA",
-    "country": "Brazil",
-    "year": 2021,
-    "indicator_code": "SL.UEM.TOTL.ZS",
-    "indicator": "Unemployment",
-    "value": 13.158
-  },
-  {
-    "country_code": "BRA",
-    "country": "Brazil",
-    "year": 2022,
-    "indicator_code": "FP.CPI.TOTL.ZG",
-    "indicator": "Inflation",
-    "value": 9.28010608956872
-  },
-  {
-    "country_code": "BRA",
-    "country": "Brazil",
-    "year": 2022,
-    "indicator_code": "NY.GDP.MKTP.KD.ZG",
-    "indicator": "GDP Growth",
-    "value": 3.01669435393015
-  },
-  {
-    "country_code": "BRA",
-    "country": "Brazil",
-    "year": 2022,
-    "indicator_code": "SL.UEM.TOTL.ZS",
-    "indicator": "Unemployment",
-    "value": 9.231
-  },
-  {
-    "country_code": "BRA",
-    "country": "Brazil",
-    "year": 2023,
-    "indicator_code": "FP.CPI.TOTL.ZG",
-    "indicator": "Inflation",
-    "value": 4.59356282283203
-  },
-  {
-    "country_code": "BRA",
-    "country": "Brazil",
-    "year": 2023,
-    "indicator_code": "NY.GDP.MKTP.KD.ZG",
-    "indicator": "GDP Growth",
-    "value": 3.24165532906981
-  },
-  {
-    "country_code": "BRA",
-    "country": "Brazil",
-    "year": 2023,
-    "indicator_code": "SL.UEM.TOTL.ZS",
-    "indicator": "Unemployment",
-    "value": 7.947
-  },
-  {
-    "country_code": "BRA",
-    "country": "Brazil",
-    "year": 2024,
-    "indicator_code": "FP.CPI.TOTL.ZG",
-    "indicator": "Inflation",
-    "value": 4.36746407652336
-  },
-  {
-    "country_code": "BRA",
-    "country": "Brazil",
-    "year": 2024,
-    "indicator_code": "NY.GDP.MKTP.KD.ZG",
-    "indicator": "GDP Growth",
-    "value": 3.41931516501906
-  },
-  {
-    "country_code": "BRA",
-    "country": "Brazil",
-    "year": 2024,
-    "indicator_code": "SL.UEM.TOTL.ZS",
-    "indicator": "Unemployment",
-    "value": 6.801
-  },
-  {
-    "country_code": "COL",
-    "country": "Colombia",
-    "year": 2000,
-    "indicator_code": "FP.CPI.TOTL.ZG",
-    "indicator": "Inflation",
-    "value": 9.22534818585365
-  },
-  {
-    "country_code": "COL",
-    "country": "Colombia",
-    "year": 2000,
-    "indicator_code": "NY.GDP.MKTP.KD.ZG",
-    "indicator": "GDP Growth",
-    "value": 2.92486148176778
-  },
-  {
-    "country_code": "COL",
-    "country": "Colombia",
-    "year": 2000,
-    "indicator_code": "SL.UEM.TOTL.ZS",
-    "indicator": "Unemployment",
-    "value": 20.52
-  },
-  {
-    "country_code": "COL",
-    "country": "Colombia",
-    "year": 2001,
-    "indicator_code": "FP.CPI.TOTL.ZG",
-    "indicator": "Inflation",
-    "value": 7.96556090304834
-  },
-  {
-    "country_code": "COL",
-    "country": "Colombia",
-    "year": 2001,
-    "indicator_code": "NY.GDP.MKTP.KD.ZG",
-    "indicator": "GDP Growth",
-    "value": 1.67789830787579
-  },
-  {
-    "country_code": "COL",
-    "country": "Colombia",
-    "year": 2001,
-    "indicator_code": "SL.UEM.TOTL.ZS",
-    "indicator": "Unemployment",
-    "value": 15.04
-  },
-  {
-    "country_code": "COL",
-    "country": "Colombia",
-    "year": 2002,
-    "indicator_code": "FP.CPI.TOTL.ZG",
-    "indicator": "Inflation",
-    "value": 6.35150728778872
-  },
-  {
-    "country_code": "COL",
-    "country": "Colombia",
-    "year": 2002,
-    "indicator_code": "NY.GDP.MKTP.KD.ZG",
-    "indicator": "GDP Growth",
-    "value": 2.50398046659659
-  },
-  {
-    "country_code": "COL",
-    "country": "Colombia",
-    "year": 2002,
-    "indicator_code": "SL.UEM.TOTL.ZS",
-    "indicator": "Unemployment",
-    "value": 14.481
-  },
-  {
-    "country_code": "COL",
-    "country": "Colombia",
-    "year": 2003,
-    "indicator_code": "FP.CPI.TOTL.ZG",
-    "indicator": "Inflation",
-    "value": 7.1297886294186
-  },
-  {
-    "country_code": "COL",
-    "country": "Colombia",
-    "year": 2003,
-    "indicator_code": "NY.GDP.MKTP.KD.ZG",
-    "indicator": "GDP Growth",
-    "value": 3.91827190322513
-  },
-  {
-    "country_code": "COL",
-    "country": "Colombia",
-    "year": 2003,
-    "indicator_code": "SL.UEM.TOTL.ZS",
-    "indicator": "Unemployment",
-    "value": 13.221
-  },
-  {
-    "country_code": "COL",
-    "country": "Colombia",
-    "year": 2004,
-    "indicator_code": "FP.CPI.TOTL.ZG",
-    "indicator": "Inflation",
-    "value": 5.90402005546502
-  },
-  {
-    "country_code": "COL",
-    "country": "Colombia",
-    "year": 2004,
-    "indicator_code": "NY.GDP.MKTP.KD.ZG",
-    "indicator": "GDP Growth",
-    "value": 5.33302206759905
-  },
-  {
-    "country_code": "COL",
-    "country": "Colombia",
-    "year": 2004,
-    "indicator_code": "SL.UEM.TOTL.ZS",
-    "indicator": "Unemployment",
-    "value": 13.717
-  },
-  {
-    "country_code": "COL",
-    "country": "Colombia",
-    "year": 2005,
-    "indicator_code": "FP.CPI.TOTL.ZG",
-    "indicator": "Inflation",
-    "value": 5.05101962689695
-  },
-  {
-    "country_code": "COL",
-    "country": "Colombia",
-    "year": 2005,
-    "indicator_code": "NY.GDP.MKTP.KD.ZG",
-    "indicator": "GDP Growth",
-    "value": 4.82876110773741
-  },
-  {
-    "country_code": "COL",
-    "country": "Colombia",
-    "year": 2005,
-    "indicator_code": "SL.UEM.TOTL.ZS",
-    "indicator": "Unemployment",
-    "value": 11.062
-  },
-  {
-    "country_code": "COL",
-    "country": "Colombia",
-    "year": 2006,
-    "indicator_code": "FP.CPI.TOTL.ZG",
-    "indicator": "Inflation",
-    "value": 4.29342363628926
-  },
-  {
-    "country_code": "COL",
-    "country": "Colombia",
-    "year": 2006,
-    "indicator_code": "NY.GDP.MKTP.KD.ZG",
-    "indicator": "GDP Growth",
-    "value": 6.71686869844402
-  },
-  {
-    "country_code": "COL",
-    "country": "Colombia",
-    "year": 2006,
-    "indicator_code": "SL.UEM.TOTL.ZS",
-    "indicator": "Unemployment",
-    "value": 11.088
-  },
-  {
-    "country_code": "COL",
-    "country": "Colombia",
-    "year": 2007,
-    "indicator_code": "FP.CPI.TOTL.ZG",
-    "indicator": "Inflation",
-    "value": 5.54438485815155
-  },
-  {
-    "country_code": "COL",
-    "country": "Colombia",
-    "year": 2007,
-    "indicator_code": "NY.GDP.MKTP.KD.ZG",
-    "indicator": "GDP Growth",
-    "value": 6.73819469090975
-  },
-  {
-    "country_code": "COL",
-    "country": "Colombia",
-    "year": 2007,
-    "indicator_code": "SL.UEM.TOTL.ZS",
-    "indicator": "Unemployment",
-    "value": 11.204
-  },
-  {
-    "country_code": "COL",
-    "country": "Colombia",
-    "year": 2008,
-    "indicator_code": "FP.CPI.TOTL.ZG",
-    "indicator": "Inflation",
-    "value": 6.9968849555451
-  },
-  {
-    "country_code": "COL",
-    "country": "Colombia",
-    "year": 2008,
-    "indicator_code": "NY.GDP.MKTP.KD.ZG",
-    "indicator": "GDP Growth",
-    "value": 3.28344618616541
-  },
-  {
-    "country_code": "COL",
-    "country": "Colombia",
-    "year": 2008,
-    "indicator_code": "SL.UEM.TOTL.ZS",
-    "indicator": "Unemployment",
-    "value": 11.273
-  },
-  {
-    "country_code": "COL",
-    "country": "Colombia",
-    "year": 2009,
-    "indicator_code": "FP.CPI.TOTL.ZG",
-    "indicator": "Inflation",
-    "value": 4.20251661216481
-  },
-  {
-    "country_code": "COL",
-    "country": "Colombia",
-    "year": 2009,
-    "indicator_code": "NY.GDP.MKTP.KD.ZG",
-    "indicator": "GDP Growth",
-    "value": 1.13964864548062
-  },
-  {
-    "country_code": "COL",
-    "country": "Colombia",
-    "year": 2009,
-    "indicator_code": "SL.UEM.TOTL.ZS",
-    "indicator": "Unemployment",
-    "value": 12.066
-  },
-  {
-    "country_code": "COL",
-    "country": "Colombia",
-    "year": 2010,
-    "indicator_code": "FP.CPI.TOTL.ZG",
-    "indicator": "Inflation",
-    "value": 2.27200227892008
-  },
-  {
-    "country_code": "COL",
-    "country": "Colombia",
-    "year": 2010,
-    "indicator_code": "NY.GDP.MKTP.KD.ZG",
-    "indicator": "GDP Growth",
-    "value": 4.49465897070922
-  },
-  {
-    "country_code": "COL",
-    "country": "Colombia",
-    "year": 2010,
-    "indicator_code": "SL.UEM.TOTL.ZS",
-    "indicator": "Unemployment",
-    "value": 11.153
-  },
-  {
-    "country_code": "COL",
-    "country": "Colombia",
-    "year": 2011,
-    "indicator_code": "FP.CPI.TOTL.ZG",
-    "indicator": "Inflation",
-    "value": 3.4150334477625
-  },
-  {
-    "country_code": "COL",
-    "country": "Colombia",
-    "year": 2011,
-    "indicator_code": "NY.GDP.MKTP.KD.ZG",
-    "indicator": "GDP Growth",
-    "value": 6.94789198173555
-  },
-  {
-    "country_code": "COL",
-    "country": "Colombia",
-    "year": 2011,
-    "indicator_code": "SL.UEM.TOTL.ZS",
-    "indicator": "Unemployment",
-    "value": 10.288
-  },
-  {
-    "country_code": "COL",
-    "country": "Colombia",
-    "year": 2012,
-    "indicator_code": "FP.CPI.TOTL.ZG",
-    "indicator": "Inflation",
-    "value": 3.16930188840055
-  },
-  {
-    "country_code": "COL",
-    "country": "Colombia",
-    "year": 2012,
-    "indicator_code": "NY.GDP.MKTP.KD.ZG",
-    "indicator": "GDP Growth",
-    "value": 3.91263576716115
-  },
-  {
-    "country_code": "COL",
-    "country": "Colombia",
-    "year": 2012,
-    "indicator_code": "SL.UEM.TOTL.ZS",
-    "indicator": "Unemployment",
-    "value": 9.959
-  },
-  {
-    "country_code": "COL",
-    "country": "Colombia",
-    "year": 2013,
-    "indicator_code": "FP.CPI.TOTL.ZG",
-    "indicator": "Inflation",
-    "value": 2.01699224310383
-  },
-  {
-    "country_code": "COL",
-    "country": "Colombia",
-    "year": 2013,
-    "indicator_code": "NY.GDP.MKTP.KD.ZG",
-    "indicator": "GDP Growth",
-    "value": 5.13399351995672
-  },
-  {
-    "country_code": "COL",
-    "country": "Colombia",
-    "year": 2013,
-    "indicator_code": "SL.UEM.TOTL.ZS",
-    "indicator": "Unemployment",
-    "value": 9.246
-  },
-  {
-    "country_code": "COL",
-    "country": "Colombia",
-    "year": 2014,
-    "indicator_code": "FP.CPI.TOTL.ZG",
-    "indicator": "Inflation",
-    "value": 2.89883787761737
-  },
-  {
-    "country_code": "COL",
-    "country": "Colombia",
-    "year": 2014,
-    "indicator_code": "NY.GDP.MKTP.KD.ZG",
-    "indicator": "GDP Growth",
-    "value": 4.49903000110972
-  },
-  {
-    "country_code": "COL",
-    "country": "Colombia",
-    "year": 2014,
-    "indicator_code": "SL.UEM.TOTL.ZS",
-    "indicator": "Unemployment",
-    "value": 8.799
-  },
-  {
-    "country_code": "COL",
-    "country": "Colombia",
-    "year": 2015,
-    "indicator_code": "FP.CPI.TOTL.ZG",
-    "indicator": "Inflation",
-    "value": 4.98983115849529
-  },
-  {
-    "country_code": "COL",
-    "country": "Colombia",
-    "year": 2015,
-    "indicator_code": "NY.GDP.MKTP.KD.ZG",
-    "indicator": "GDP Growth",
-    "value": 2.95590137527523
-  },
-  {
-    "country_code": "COL",
-    "country": "Colombia",
-    "year": 2015,
-    "indicator_code": "SL.UEM.TOTL.ZS",
-    "indicator": "Unemployment",
-    "value": 8.572
-  },
-  {
-    "country_code": "COL",
-    "country": "Colombia",
-    "year": 2016,
-    "indicator_code": "FP.CPI.TOTL.ZG",
-    "indicator": "Inflation",
-    "value": 7.51346024627674
-  },
-  {
-    "country_code": "COL",
-    "country": "Colombia",
-    "year": 2016,
-    "indicator_code": "NY.GDP.MKTP.KD.ZG",
-    "indicator": "GDP Growth",
-    "value": 2.08738250162794
-  },
-  {
-    "country_code": "COL",
-    "country": "Colombia",
-    "year": 2016,
-    "indicator_code": "SL.UEM.TOTL.ZS",
-    "indicator": "Unemployment",
-    "value": 8.922
-  },
-  {
-    "country_code": "COL",
-    "country": "Colombia",
-    "year": 2017,
-    "indicator_code": "FP.CPI.TOTL.ZG",
-    "indicator": "Inflation",
-    "value": 4.3143132569501
-  },
-  {
-    "country_code": "COL",
-    "country": "Colombia",
-    "year": 2017,
-    "indicator_code": "NY.GDP.MKTP.KD.ZG",
-    "indicator": "GDP Growth",
-    "value": 1.35936086788746
-  },
-  {
-    "country_code": "COL",
-    "country": "Colombia",
-    "year": 2017,
-    "indicator_code": "SL.UEM.TOTL.ZS",
-    "indicator": "Unemployment",
-    "value": 9.086
-  },
-  {
-    "country_code": "COL",
-    "country": "Colombia",
-    "year": 2018,
-    "indicator_code": "FP.CPI.TOTL.ZG",
-    "indicator": "Inflation",
-    "value": 3.24056932930569
-  },
-  {
-    "country_code": "COL",
-    "country": "Colombia",
-    "year": 2018,
-    "indicator_code": "NY.GDP.MKTP.KD.ZG",
-    "indicator": "GDP Growth",
-    "value": 2.56432428277704
-  },
-  {
-    "country_code": "COL",
-    "country": "Colombia",
-    "year": 2018,
-    "indicator_code": "SL.UEM.TOTL.ZS",
-    "indicator": "Unemployment",
-    "value": 9.36
-  },
-  {
-    "country_code": "COL",
-    "country": "Colombia",
-    "year": 2019,
-    "indicator_code": "FP.CPI.TOTL.ZG",
-    "indicator": "Inflation",
-    "value": 3.52301932741446
-  },
-  {
-    "country_code": "COL",
-    "country": "Colombia",
-    "year": 2019,
-    "indicator_code": "NY.GDP.MKTP.KD.ZG",
-    "indicator": "GDP Growth",
-    "value": 3.18685539245533
-  },
-  {
-    "country_code": "COL",
-    "country": "Colombia",
-    "year": 2019,
-    "indicator_code": "SL.UEM.TOTL.ZS",
-    "indicator": "Unemployment",
-    "value": 10.28
-  },
-  {
-    "country_code": "COL",
-    "country": "Colombia",
-    "year": 2020,
-    "indicator_code": "FP.CPI.TOTL.ZG",
-    "indicator": "Inflation",
-    "value": 2.52663500084706
-  },
-  {
-    "country_code": "COL",
-    "country": "Colombia",
-    "year": 2020,
-    "indicator_code": "NY.GDP.MKTP.KD.ZG",
-    "indicator": "GDP Growth",
-    "value": -7.18591413760859
-  },
-  {
-    "country_code": "COL",
-    "country": "Colombia",
-    "year": 2020,
-    "indicator_code": "SL.UEM.TOTL.ZS",
-    "indicator": "Unemployment",
-    "value": 15.983
-  },
-  {
-    "country_code": "COL",
-    "country": "Colombia",
-    "year": 2021,
-    "indicator_code": "FP.CPI.TOTL.ZG",
-    "indicator": "Inflation",
-    "value": 3.49505757399448
-  },
-  {
-    "country_code": "COL",
-    "country": "Colombia",
-    "year": 2021,
-    "indicator_code": "NY.GDP.MKTP.KD.ZG",
-    "indicator": "GDP Growth",
-    "value": 10.8011981904878
-  },
-  {
-    "country_code": "COL",
-    "country": "Colombia",
-    "year": 2021,
-    "indicator_code": "SL.UEM.TOTL.ZS",
-    "indicator": "Unemployment",
-    "value": 13.898
-  },
-  {
-    "country_code": "COL",
-    "country": "Colombia",
-    "year": 2022,
-    "indicator_code": "FP.CPI.TOTL.ZG",
-    "indicator": "Inflation",
-    "value": 10.1772313546166
-  },
-  {
-    "country_code": "COL",
-    "country": "Colombia",
-    "year": 2022,
-    "indicator_code": "NY.GDP.MKTP.KD.ZG",
-    "indicator": "GDP Growth",
-    "value": 7.32827729427979
-  },
-  {
-    "country_code": "COL",
-    "country": "Colombia",
-    "year": 2022,
-    "indicator_code": "SL.UEM.TOTL.ZS",
-    "indicator": "Unemployment",
-    "value": 10.541
-  },
-  {
-    "country_code": "COL",
-    "country": "Colombia",
-    "year": 2023,
-    "indicator_code": "FP.CPI.TOTL.ZG",
-    "indicator": "Inflation",
-    "value": 11.7359044948689
-  },
-  {
-    "country_code": "COL",
-    "country": "Colombia",
-    "year": 2023,
-    "indicator_code": "NY.GDP.MKTP.KD.ZG",
-    "indicator": "GDP Growth",
-    "value": 0.841819555752039
-  },
-  {
-    "country_code": "COL",
-    "country": "Colombia",
-    "year": 2023,
-    "indicator_code": "SL.UEM.TOTL.ZS",
-    "indicator": "Unemployment",
-    "value": 9.591
-  },
-  {
-    "country_code": "COL",
-    "country": "Colombia",
-    "year": 2024,
-    "indicator_code": "FP.CPI.TOTL.ZG",
-    "indicator": "Inflation",
-    "value": 6.60908593728228
-  },
-  {
-    "country_code": "COL",
-    "country": "Colombia",
-    "year": 2024,
-    "indicator_code": "NY.GDP.MKTP.KD.ZG",
-    "indicator": "GDP Growth",
-    "value": 1.49330728771066
-  },
-  {
-    "country_code": "COL",
-    "country": "Colombia",
-    "year": 2024,
-    "indicator_code": "SL.UEM.TOTL.ZS",
-    "indicator": "Unemployment",
-    "value": 9.619
-  },
-  {
-    "country_code": "MEX",
-    "country": "Mexico",
-    "year": 2000,
-    "indicator_code": "FP.CPI.TOTL.ZG",
-    "indicator": "Inflation",
-    "value": 9.49156149435402
-  },
-  {
-    "country_code": "MEX",
-    "country": "Mexico",
-    "year": 2000,
-    "indicator_code": "NY.GDP.MKTP.KD.ZG",
-    "indicator": "GDP Growth",
-    "value": 5.02928399378261
-  },
-  {
-    "country_code": "MEX",
-    "country": "Mexico",
-    "year": 2000,
-    "indicator_code": "SL.UEM.TOTL.ZS",
-    "indicator": "Unemployment",
-    "value": 2.646
-  },
-  {
-    "country_code": "MEX",
-    "country": "Mexico",
-    "year": 2001,
-    "indicator_code": "FP.CPI.TOTL.ZG",
-    "indicator": "Inflation",
-    "value": 6.36773806235037
-  },
-  {
-    "country_code": "MEX",
-    "country": "Mexico",
-    "year": 2001,
-    "indicator_code": "NY.GDP.MKTP.KD.ZG",
-    "indicator": "GDP Growth",
-    "value": -0.450845253215945
-  },
-  {
-    "country_code": "MEX",
-    "country": "Mexico",
-    "year": 2001,
-    "indicator_code": "SL.UEM.TOTL.ZS",
-    "indicator": "Unemployment",
-    "value": 2.627
-  },
-  {
-    "country_code": "MEX",
-    "country": "Mexico",
-    "year": 2002,
-    "indicator_code": "FP.CPI.TOTL.ZG",
-    "indicator": "Inflation",
-    "value": 5.03072733151295
-  },
-  {
-    "country_code": "MEX",
-    "country": "Mexico",
-    "year": 2002,
-    "indicator_code": "NY.GDP.MKTP.KD.ZG",
-    "indicator": "GDP Growth",
-    "value": -0.236588001922641
-  },
-  {
-    "country_code": "MEX",
-    "country": "Mexico",
-    "year": 2002,
-    "indicator_code": "SL.UEM.TOTL.ZS",
-    "indicator": "Unemployment",
-    "value": 3.003
-  },
-  {
-    "country_code": "MEX",
-    "country": "Mexico",
-    "year": 2003,
-    "indicator_code": "FP.CPI.TOTL.ZG",
-    "indicator": "Inflation",
-    "value": 4.54690012118718
-  },
-  {
-    "country_code": "MEX",
-    "country": "Mexico",
-    "year": 2003,
-    "indicator_code": "NY.GDP.MKTP.KD.ZG",
-    "indicator": "GDP Growth",
-    "value": 1.18554486709559
-  },
-  {
-    "country_code": "MEX",
-    "country": "Mexico",
-    "year": 2003,
-    "indicator_code": "SL.UEM.TOTL.ZS",
-    "indicator": "Unemployment",
-    "value": 3.455
-  },
-  {
-    "country_code": "MEX",
-    "country": "Mexico",
-    "year": 2004,
-    "indicator_code": "FP.CPI.TOTL.ZG",
-    "indicator": "Inflation",
-    "value": 4.68840884843142
-  },
-  {
-    "country_code": "MEX",
-    "country": "Mexico",
-    "year": 2004,
-    "indicator_code": "NY.GDP.MKTP.KD.ZG",
-    "indicator": "GDP Growth",
-    "value": 3.56544102622887
-  },
-  {
-    "country_code": "MEX",
-    "country": "Mexico",
-    "year": 2004,
-    "indicator_code": "SL.UEM.TOTL.ZS",
-    "indicator": "Unemployment",
-    "value": 3.937
-  },
-  {
-    "country_code": "MEX",
-    "country": "Mexico",
-    "year": 2005,
-    "indicator_code": "FP.CPI.TOTL.ZG",
-    "indicator": "Inflation",
-    "value": 3.98805714597437
-  },
-  {
-    "country_code": "MEX",
-    "country": "Mexico",
-    "year": 2005,
-    "indicator_code": "NY.GDP.MKTP.KD.ZG",
-    "indicator": "GDP Growth",
-    "value": 2.11324711473297
-  },
-  {
-    "country_code": "MEX",
-    "country": "Mexico",
-    "year": 2005,
-    "indicator_code": "SL.UEM.TOTL.ZS",
-    "indicator": "Unemployment",
-    "value": 3.558
-  },
-  {
-    "country_code": "MEX",
-    "country": "Mexico",
-    "year": 2006,
-    "indicator_code": "FP.CPI.TOTL.ZG",
-    "indicator": "Inflation",
-    "value": 3.62946762439132
-  },
-  {
-    "country_code": "MEX",
-    "country": "Mexico",
-    "year": 2006,
-    "indicator_code": "NY.GDP.MKTP.KD.ZG",
-    "indicator": "GDP Growth",
-    "value": 4.80501351664901
-  },
-  {
-    "country_code": "MEX",
-    "country": "Mexico",
-    "year": 2006,
-    "indicator_code": "SL.UEM.TOTL.ZS",
-    "indicator": "Unemployment",
-    "value": 3.566
-  },
-  {
-    "country_code": "MEX",
-    "country": "Mexico",
-    "year": 2007,
-    "indicator_code": "FP.CPI.TOTL.ZG",
-    "indicator": "Inflation",
-    "value": 3.96684905458235
-  },
-  {
-    "country_code": "MEX",
-    "country": "Mexico",
-    "year": 2007,
-    "indicator_code": "NY.GDP.MKTP.KD.ZG",
-    "indicator": "GDP Growth",
-    "value": 2.0778639395329
-  },
-  {
-    "country_code": "MEX",
-    "country": "Mexico",
-    "year": 2007,
-    "indicator_code": "SL.UEM.TOTL.ZS",
-    "indicator": "Unemployment",
-    "value": 3.628
-  },
-  {
-    "country_code": "MEX",
-    "country": "Mexico",
-    "year": 2008,
-    "indicator_code": "FP.CPI.TOTL.ZG",
-    "indicator": "Inflation",
-    "value": 5.12498274575896
-  },
-  {
-    "country_code": "MEX",
-    "country": "Mexico",
-    "year": 2008,
-    "indicator_code": "NY.GDP.MKTP.KD.ZG",
-    "indicator": "GDP Growth",
-    "value": 0.943331872912935
-  },
-  {
-    "country_code": "MEX",
-    "country": "Mexico",
-    "year": 2008,
-    "indicator_code": "SL.UEM.TOTL.ZS",
-    "indicator": "Unemployment",
-    "value": 3.874
-  },
-  {
-    "country_code": "MEX",
-    "country": "Mexico",
-    "year": 2009,
-    "indicator_code": "FP.CPI.TOTL.ZG",
-    "indicator": "Inflation",
-    "value": 5.29735584228855
-  },
-  {
-    "country_code": "MEX",
-    "country": "Mexico",
-    "year": 2009,
-    "indicator_code": "NY.GDP.MKTP.KD.ZG",
-    "indicator": "GDP Growth",
-    "value": -6.29525056697287
-  },
-  {
-    "country_code": "MEX",
-    "country": "Mexico",
-    "year": 2009,
-    "indicator_code": "SL.UEM.TOTL.ZS",
-    "indicator": "Unemployment",
-    "value": 5.356
-  },
-  {
-    "country_code": "MEX",
-    "country": "Mexico",
-    "year": 2010,
-    "indicator_code": "FP.CPI.TOTL.ZG",
-    "indicator": "Inflation",
-    "value": 4.15672722680173
-  },
-  {
-    "country_code": "MEX",
-    "country": "Mexico",
-    "year": 2010,
-    "indicator_code": "NY.GDP.MKTP.KD.ZG",
-    "indicator": "GDP Growth",
-    "value": 4.9713345832195
-  },
-  {
-    "country_code": "MEX",
-    "country": "Mexico",
-    "year": 2010,
-    "indicator_code": "SL.UEM.TOTL.ZS",
-    "indicator": "Unemployment",
-    "value": 5.303
-  },
-  {
-    "country_code": "MEX",
-    "country": "Mexico",
-    "year": 2011,
-    "indicator_code": "FP.CPI.TOTL.ZG",
-    "indicator": "Inflation",
-    "value": 3.40737824605742
-  },
-  {
-    "country_code": "MEX",
-    "country": "Mexico",
-    "year": 2011,
-    "indicator_code": "NY.GDP.MKTP.KD.ZG",
-    "indicator": "GDP Growth",
-    "value": 3.44404505297089
-  },
-  {
-    "country_code": "MEX",
-    "country": "Mexico",
-    "year": 2011,
-    "indicator_code": "SL.UEM.TOTL.ZS",
-    "indicator": "Unemployment",
-    "value": 5.175
-  },
-  {
-    "country_code": "MEX",
-    "country": "Mexico",
-    "year": 2012,
-    "indicator_code": "FP.CPI.TOTL.ZG",
-    "indicator": "Inflation",
-    "value": 4.11150981070289
-  },
-  {
-    "country_code": "MEX",
-    "country": "Mexico",
-    "year": 2012,
-    "indicator_code": "NY.GDP.MKTP.KD.ZG",
-    "indicator": "GDP Growth",
-    "value": 3.55321076010608
-  },
-  {
-    "country_code": "MEX",
-    "country": "Mexico",
-    "year": 2012,
-    "indicator_code": "SL.UEM.TOTL.ZS",
-    "indicator": "Unemployment",
-    "value": 4.892
-  },
-  {
-    "country_code": "MEX",
-    "country": "Mexico",
-    "year": 2013,
-    "indicator_code": "FP.CPI.TOTL.ZG",
-    "indicator": "Inflation",
-    "value": 3.80639069747204
-  },
-  {
-    "country_code": "MEX",
-    "country": "Mexico",
-    "year": 2013,
-    "indicator_code": "NY.GDP.MKTP.KD.ZG",
-    "indicator": "GDP Growth",
-    "value": 0.852101550164704
-  },
-  {
-    "country_code": "MEX",
-    "country": "Mexico",
-    "year": 2013,
-    "indicator_code": "SL.UEM.TOTL.ZS",
-    "indicator": "Unemployment",
-    "value": 4.921
-  },
-  {
-    "country_code": "MEX",
-    "country": "Mexico",
-    "year": 2014,
-    "indicator_code": "FP.CPI.TOTL.ZG",
-    "indicator": "Inflation",
-    "value": 4.01861608078678
-  },
-  {
-    "country_code": "MEX",
-    "country": "Mexico",
-    "year": 2014,
-    "indicator_code": "NY.GDP.MKTP.KD.ZG",
-    "indicator": "GDP Growth",
-    "value": 2.50376350783593
-  },
-  {
-    "country_code": "MEX",
-    "country": "Mexico",
-    "year": 2014,
-    "indicator_code": "SL.UEM.TOTL.ZS",
-    "indicator": "Unemployment",
-    "value": 4.819
-  },
-  {
-    "country_code": "MEX",
-    "country": "Mexico",
-    "year": 2015,
-    "indicator_code": "FP.CPI.TOTL.ZG",
-    "indicator": "Inflation",
-    "value": 2.72064064964022
-  },
-  {
-    "country_code": "MEX",
-    "country": "Mexico",
-    "year": 2015,
-    "indicator_code": "NY.GDP.MKTP.KD.ZG",
-    "indicator": "GDP Growth",
-    "value": 2.70232343024026
-  },
-  {
-    "country_code": "MEX",
-    "country": "Mexico",
-    "year": 2015,
-    "indicator_code": "SL.UEM.TOTL.ZS",
-    "indicator": "Unemployment",
-    "value": 4.311
-  },
-  {
-    "country_code": "MEX",
-    "country": "Mexico",
-    "year": 2016,
-    "indicator_code": "FP.CPI.TOTL.ZG",
-    "indicator": "Inflation",
-    "value": 2.8217078474766
-  },
-  {
-    "country_code": "MEX",
-    "country": "Mexico",
-    "year": 2016,
-    "indicator_code": "NY.GDP.MKTP.KD.ZG",
-    "indicator": "GDP Growth",
-    "value": 1.7724932254128
-  },
-  {
-    "country_code": "MEX",
-    "country": "Mexico",
-    "year": 2016,
-    "indicator_code": "SL.UEM.TOTL.ZS",
-    "indicator": "Unemployment",
-    "value": 3.853
-  },
-  {
-    "country_code": "MEX",
-    "country": "Mexico",
-    "year": 2017,
-    "indicator_code": "FP.CPI.TOTL.ZG",
-    "indicator": "Inflation",
-    "value": 6.04145724018985
-  },
-  {
-    "country_code": "MEX",
-    "country": "Mexico",
-    "year": 2017,
-    "indicator_code": "NY.GDP.MKTP.KD.ZG",
-    "indicator": "GDP Growth",
-    "value": 1.87172854648381
-  },
-  {
-    "country_code": "MEX",
-    "country": "Mexico",
-    "year": 2017,
-    "indicator_code": "SL.UEM.TOTL.ZS",
-    "indicator": "Unemployment",
-    "value": 3.419
-  },
-  {
-    "country_code": "MEX",
-    "country": "Mexico",
-    "year": 2018,
-    "indicator_code": "FP.CPI.TOTL.ZG",
-    "indicator": "Inflation",
-    "value": 4.8993501535655
-  },
-  {
-    "country_code": "MEX",
-    "country": "Mexico",
-    "year": 2018,
-    "indicator_code": "NY.GDP.MKTP.KD.ZG",
-    "indicator": "GDP Growth",
-    "value": 1.97208211101069
-  },
-  {
-    "country_code": "MEX",
-    "country": "Mexico",
-    "year": 2018,
-    "indicator_code": "SL.UEM.TOTL.ZS",
-    "indicator": "Unemployment",
-    "value": 3.275
-  },
-  {
-    "country_code": "MEX",
-    "country": "Mexico",
-    "year": 2019,
-    "indicator_code": "FP.CPI.TOTL.ZG",
-    "indicator": "Inflation",
-    "value": 3.63596142127046
-  },
-  {
-    "country_code": "MEX",
-    "country": "Mexico",
-    "year": 2019,
-    "indicator_code": "NY.GDP.MKTP.KD.ZG",
-    "indicator": "GDP Growth",
-    "value": -0.392690513290532
-  },
-  {
-    "country_code": "MEX",
-    "country": "Mexico",
-    "year": 2019,
-    "indicator_code": "SL.UEM.TOTL.ZS",
-    "indicator": "Unemployment",
-    "value": 3.477
-  },
-  {
-    "country_code": "MEX",
-    "country": "Mexico",
-    "year": 2020,
-    "indicator_code": "FP.CPI.TOTL.ZG",
-    "indicator": "Inflation",
-    "value": 3.39683415570006
-  },
-  {
-    "country_code": "MEX",
-    "country": "Mexico",
-    "year": 2020,
-    "indicator_code": "NY.GDP.MKTP.KD.ZG",
-    "indicator": "GDP Growth",
-    "value": -8.35403459379062
-  },
-  {
-    "country_code": "MEX",
-    "country": "Mexico",
-    "year": 2020,
-    "indicator_code": "SL.UEM.TOTL.ZS",
-    "indicator": "Unemployment",
-    "value": 4.44
-  },
-  {
-    "country_code": "MEX",
-    "country": "Mexico",
-    "year": 2021,
-    "indicator_code": "FP.CPI.TOTL.ZG",
-    "indicator": "Inflation",
-    "value": 5.68920847683753
-  },
-  {
-    "country_code": "MEX",
-    "country": "Mexico",
-    "year": 2021,
-    "indicator_code": "NY.GDP.MKTP.KD.ZG",
-    "indicator": "GDP Growth",
-    "value": 6.04848347173572
-  },
-  {
-    "country_code": "MEX",
-    "country": "Mexico",
-    "year": 2021,
-    "indicator_code": "SL.UEM.TOTL.ZS",
-    "indicator": "Unemployment",
-    "value": 4.019
-  },
-  {
-    "country_code": "MEX",
-    "country": "Mexico",
-    "year": 2022,
-    "indicator_code": "FP.CPI.TOTL.ZG",
-    "indicator": "Inflation",
-    "value": 7.89627619168549
-  },
-  {
-    "country_code": "MEX",
-    "country": "Mexico",
-    "year": 2022,
-    "indicator_code": "NY.GDP.MKTP.KD.ZG",
-    "indicator": "GDP Growth",
-    "value": 3.70975708309098
-  },
-  {
-    "country_code": "MEX",
-    "country": "Mexico",
-    "year": 2022,
-    "indicator_code": "SL.UEM.TOTL.ZS",
-    "indicator": "Unemployment",
-    "value": 3.256
-  },
-  {
-    "country_code": "MEX",
-    "country": "Mexico",
-    "year": 2023,
-    "indicator_code": "FP.CPI.TOTL.ZG",
-    "indicator": "Inflation",
-    "value": 5.52796087314388
-  },
-  {
-    "country_code": "MEX",
-    "country": "Mexico",
-    "year": 2023,
-    "indicator_code": "NY.GDP.MKTP.KD.ZG",
-    "indicator": "GDP Growth",
-    "value": 3.1067964131456
-  },
-  {
-    "country_code": "MEX",
-    "country": "Mexico",
-    "year": 2023,
-    "indicator_code": "SL.UEM.TOTL.ZS",
-    "indicator": "Unemployment",
-    "value": 2.765
-  },
-  {
-    "country_code": "MEX",
-    "country": "Mexico",
-    "year": 2024,
-    "indicator_code": "FP.CPI.TOTL.ZG",
-    "indicator": "Inflation",
-    "value": 4.72225588452931
-  },
-  {
-    "country_code": "MEX",
-    "country": "Mexico",
-    "year": 2024,
-    "indicator_code": "NY.GDP.MKTP.KD.ZG",
-    "indicator": "GDP Growth",
-    "value": 1.35057631384696
-  },
-  {
-    "country_code": "MEX",
-    "country": "Mexico",
-    "year": 2024,
-    "indicator_code": "SL.UEM.TOTL.ZS",
-    "indicator": "Unemployment",
-    "value": 2.678
+    "indicator": {
+      "id": "NY.GDP.MKTP.KD.ZG",
+      "value": "GDP growth (annual %)"
+    },
+    "country": {
+      "id": "AR",
+      "value": "Argentina"
+    },
+    "countryiso3code": "ARG",
+    "date": "2024",
+    "value": -1.34293072157739,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+  },
+  {
+    "indicator": {
+      "id": "NY.GDP.MKTP.KD.ZG",
+      "value": "GDP growth (annual %)"
+    },
+    "country": {
+      "id": "AR",
+      "value": "Argentina"
+    },
+    "countryiso3code": "ARG",
+    "date": "2023",
+    "value": -1.85578803046339,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+  },
+  {
+    "indicator": {
+      "id": "NY.GDP.MKTP.KD.ZG",
+      "value": "GDP growth (annual %)"
+    },
+    "country": {
+      "id": "AR",
+      "value": "Argentina"
+    },
+    "countryiso3code": "ARG",
+    "date": "2022",
+    "value": 6.02074537534855,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+  },
+  {
+    "indicator": {
+      "id": "NY.GDP.MKTP.KD.ZG",
+      "value": "GDP growth (annual %)"
+    },
+    "country": {
+      "id": "AR",
+      "value": "Argentina"
+    },
+    "countryiso3code": "ARG",
+    "date": "2021",
+    "value": 10.4418119882506,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+  },
+  {
+    "indicator": {
+      "id": "NY.GDP.MKTP.KD.ZG",
+      "value": "GDP growth (annual %)"
+    },
+    "country": {
+      "id": "AR",
+      "value": "Argentina"
+    },
+    "countryiso3code": "ARG",
+    "date": "2020",
+    "value": -9.9004848136464,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+  },
+  {
+    "indicator": {
+      "id": "NY.GDP.MKTP.KD.ZG",
+      "value": "GDP growth (annual %)"
+    },
+    "country": {
+      "id": "AR",
+      "value": "Argentina"
+    },
+    "countryiso3code": "ARG",
+    "date": "2019",
+    "value": -2.00086100285785,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+  },
+  {
+    "indicator": {
+      "id": "NY.GDP.MKTP.KD.ZG",
+      "value": "GDP growth (annual %)"
+    },
+    "country": {
+      "id": "AR",
+      "value": "Argentina"
+    },
+    "countryiso3code": "ARG",
+    "date": "2018",
+    "value": -2.61739646282038,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+  },
+  {
+    "indicator": {
+      "id": "NY.GDP.MKTP.KD.ZG",
+      "value": "GDP growth (annual %)"
+    },
+    "country": {
+      "id": "AR",
+      "value": "Argentina"
+    },
+    "countryiso3code": "ARG",
+    "date": "2017",
+    "value": 2.81850297775918,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+  },
+  {
+    "indicator": {
+      "id": "NY.GDP.MKTP.KD.ZG",
+      "value": "GDP growth (annual %)"
+    },
+    "country": {
+      "id": "AR",
+      "value": "Argentina"
+    },
+    "countryiso3code": "ARG",
+    "date": "2016",
+    "value": -2.08032784377811,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+  },
+  {
+    "indicator": {
+      "id": "NY.GDP.MKTP.KD.ZG",
+      "value": "GDP growth (annual %)"
+    },
+    "country": {
+      "id": "AR",
+      "value": "Argentina"
+    },
+    "countryiso3code": "ARG",
+    "date": "2015",
+    "value": 2.73115982828944,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+  },
+  {
+    "indicator": {
+      "id": "NY.GDP.MKTP.KD.ZG",
+      "value": "GDP growth (annual %)"
+    },
+    "country": {
+      "id": "AR",
+      "value": "Argentina"
+    },
+    "countryiso3code": "ARG",
+    "date": "2014",
+    "value": -2.51261532081394,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+  },
+  {
+    "indicator": {
+      "id": "NY.GDP.MKTP.KD.ZG",
+      "value": "GDP growth (annual %)"
+    },
+    "country": {
+      "id": "AR",
+      "value": "Argentina"
+    },
+    "countryiso3code": "ARG",
+    "date": "2013",
+    "value": 2.40532378079436,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+  },
+  {
+    "indicator": {
+      "id": "NY.GDP.MKTP.KD.ZG",
+      "value": "GDP growth (annual %)"
+    },
+    "country": {
+      "id": "AR",
+      "value": "Argentina"
+    },
+    "countryiso3code": "ARG",
+    "date": "2012",
+    "value": -1.0264204544321,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+  },
+  {
+    "indicator": {
+      "id": "NY.GDP.MKTP.KD.ZG",
+      "value": "GDP growth (annual %)"
+    },
+    "country": {
+      "id": "AR",
+      "value": "Argentina"
+    },
+    "countryiso3code": "ARG",
+    "date": "2011",
+    "value": 6.00395169280579,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+  },
+  {
+    "indicator": {
+      "id": "NY.GDP.MKTP.KD.ZG",
+      "value": "GDP growth (annual %)"
+    },
+    "country": {
+      "id": "AR",
+      "value": "Argentina"
+    },
+    "countryiso3code": "ARG",
+    "date": "2010",
+    "value": 10.1253981561002,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+  },
+  {
+    "indicator": {
+      "id": "NY.GDP.MKTP.KD.ZG",
+      "value": "GDP growth (annual %)"
+    },
+    "country": {
+      "id": "AR",
+      "value": "Argentina"
+    },
+    "countryiso3code": "ARG",
+    "date": "2009",
+    "value": -5.91852507634947,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+  },
+  {
+    "indicator": {
+      "id": "NY.GDP.MKTP.KD.ZG",
+      "value": "GDP growth (annual %)"
+    },
+    "country": {
+      "id": "AR",
+      "value": "Argentina"
+    },
+    "countryiso3code": "ARG",
+    "date": "2008",
+    "value": 4.05723310346406,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+  },
+  {
+    "indicator": {
+      "id": "NY.GDP.MKTP.KD.ZG",
+      "value": "GDP growth (annual %)"
+    },
+    "country": {
+      "id": "AR",
+      "value": "Argentina"
+    },
+    "countryiso3code": "ARG",
+    "date": "2007",
+    "value": 9.00765087504757,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+  },
+  {
+    "indicator": {
+      "id": "NY.GDP.MKTP.KD.ZG",
+      "value": "GDP growth (annual %)"
+    },
+    "country": {
+      "id": "AR",
+      "value": "Argentina"
+    },
+    "countryiso3code": "ARG",
+    "date": "2006",
+    "value": 8.04715150043027,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+  },
+  {
+    "indicator": {
+      "id": "NY.GDP.MKTP.KD.ZG",
+      "value": "GDP growth (annual %)"
+    },
+    "country": {
+      "id": "AR",
+      "value": "Argentina"
+    },
+    "countryiso3code": "ARG",
+    "date": "2005",
+    "value": 8.85165992013437,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+  },
+  {
+    "indicator": {
+      "id": "NY.GDP.MKTP.KD.ZG",
+      "value": "GDP growth (annual %)"
+    },
+    "country": {
+      "id": "AR",
+      "value": "Argentina"
+    },
+    "countryiso3code": "ARG",
+    "date": "2004",
+    "value": 9.02957330068152,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+  },
+  {
+    "indicator": {
+      "id": "NY.GDP.MKTP.KD.ZG",
+      "value": "GDP growth (annual %)"
+    },
+    "country": {
+      "id": "AR",
+      "value": "Argentina"
+    },
+    "countryiso3code": "ARG",
+    "date": "2003",
+    "value": 8.83704079576924,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+  },
+  {
+    "indicator": {
+      "id": "NY.GDP.MKTP.KD.ZG",
+      "value": "GDP growth (annual %)"
+    },
+    "country": {
+      "id": "AR",
+      "value": "Argentina"
+    },
+    "countryiso3code": "ARG",
+    "date": "2002",
+    "value": -10.8944848285903,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+  },
+  {
+    "indicator": {
+      "id": "NY.GDP.MKTP.KD.ZG",
+      "value": "GDP growth (annual %)"
+    },
+    "country": {
+      "id": "AR",
+      "value": "Argentina"
+    },
+    "countryiso3code": "ARG",
+    "date": "2001",
+    "value": -4.40883968258557,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+  },
+  {
+    "indicator": {
+      "id": "NY.GDP.MKTP.KD.ZG",
+      "value": "GDP growth (annual %)"
+    },
+    "country": {
+      "id": "AR",
+      "value": "Argentina"
+    },
+    "countryiso3code": "ARG",
+    "date": "2000",
+    "value": -0.78899893905691,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+  },
+  {
+    "indicator": {
+      "id": "NY.GDP.MKTP.KD.ZG",
+      "value": "GDP growth (annual %)"
+    },
+    "country": {
+      "id": "BR",
+      "value": "Brazil"
+    },
+    "countryiso3code": "BRA",
+    "date": "2024",
+    "value": 3.41931516501906,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+  },
+  {
+    "indicator": {
+      "id": "NY.GDP.MKTP.KD.ZG",
+      "value": "GDP growth (annual %)"
+    },
+    "country": {
+      "id": "BR",
+      "value": "Brazil"
+    },
+    "countryiso3code": "BRA",
+    "date": "2023",
+    "value": 3.24165532906981,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+  },
+  {
+    "indicator": {
+      "id": "NY.GDP.MKTP.KD.ZG",
+      "value": "GDP growth (annual %)"
+    },
+    "country": {
+      "id": "BR",
+      "value": "Brazil"
+    },
+    "countryiso3code": "BRA",
+    "date": "2022",
+    "value": 3.01669435393015,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+  },
+  {
+    "indicator": {
+      "id": "NY.GDP.MKTP.KD.ZG",
+      "value": "GDP growth (annual %)"
+    },
+    "country": {
+      "id": "BR",
+      "value": "Brazil"
+    },
+    "countryiso3code": "BRA",
+    "date": "2021",
+    "value": 4.76260437908608,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+  },
+  {
+    "indicator": {
+      "id": "NY.GDP.MKTP.KD.ZG",
+      "value": "GDP growth (annual %)"
+    },
+    "country": {
+      "id": "BR",
+      "value": "Brazil"
+    },
+    "countryiso3code": "BRA",
+    "date": "2020",
+    "value": -3.2767587964736,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+  },
+  {
+    "indicator": {
+      "id": "NY.GDP.MKTP.KD.ZG",
+      "value": "GDP growth (annual %)"
+    },
+    "country": {
+      "id": "BR",
+      "value": "Brazil"
+    },
+    "countryiso3code": "BRA",
+    "date": "2019",
+    "value": 1.22077782360842,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+  },
+  {
+    "indicator": {
+      "id": "NY.GDP.MKTP.KD.ZG",
+      "value": "GDP growth (annual %)"
+    },
+    "country": {
+      "id": "BR",
+      "value": "Brazil"
+    },
+    "countryiso3code": "BRA",
+    "date": "2018",
+    "value": 1.783666761634,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+  },
+  {
+    "indicator": {
+      "id": "NY.GDP.MKTP.KD.ZG",
+      "value": "GDP growth (annual %)"
+    },
+    "country": {
+      "id": "BR",
+      "value": "Brazil"
+    },
+    "countryiso3code": "BRA",
+    "date": "2017",
+    "value": 1.32286905404399,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+  },
+  {
+    "indicator": {
+      "id": "NY.GDP.MKTP.KD.ZG",
+      "value": "GDP growth (annual %)"
+    },
+    "country": {
+      "id": "BR",
+      "value": "Brazil"
+    },
+    "countryiso3code": "BRA",
+    "date": "2016",
+    "value": -3.27591690782192,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+  },
+  {
+    "indicator": {
+      "id": "NY.GDP.MKTP.KD.ZG",
+      "value": "GDP growth (annual %)"
+    },
+    "country": {
+      "id": "BR",
+      "value": "Brazil"
+    },
+    "countryiso3code": "BRA",
+    "date": "2015",
+    "value": -3.54576339269425,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+  },
+  {
+    "indicator": {
+      "id": "NY.GDP.MKTP.KD.ZG",
+      "value": "GDP growth (annual %)"
+    },
+    "country": {
+      "id": "BR",
+      "value": "Brazil"
+    },
+    "countryiso3code": "BRA",
+    "date": "2014",
+    "value": 0.503955740242247,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+  },
+  {
+    "indicator": {
+      "id": "NY.GDP.MKTP.KD.ZG",
+      "value": "GDP growth (annual %)"
+    },
+    "country": {
+      "id": "BR",
+      "value": "Brazil"
+    },
+    "countryiso3code": "BRA",
+    "date": "2013",
+    "value": 3.00482266944432,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+  },
+  {
+    "indicator": {
+      "id": "NY.GDP.MKTP.KD.ZG",
+      "value": "GDP growth (annual %)"
+    },
+    "country": {
+      "id": "BR",
+      "value": "Brazil"
+    },
+    "countryiso3code": "BRA",
+    "date": "2012",
+    "value": 1.92117598576537,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+  },
+  {
+    "indicator": {
+      "id": "NY.GDP.MKTP.KD.ZG",
+      "value": "GDP growth (annual %)"
+    },
+    "country": {
+      "id": "BR",
+      "value": "Brazil"
+    },
+    "countryiso3code": "BRA",
+    "date": "2011",
+    "value": 3.97442307944702,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+  },
+  {
+    "indicator": {
+      "id": "NY.GDP.MKTP.KD.ZG",
+      "value": "GDP growth (annual %)"
+    },
+    "country": {
+      "id": "BR",
+      "value": "Brazil"
+    },
+    "countryiso3code": "BRA",
+    "date": "2010",
+    "value": 7.52822581815364,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+  },
+  {
+    "indicator": {
+      "id": "NY.GDP.MKTP.KD.ZG",
+      "value": "GDP growth (annual %)"
+    },
+    "country": {
+      "id": "BR",
+      "value": "Brazil"
+    },
+    "countryiso3code": "BRA",
+    "date": "2009",
+    "value": -0.125812002161169,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+  },
+  {
+    "indicator": {
+      "id": "NY.GDP.MKTP.KD.ZG",
+      "value": "GDP growth (annual %)"
+    },
+    "country": {
+      "id": "BR",
+      "value": "Brazil"
+    },
+    "countryiso3code": "BRA",
+    "date": "2008",
+    "value": 5.09419544658736,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+  },
+  {
+    "indicator": {
+      "id": "NY.GDP.MKTP.KD.ZG",
+      "value": "GDP growth (annual %)"
+    },
+    "country": {
+      "id": "BR",
+      "value": "Brazil"
+    },
+    "countryiso3code": "BRA",
+    "date": "2007",
+    "value": 6.06987060678338,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+  },
+  {
+    "indicator": {
+      "id": "NY.GDP.MKTP.KD.ZG",
+      "value": "GDP growth (annual %)"
+    },
+    "country": {
+      "id": "BR",
+      "value": "Brazil"
+    },
+    "countryiso3code": "BRA",
+    "date": "2006",
+    "value": 3.96198871122617,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+  },
+  {
+    "indicator": {
+      "id": "NY.GDP.MKTP.KD.ZG",
+      "value": "GDP growth (annual %)"
+    },
+    "country": {
+      "id": "BR",
+      "value": "Brazil"
+    },
+    "countryiso3code": "BRA",
+    "date": "2005",
+    "value": 3.20213206130431,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+  },
+  {
+    "indicator": {
+      "id": "NY.GDP.MKTP.KD.ZG",
+      "value": "GDP growth (annual %)"
+    },
+    "country": {
+      "id": "BR",
+      "value": "Brazil"
+    },
+    "countryiso3code": "BRA",
+    "date": "2004",
+    "value": 5.75996463670954,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+  },
+  {
+    "indicator": {
+      "id": "NY.GDP.MKTP.KD.ZG",
+      "value": "GDP growth (annual %)"
+    },
+    "country": {
+      "id": "BR",
+      "value": "Brazil"
+    },
+    "countryiso3code": "BRA",
+    "date": "2003",
+    "value": 1.14082899824888,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+  },
+  {
+    "indicator": {
+      "id": "NY.GDP.MKTP.KD.ZG",
+      "value": "GDP growth (annual %)"
+    },
+    "country": {
+      "id": "BR",
+      "value": "Brazil"
+    },
+    "countryiso3code": "BRA",
+    "date": "2002",
+    "value": 3.05346185909312,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+  },
+  {
+    "indicator": {
+      "id": "NY.GDP.MKTP.KD.ZG",
+      "value": "GDP growth (annual %)"
+    },
+    "country": {
+      "id": "BR",
+      "value": "Brazil"
+    },
+    "countryiso3code": "BRA",
+    "date": "2001",
+    "value": 1.38989640095637,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+  },
+  {
+    "indicator": {
+      "id": "NY.GDP.MKTP.KD.ZG",
+      "value": "GDP growth (annual %)"
+    },
+    "country": {
+      "id": "BR",
+      "value": "Brazil"
+    },
+    "countryiso3code": "BRA",
+    "date": "2000",
+    "value": 4.38794944745618,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+  },
+  {
+    "indicator": {
+      "id": "NY.GDP.MKTP.KD.ZG",
+      "value": "GDP growth (annual %)"
+    },
+    "country": {
+      "id": "CO",
+      "value": "Colombia"
+    },
+    "countryiso3code": "COL",
+    "date": "2024",
+    "value": 1.49330728771066,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+  },
+  {
+    "indicator": {
+      "id": "NY.GDP.MKTP.KD.ZG",
+      "value": "GDP growth (annual %)"
+    },
+    "country": {
+      "id": "CO",
+      "value": "Colombia"
+    },
+    "countryiso3code": "COL",
+    "date": "2023",
+    "value": 0.841819555752039,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+  },
+  {
+    "indicator": {
+      "id": "NY.GDP.MKTP.KD.ZG",
+      "value": "GDP growth (annual %)"
+    },
+    "country": {
+      "id": "CO",
+      "value": "Colombia"
+    },
+    "countryiso3code": "COL",
+    "date": "2022",
+    "value": 7.32827729427979,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+  },
+  {
+    "indicator": {
+      "id": "NY.GDP.MKTP.KD.ZG",
+      "value": "GDP growth (annual %)"
+    },
+    "country": {
+      "id": "CO",
+      "value": "Colombia"
+    },
+    "countryiso3code": "COL",
+    "date": "2021",
+    "value": 10.8011981904878,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+  },
+  {
+    "indicator": {
+      "id": "NY.GDP.MKTP.KD.ZG",
+      "value": "GDP growth (annual %)"
+    },
+    "country": {
+      "id": "CO",
+      "value": "Colombia"
+    },
+    "countryiso3code": "COL",
+    "date": "2020",
+    "value": -7.18591413760859,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+  },
+  {
+    "indicator": {
+      "id": "NY.GDP.MKTP.KD.ZG",
+      "value": "GDP growth (annual %)"
+    },
+    "country": {
+      "id": "CO",
+      "value": "Colombia"
+    },
+    "countryiso3code": "COL",
+    "date": "2019",
+    "value": 3.18685539245533,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+  },
+  {
+    "indicator": {
+      "id": "NY.GDP.MKTP.KD.ZG",
+      "value": "GDP growth (annual %)"
+    },
+    "country": {
+      "id": "CO",
+      "value": "Colombia"
+    },
+    "countryiso3code": "COL",
+    "date": "2018",
+    "value": 2.56432428277704,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+  },
+  {
+    "indicator": {
+      "id": "NY.GDP.MKTP.KD.ZG",
+      "value": "GDP growth (annual %)"
+    },
+    "country": {
+      "id": "CO",
+      "value": "Colombia"
+    },
+    "countryiso3code": "COL",
+    "date": "2017",
+    "value": 1.35936086788746,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+  },
+  {
+    "indicator": {
+      "id": "NY.GDP.MKTP.KD.ZG",
+      "value": "GDP growth (annual %)"
+    },
+    "country": {
+      "id": "CO",
+      "value": "Colombia"
+    },
+    "countryiso3code": "COL",
+    "date": "2016",
+    "value": 2.08738250162794,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+  },
+  {
+    "indicator": {
+      "id": "NY.GDP.MKTP.KD.ZG",
+      "value": "GDP growth (annual %)"
+    },
+    "country": {
+      "id": "CO",
+      "value": "Colombia"
+    },
+    "countryiso3code": "COL",
+    "date": "2015",
+    "value": 2.95590137527523,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+  },
+  {
+    "indicator": {
+      "id": "NY.GDP.MKTP.KD.ZG",
+      "value": "GDP growth (annual %)"
+    },
+    "country": {
+      "id": "CO",
+      "value": "Colombia"
+    },
+    "countryiso3code": "COL",
+    "date": "2014",
+    "value": 4.49903000110972,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+  },
+  {
+    "indicator": {
+      "id": "NY.GDP.MKTP.KD.ZG",
+      "value": "GDP growth (annual %)"
+    },
+    "country": {
+      "id": "CO",
+      "value": "Colombia"
+    },
+    "countryiso3code": "COL",
+    "date": "2013",
+    "value": 5.13399351995672,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+  },
+  {
+    "indicator": {
+      "id": "NY.GDP.MKTP.KD.ZG",
+      "value": "GDP growth (annual %)"
+    },
+    "country": {
+      "id": "CO",
+      "value": "Colombia"
+    },
+    "countryiso3code": "COL",
+    "date": "2012",
+    "value": 3.91263576716115,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+  },
+  {
+    "indicator": {
+      "id": "NY.GDP.MKTP.KD.ZG",
+      "value": "GDP growth (annual %)"
+    },
+    "country": {
+      "id": "CO",
+      "value": "Colombia"
+    },
+    "countryiso3code": "COL",
+    "date": "2011",
+    "value": 6.94789198173555,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+  },
+  {
+    "indicator": {
+      "id": "NY.GDP.MKTP.KD.ZG",
+      "value": "GDP growth (annual %)"
+    },
+    "country": {
+      "id": "CO",
+      "value": "Colombia"
+    },
+    "countryiso3code": "COL",
+    "date": "2010",
+    "value": 4.49465897070922,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+  },
+  {
+    "indicator": {
+      "id": "NY.GDP.MKTP.KD.ZG",
+      "value": "GDP growth (annual %)"
+    },
+    "country": {
+      "id": "CO",
+      "value": "Colombia"
+    },
+    "countryiso3code": "COL",
+    "date": "2009",
+    "value": 1.13964864548062,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+  },
+  {
+    "indicator": {
+      "id": "NY.GDP.MKTP.KD.ZG",
+      "value": "GDP growth (annual %)"
+    },
+    "country": {
+      "id": "CO",
+      "value": "Colombia"
+    },
+    "countryiso3code": "COL",
+    "date": "2008",
+    "value": 3.28344618616541,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+  },
+  {
+    "indicator": {
+      "id": "NY.GDP.MKTP.KD.ZG",
+      "value": "GDP growth (annual %)"
+    },
+    "country": {
+      "id": "CO",
+      "value": "Colombia"
+    },
+    "countryiso3code": "COL",
+    "date": "2007",
+    "value": 6.73819469090975,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+  },
+  {
+    "indicator": {
+      "id": "NY.GDP.MKTP.KD.ZG",
+      "value": "GDP growth (annual %)"
+    },
+    "country": {
+      "id": "CO",
+      "value": "Colombia"
+    },
+    "countryiso3code": "COL",
+    "date": "2006",
+    "value": 6.71686869844402,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+  },
+  {
+    "indicator": {
+      "id": "NY.GDP.MKTP.KD.ZG",
+      "value": "GDP growth (annual %)"
+    },
+    "country": {
+      "id": "CO",
+      "value": "Colombia"
+    },
+    "countryiso3code": "COL",
+    "date": "2005",
+    "value": 4.82876110773741,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+  },
+  {
+    "indicator": {
+      "id": "NY.GDP.MKTP.KD.ZG",
+      "value": "GDP growth (annual %)"
+    },
+    "country": {
+      "id": "CO",
+      "value": "Colombia"
+    },
+    "countryiso3code": "COL",
+    "date": "2004",
+    "value": 5.33302206759905,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+  },
+  {
+    "indicator": {
+      "id": "NY.GDP.MKTP.KD.ZG",
+      "value": "GDP growth (annual %)"
+    },
+    "country": {
+      "id": "CO",
+      "value": "Colombia"
+    },
+    "countryiso3code": "COL",
+    "date": "2003",
+    "value": 3.91827190322513,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+  },
+  {
+    "indicator": {
+      "id": "NY.GDP.MKTP.KD.ZG",
+      "value": "GDP growth (annual %)"
+    },
+    "country": {
+      "id": "CO",
+      "value": "Colombia"
+    },
+    "countryiso3code": "COL",
+    "date": "2002",
+    "value": 2.50398046659659,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+  },
+  {
+    "indicator": {
+      "id": "NY.GDP.MKTP.KD.ZG",
+      "value": "GDP growth (annual %)"
+    },
+    "country": {
+      "id": "CO",
+      "value": "Colombia"
+    },
+    "countryiso3code": "COL",
+    "date": "2001",
+    "value": 1.67789830787579,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+  },
+  {
+    "indicator": {
+      "id": "NY.GDP.MKTP.KD.ZG",
+      "value": "GDP growth (annual %)"
+    },
+    "country": {
+      "id": "CO",
+      "value": "Colombia"
+    },
+    "countryiso3code": "COL",
+    "date": "2000",
+    "value": 2.92486148176778,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+  },
+  {
+    "indicator": {
+      "id": "NY.GDP.MKTP.KD.ZG",
+      "value": "GDP growth (annual %)"
+    },
+    "country": {
+      "id": "MX",
+      "value": "Mexico"
+    },
+    "countryiso3code": "MEX",
+    "date": "2024",
+    "value": 1.35057631384696,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+  },
+  {
+    "indicator": {
+      "id": "NY.GDP.MKTP.KD.ZG",
+      "value": "GDP growth (annual %)"
+    },
+    "country": {
+      "id": "MX",
+      "value": "Mexico"
+    },
+    "countryiso3code": "MEX",
+    "date": "2023",
+    "value": 3.1067964131456,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+  },
+  {
+    "indicator": {
+      "id": "NY.GDP.MKTP.KD.ZG",
+      "value": "GDP growth (annual %)"
+    },
+    "country": {
+      "id": "MX",
+      "value": "Mexico"
+    },
+    "countryiso3code": "MEX",
+    "date": "2022",
+    "value": 3.70975708309098,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+  },
+  {
+    "indicator": {
+      "id": "NY.GDP.MKTP.KD.ZG",
+      "value": "GDP growth (annual %)"
+    },
+    "country": {
+      "id": "MX",
+      "value": "Mexico"
+    },
+    "countryiso3code": "MEX",
+    "date": "2021",
+    "value": 6.04848347173572,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+  },
+  {
+    "indicator": {
+      "id": "NY.GDP.MKTP.KD.ZG",
+      "value": "GDP growth (annual %)"
+    },
+    "country": {
+      "id": "MX",
+      "value": "Mexico"
+    },
+    "countryiso3code": "MEX",
+    "date": "2020",
+    "value": -8.35403459379062,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+  },
+  {
+    "indicator": {
+      "id": "NY.GDP.MKTP.KD.ZG",
+      "value": "GDP growth (annual %)"
+    },
+    "country": {
+      "id": "MX",
+      "value": "Mexico"
+    },
+    "countryiso3code": "MEX",
+    "date": "2019",
+    "value": -0.392690513290532,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+  },
+  {
+    "indicator": {
+      "id": "NY.GDP.MKTP.KD.ZG",
+      "value": "GDP growth (annual %)"
+    },
+    "country": {
+      "id": "MX",
+      "value": "Mexico"
+    },
+    "countryiso3code": "MEX",
+    "date": "2018",
+    "value": 1.97208211101069,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+  },
+  {
+    "indicator": {
+      "id": "NY.GDP.MKTP.KD.ZG",
+      "value": "GDP growth (annual %)"
+    },
+    "country": {
+      "id": "MX",
+      "value": "Mexico"
+    },
+    "countryiso3code": "MEX",
+    "date": "2017",
+    "value": 1.87172854648381,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+  },
+  {
+    "indicator": {
+      "id": "NY.GDP.MKTP.KD.ZG",
+      "value": "GDP growth (annual %)"
+    },
+    "country": {
+      "id": "MX",
+      "value": "Mexico"
+    },
+    "countryiso3code": "MEX",
+    "date": "2016",
+    "value": 1.7724932254128,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+  },
+  {
+    "indicator": {
+      "id": "NY.GDP.MKTP.KD.ZG",
+      "value": "GDP growth (annual %)"
+    },
+    "country": {
+      "id": "MX",
+      "value": "Mexico"
+    },
+    "countryiso3code": "MEX",
+    "date": "2015",
+    "value": 2.70232343024026,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+  },
+  {
+    "indicator": {
+      "id": "NY.GDP.MKTP.KD.ZG",
+      "value": "GDP growth (annual %)"
+    },
+    "country": {
+      "id": "MX",
+      "value": "Mexico"
+    },
+    "countryiso3code": "MEX",
+    "date": "2014",
+    "value": 2.50376350783593,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+  },
+  {
+    "indicator": {
+      "id": "NY.GDP.MKTP.KD.ZG",
+      "value": "GDP growth (annual %)"
+    },
+    "country": {
+      "id": "MX",
+      "value": "Mexico"
+    },
+    "countryiso3code": "MEX",
+    "date": "2013",
+    "value": 0.852101550164704,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+  },
+  {
+    "indicator": {
+      "id": "NY.GDP.MKTP.KD.ZG",
+      "value": "GDP growth (annual %)"
+    },
+    "country": {
+      "id": "MX",
+      "value": "Mexico"
+    },
+    "countryiso3code": "MEX",
+    "date": "2012",
+    "value": 3.55321076010608,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+  },
+  {
+    "indicator": {
+      "id": "NY.GDP.MKTP.KD.ZG",
+      "value": "GDP growth (annual %)"
+    },
+    "country": {
+      "id": "MX",
+      "value": "Mexico"
+    },
+    "countryiso3code": "MEX",
+    "date": "2011",
+    "value": 3.44404505297089,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+  },
+  {
+    "indicator": {
+      "id": "NY.GDP.MKTP.KD.ZG",
+      "value": "GDP growth (annual %)"
+    },
+    "country": {
+      "id": "MX",
+      "value": "Mexico"
+    },
+    "countryiso3code": "MEX",
+    "date": "2010",
+    "value": 4.9713345832195,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+  },
+  {
+    "indicator": {
+      "id": "NY.GDP.MKTP.KD.ZG",
+      "value": "GDP growth (annual %)"
+    },
+    "country": {
+      "id": "MX",
+      "value": "Mexico"
+    },
+    "countryiso3code": "MEX",
+    "date": "2009",
+    "value": -6.29525056697287,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+  },
+  {
+    "indicator": {
+      "id": "NY.GDP.MKTP.KD.ZG",
+      "value": "GDP growth (annual %)"
+    },
+    "country": {
+      "id": "MX",
+      "value": "Mexico"
+    },
+    "countryiso3code": "MEX",
+    "date": "2008",
+    "value": 0.943331872912935,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+  },
+  {
+    "indicator": {
+      "id": "NY.GDP.MKTP.KD.ZG",
+      "value": "GDP growth (annual %)"
+    },
+    "country": {
+      "id": "MX",
+      "value": "Mexico"
+    },
+    "countryiso3code": "MEX",
+    "date": "2007",
+    "value": 2.0778639395329,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+  },
+  {
+    "indicator": {
+      "id": "NY.GDP.MKTP.KD.ZG",
+      "value": "GDP growth (annual %)"
+    },
+    "country": {
+      "id": "MX",
+      "value": "Mexico"
+    },
+    "countryiso3code": "MEX",
+    "date": "2006",
+    "value": 4.80501351664901,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+  },
+  {
+    "indicator": {
+      "id": "NY.GDP.MKTP.KD.ZG",
+      "value": "GDP growth (annual %)"
+    },
+    "country": {
+      "id": "MX",
+      "value": "Mexico"
+    },
+    "countryiso3code": "MEX",
+    "date": "2005",
+    "value": 2.11324711473297,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+  },
+  {
+    "indicator": {
+      "id": "NY.GDP.MKTP.KD.ZG",
+      "value": "GDP growth (annual %)"
+    },
+    "country": {
+      "id": "MX",
+      "value": "Mexico"
+    },
+    "countryiso3code": "MEX",
+    "date": "2004",
+    "value": 3.56544102622887,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+  },
+  {
+    "indicator": {
+      "id": "NY.GDP.MKTP.KD.ZG",
+      "value": "GDP growth (annual %)"
+    },
+    "country": {
+      "id": "MX",
+      "value": "Mexico"
+    },
+    "countryiso3code": "MEX",
+    "date": "2003",
+    "value": 1.18554486709559,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+  },
+  {
+    "indicator": {
+      "id": "NY.GDP.MKTP.KD.ZG",
+      "value": "GDP growth (annual %)"
+    },
+    "country": {
+      "id": "MX",
+      "value": "Mexico"
+    },
+    "countryiso3code": "MEX",
+    "date": "2002",
+    "value": -0.236588001922641,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+  },
+  {
+    "indicator": {
+      "id": "NY.GDP.MKTP.KD.ZG",
+      "value": "GDP growth (annual %)"
+    },
+    "country": {
+      "id": "MX",
+      "value": "Mexico"
+    },
+    "countryiso3code": "MEX",
+    "date": "2001",
+    "value": -0.450845253215945,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+  },
+  {
+    "indicator": {
+      "id": "NY.GDP.MKTP.KD.ZG",
+      "value": "GDP growth (annual %)"
+    },
+    "country": {
+      "id": "MX",
+      "value": "Mexico"
+    },
+    "countryiso3code": "MEX",
+    "date": "2000",
+    "value": 5.02928399378261,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+  },
+  {
+    "indicator": {
+      "id": "FP.CPI.TOTL.ZG",
+      "value": "Inflation, consumer prices (annual %)"
+    },
+    "country": {
+      "id": "AR",
+      "value": "Argentina"
+    },
+    "countryiso3code": "ARG",
+    "date": "2024",
+    "value": 219.883929014578,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+  },
+  {
+    "indicator": {
+      "id": "FP.CPI.TOTL.ZG",
+      "value": "Inflation, consumer prices (annual %)"
+    },
+    "country": {
+      "id": "AR",
+      "value": "Argentina"
+    },
+    "countryiso3code": "ARG",
+    "date": "2023",
+    "value": 133.488935594175,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+  },
+  {
+    "indicator": {
+      "id": "FP.CPI.TOTL.ZG",
+      "value": "Inflation, consumer prices (annual %)"
+    },
+    "country": {
+      "id": "AR",
+      "value": "Argentina"
+    },
+    "countryiso3code": "ARG",
+    "date": "2022",
+    "value": 72.430757531824,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+  },
+  {
+    "indicator": {
+      "id": "FP.CPI.TOTL.ZG",
+      "value": "Inflation, consumer prices (annual %)"
+    },
+    "country": {
+      "id": "AR",
+      "value": "Argentina"
+    },
+    "countryiso3code": "ARG",
+    "date": "2021",
+    "value": 48.4093786255199,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+  },
+  {
+    "indicator": {
+      "id": "FP.CPI.TOTL.ZG",
+      "value": "Inflation, consumer prices (annual %)"
+    },
+    "country": {
+      "id": "AR",
+      "value": "Argentina"
+    },
+    "countryiso3code": "ARG",
+    "date": "2020",
+    "value": 42.0150947376509,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+  },
+  {
+    "indicator": {
+      "id": "FP.CPI.TOTL.ZG",
+      "value": "Inflation, consumer prices (annual %)"
+    },
+    "country": {
+      "id": "AR",
+      "value": "Argentina"
+    },
+    "countryiso3code": "ARG",
+    "date": "2019",
+    "value": 53.5483043492339,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+  },
+  {
+    "indicator": {
+      "id": "FP.CPI.TOTL.ZG",
+      "value": "Inflation, consumer prices (annual %)"
+    },
+    "country": {
+      "id": "AR",
+      "value": "Argentina"
+    },
+    "countryiso3code": "ARG",
+    "date": "2018",
+    "value": 34.2772237131003,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+  },
+  {
+    "indicator": {
+      "id": "FP.CPI.TOTL.ZG",
+      "value": "Inflation, consumer prices (annual %)"
+    },
+    "country": {
+      "id": "AR",
+      "value": "Argentina"
+    },
+    "countryiso3code": "ARG",
+    "date": "2017",
+    "value": null,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+  },
+  {
+    "indicator": {
+      "id": "FP.CPI.TOTL.ZG",
+      "value": "Inflation, consumer prices (annual %)"
+    },
+    "country": {
+      "id": "AR",
+      "value": "Argentina"
+    },
+    "countryiso3code": "ARG",
+    "date": "2016",
+    "value": null,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+  },
+  {
+    "indicator": {
+      "id": "FP.CPI.TOTL.ZG",
+      "value": "Inflation, consumer prices (annual %)"
+    },
+    "country": {
+      "id": "AR",
+      "value": "Argentina"
+    },
+    "countryiso3code": "ARG",
+    "date": "2015",
+    "value": null,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+  },
+  {
+    "indicator": {
+      "id": "FP.CPI.TOTL.ZG",
+      "value": "Inflation, consumer prices (annual %)"
+    },
+    "country": {
+      "id": "AR",
+      "value": "Argentina"
+    },
+    "countryiso3code": "ARG",
+    "date": "2014",
+    "value": null,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+  },
+  {
+    "indicator": {
+      "id": "FP.CPI.TOTL.ZG",
+      "value": "Inflation, consumer prices (annual %)"
+    },
+    "country": {
+      "id": "AR",
+      "value": "Argentina"
+    },
+    "countryiso3code": "ARG",
+    "date": "2013",
+    "value": null,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+  },
+  {
+    "indicator": {
+      "id": "FP.CPI.TOTL.ZG",
+      "value": "Inflation, consumer prices (annual %)"
+    },
+    "country": {
+      "id": "AR",
+      "value": "Argentina"
+    },
+    "countryiso3code": "ARG",
+    "date": "2012",
+    "value": null,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+  },
+  {
+    "indicator": {
+      "id": "FP.CPI.TOTL.ZG",
+      "value": "Inflation, consumer prices (annual %)"
+    },
+    "country": {
+      "id": "AR",
+      "value": "Argentina"
+    },
+    "countryiso3code": "ARG",
+    "date": "2011",
+    "value": null,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+  },
+  {
+    "indicator": {
+      "id": "FP.CPI.TOTL.ZG",
+      "value": "Inflation, consumer prices (annual %)"
+    },
+    "country": {
+      "id": "AR",
+      "value": "Argentina"
+    },
+    "countryiso3code": "ARG",
+    "date": "2010",
+    "value": null,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+  },
+  {
+    "indicator": {
+      "id": "FP.CPI.TOTL.ZG",
+      "value": "Inflation, consumer prices (annual %)"
+    },
+    "country": {
+      "id": "AR",
+      "value": "Argentina"
+    },
+    "countryiso3code": "ARG",
+    "date": "2009",
+    "value": null,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+  },
+  {
+    "indicator": {
+      "id": "FP.CPI.TOTL.ZG",
+      "value": "Inflation, consumer prices (annual %)"
+    },
+    "country": {
+      "id": "AR",
+      "value": "Argentina"
+    },
+    "countryiso3code": "ARG",
+    "date": "2008",
+    "value": null,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+  },
+  {
+    "indicator": {
+      "id": "FP.CPI.TOTL.ZG",
+      "value": "Inflation, consumer prices (annual %)"
+    },
+    "country": {
+      "id": "AR",
+      "value": "Argentina"
+    },
+    "countryiso3code": "ARG",
+    "date": "2007",
+    "value": null,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+  },
+  {
+    "indicator": {
+      "id": "FP.CPI.TOTL.ZG",
+      "value": "Inflation, consumer prices (annual %)"
+    },
+    "country": {
+      "id": "AR",
+      "value": "Argentina"
+    },
+    "countryiso3code": "ARG",
+    "date": "2006",
+    "value": null,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+  },
+  {
+    "indicator": {
+      "id": "FP.CPI.TOTL.ZG",
+      "value": "Inflation, consumer prices (annual %)"
+    },
+    "country": {
+      "id": "AR",
+      "value": "Argentina"
+    },
+    "countryiso3code": "ARG",
+    "date": "2005",
+    "value": null,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+  },
+  {
+    "indicator": {
+      "id": "FP.CPI.TOTL.ZG",
+      "value": "Inflation, consumer prices (annual %)"
+    },
+    "country": {
+      "id": "AR",
+      "value": "Argentina"
+    },
+    "countryiso3code": "ARG",
+    "date": "2004",
+    "value": null,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+  },
+  {
+    "indicator": {
+      "id": "FP.CPI.TOTL.ZG",
+      "value": "Inflation, consumer prices (annual %)"
+    },
+    "country": {
+      "id": "AR",
+      "value": "Argentina"
+    },
+    "countryiso3code": "ARG",
+    "date": "2003",
+    "value": null,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+  },
+  {
+    "indicator": {
+      "id": "FP.CPI.TOTL.ZG",
+      "value": "Inflation, consumer prices (annual %)"
+    },
+    "country": {
+      "id": "AR",
+      "value": "Argentina"
+    },
+    "countryiso3code": "ARG",
+    "date": "2002",
+    "value": null,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+  },
+  {
+    "indicator": {
+      "id": "FP.CPI.TOTL.ZG",
+      "value": "Inflation, consumer prices (annual %)"
+    },
+    "country": {
+      "id": "AR",
+      "value": "Argentina"
+    },
+    "countryiso3code": "ARG",
+    "date": "2001",
+    "value": null,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+  },
+  {
+    "indicator": {
+      "id": "FP.CPI.TOTL.ZG",
+      "value": "Inflation, consumer prices (annual %)"
+    },
+    "country": {
+      "id": "AR",
+      "value": "Argentina"
+    },
+    "countryiso3code": "ARG",
+    "date": "2000",
+    "value": null,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+  },
+  {
+    "indicator": {
+      "id": "FP.CPI.TOTL.ZG",
+      "value": "Inflation, consumer prices (annual %)"
+    },
+    "country": {
+      "id": "BR",
+      "value": "Brazil"
+    },
+    "countryiso3code": "BRA",
+    "date": "2024",
+    "value": 4.36746407652336,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+  },
+  {
+    "indicator": {
+      "id": "FP.CPI.TOTL.ZG",
+      "value": "Inflation, consumer prices (annual %)"
+    },
+    "country": {
+      "id": "BR",
+      "value": "Brazil"
+    },
+    "countryiso3code": "BRA",
+    "date": "2023",
+    "value": 4.59356282283203,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+  },
+  {
+    "indicator": {
+      "id": "FP.CPI.TOTL.ZG",
+      "value": "Inflation, consumer prices (annual %)"
+    },
+    "country": {
+      "id": "BR",
+      "value": "Brazil"
+    },
+    "countryiso3code": "BRA",
+    "date": "2022",
+    "value": 9.28010608956872,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+  },
+  {
+    "indicator": {
+      "id": "FP.CPI.TOTL.ZG",
+      "value": "Inflation, consumer prices (annual %)"
+    },
+    "country": {
+      "id": "BR",
+      "value": "Brazil"
+    },
+    "countryiso3code": "BRA",
+    "date": "2021",
+    "value": 8.30165975585673,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+  },
+  {
+    "indicator": {
+      "id": "FP.CPI.TOTL.ZG",
+      "value": "Inflation, consumer prices (annual %)"
+    },
+    "country": {
+      "id": "BR",
+      "value": "Brazil"
+    },
+    "countryiso3code": "BRA",
+    "date": "2020",
+    "value": 3.21176803803376,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+  },
+  {
+    "indicator": {
+      "id": "FP.CPI.TOTL.ZG",
+      "value": "Inflation, consumer prices (annual %)"
+    },
+    "country": {
+      "id": "BR",
+      "value": "Brazil"
+    },
+    "countryiso3code": "BRA",
+    "date": "2019",
+    "value": 3.73297621216893,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+  },
+  {
+    "indicator": {
+      "id": "FP.CPI.TOTL.ZG",
+      "value": "Inflation, consumer prices (annual %)"
+    },
+    "country": {
+      "id": "BR",
+      "value": "Brazil"
+    },
+    "countryiso3code": "BRA",
+    "date": "2018",
+    "value": 3.66485028376728,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+  },
+  {
+    "indicator": {
+      "id": "FP.CPI.TOTL.ZG",
+      "value": "Inflation, consumer prices (annual %)"
+    },
+    "country": {
+      "id": "BR",
+      "value": "Brazil"
+    },
+    "countryiso3code": "BRA",
+    "date": "2017",
+    "value": 3.44637335032669,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+  },
+  {
+    "indicator": {
+      "id": "FP.CPI.TOTL.ZG",
+      "value": "Inflation, consumer prices (annual %)"
+    },
+    "country": {
+      "id": "BR",
+      "value": "Brazil"
+    },
+    "countryiso3code": "BRA",
+    "date": "2016",
+    "value": 8.73914352329393,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+  },
+  {
+    "indicator": {
+      "id": "FP.CPI.TOTL.ZG",
+      "value": "Inflation, consumer prices (annual %)"
+    },
+    "country": {
+      "id": "BR",
+      "value": "Brazil"
+    },
+    "countryiso3code": "BRA",
+    "date": "2015",
+    "value": 9.02990102416136,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+  },
+  {
+    "indicator": {
+      "id": "FP.CPI.TOTL.ZG",
+      "value": "Inflation, consumer prices (annual %)"
+    },
+    "country": {
+      "id": "BR",
+      "value": "Brazil"
+    },
+    "countryiso3code": "BRA",
+    "date": "2014",
+    "value": 6.32904015516138,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+  },
+  {
+    "indicator": {
+      "id": "FP.CPI.TOTL.ZG",
+      "value": "Inflation, consumer prices (annual %)"
+    },
+    "country": {
+      "id": "BR",
+      "value": "Brazil"
+    },
+    "countryiso3code": "BRA",
+    "date": "2013",
+    "value": 6.204310666401,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+  },
+  {
+    "indicator": {
+      "id": "FP.CPI.TOTL.ZG",
+      "value": "Inflation, consumer prices (annual %)"
+    },
+    "country": {
+      "id": "BR",
+      "value": "Brazil"
+    },
+    "countryiso3code": "BRA",
+    "date": "2012",
+    "value": 5.40349914036997,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+  },
+  {
+    "indicator": {
+      "id": "FP.CPI.TOTL.ZG",
+      "value": "Inflation, consumer prices (annual %)"
+    },
+    "country": {
+      "id": "BR",
+      "value": "Brazil"
+    },
+    "countryiso3code": "BRA",
+    "date": "2011",
+    "value": 6.6364496221309,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+  },
+  {
+    "indicator": {
+      "id": "FP.CPI.TOTL.ZG",
+      "value": "Inflation, consumer prices (annual %)"
+    },
+    "country": {
+      "id": "BR",
+      "value": "Brazil"
+    },
+    "countryiso3code": "BRA",
+    "date": "2010",
+    "value": 5.03872690108074,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+  },
+  {
+    "indicator": {
+      "id": "FP.CPI.TOTL.ZG",
+      "value": "Inflation, consumer prices (annual %)"
+    },
+    "country": {
+      "id": "BR",
+      "value": "Brazil"
+    },
+    "countryiso3code": "BRA",
+    "date": "2009",
+    "value": 4.88803479876798,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+  },
+  {
+    "indicator": {
+      "id": "FP.CPI.TOTL.ZG",
+      "value": "Inflation, consumer prices (annual %)"
+    },
+    "country": {
+      "id": "BR",
+      "value": "Brazil"
+    },
+    "countryiso3code": "BRA",
+    "date": "2008",
+    "value": 5.67859390284168,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+  },
+  {
+    "indicator": {
+      "id": "FP.CPI.TOTL.ZG",
+      "value": "Inflation, consumer prices (annual %)"
+    },
+    "country": {
+      "id": "BR",
+      "value": "Brazil"
+    },
+    "countryiso3code": "BRA",
+    "date": "2007",
+    "value": 3.64127299102652,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+  },
+  {
+    "indicator": {
+      "id": "FP.CPI.TOTL.ZG",
+      "value": "Inflation, consumer prices (annual %)"
+    },
+    "country": {
+      "id": "BR",
+      "value": "Brazil"
+    },
+    "countryiso3code": "BRA",
+    "date": "2006",
+    "value": 4.18356812896909,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+  },
+  {
+    "indicator": {
+      "id": "FP.CPI.TOTL.ZG",
+      "value": "Inflation, consumer prices (annual %)"
+    },
+    "country": {
+      "id": "BR",
+      "value": "Brazil"
+    },
+    "countryiso3code": "BRA",
+    "date": "2005",
+    "value": 6.86953720898964,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+  },
+  {
+    "indicator": {
+      "id": "FP.CPI.TOTL.ZG",
+      "value": "Inflation, consumer prices (annual %)"
+    },
+    "country": {
+      "id": "BR",
+      "value": "Brazil"
+    },
+    "countryiso3code": "BRA",
+    "date": "2004",
+    "value": 6.59718509985963,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+  },
+  {
+    "indicator": {
+      "id": "FP.CPI.TOTL.ZG",
+      "value": "Inflation, consumer prices (annual %)"
+    },
+    "country": {
+      "id": "BR",
+      "value": "Brazil"
+    },
+    "countryiso3code": "BRA",
+    "date": "2003",
+    "value": 14.7149197228147,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+  },
+  {
+    "indicator": {
+      "id": "FP.CPI.TOTL.ZG",
+      "value": "Inflation, consumer prices (annual %)"
+    },
+    "country": {
+      "id": "BR",
+      "value": "Brazil"
+    },
+    "countryiso3code": "BRA",
+    "date": "2002",
+    "value": 8.45016437708331,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+  },
+  {
+    "indicator": {
+      "id": "FP.CPI.TOTL.ZG",
+      "value": "Inflation, consumer prices (annual %)"
+    },
+    "country": {
+      "id": "BR",
+      "value": "Brazil"
+    },
+    "countryiso3code": "BRA",
+    "date": "2001",
+    "value": 6.84035902487523,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+  },
+  {
+    "indicator": {
+      "id": "FP.CPI.TOTL.ZG",
+      "value": "Inflation, consumer prices (annual %)"
+    },
+    "country": {
+      "id": "BR",
+      "value": "Brazil"
+    },
+    "countryiso3code": "BRA",
+    "date": "2000",
+    "value": 7.04414105947265,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+  },
+  {
+    "indicator": {
+      "id": "FP.CPI.TOTL.ZG",
+      "value": "Inflation, consumer prices (annual %)"
+    },
+    "country": {
+      "id": "CO",
+      "value": "Colombia"
+    },
+    "countryiso3code": "COL",
+    "date": "2024",
+    "value": 6.60908593728228,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+  },
+  {
+    "indicator": {
+      "id": "FP.CPI.TOTL.ZG",
+      "value": "Inflation, consumer prices (annual %)"
+    },
+    "country": {
+      "id": "CO",
+      "value": "Colombia"
+    },
+    "countryiso3code": "COL",
+    "date": "2023",
+    "value": 11.7359044948689,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+  },
+  {
+    "indicator": {
+      "id": "FP.CPI.TOTL.ZG",
+      "value": "Inflation, consumer prices (annual %)"
+    },
+    "country": {
+      "id": "CO",
+      "value": "Colombia"
+    },
+    "countryiso3code": "COL",
+    "date": "2022",
+    "value": 10.1772313546166,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+  },
+  {
+    "indicator": {
+      "id": "FP.CPI.TOTL.ZG",
+      "value": "Inflation, consumer prices (annual %)"
+    },
+    "country": {
+      "id": "CO",
+      "value": "Colombia"
+    },
+    "countryiso3code": "COL",
+    "date": "2021",
+    "value": 3.49505757399448,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+  },
+  {
+    "indicator": {
+      "id": "FP.CPI.TOTL.ZG",
+      "value": "Inflation, consumer prices (annual %)"
+    },
+    "country": {
+      "id": "CO",
+      "value": "Colombia"
+    },
+    "countryiso3code": "COL",
+    "date": "2020",
+    "value": 2.52663500084706,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+  },
+  {
+    "indicator": {
+      "id": "FP.CPI.TOTL.ZG",
+      "value": "Inflation, consumer prices (annual %)"
+    },
+    "country": {
+      "id": "CO",
+      "value": "Colombia"
+    },
+    "countryiso3code": "COL",
+    "date": "2019",
+    "value": 3.52301932741446,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+  },
+  {
+    "indicator": {
+      "id": "FP.CPI.TOTL.ZG",
+      "value": "Inflation, consumer prices (annual %)"
+    },
+    "country": {
+      "id": "CO",
+      "value": "Colombia"
+    },
+    "countryiso3code": "COL",
+    "date": "2018",
+    "value": 3.24056932930569,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+  },
+  {
+    "indicator": {
+      "id": "FP.CPI.TOTL.ZG",
+      "value": "Inflation, consumer prices (annual %)"
+    },
+    "country": {
+      "id": "CO",
+      "value": "Colombia"
+    },
+    "countryiso3code": "COL",
+    "date": "2017",
+    "value": 4.3143132569501,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+  },
+  {
+    "indicator": {
+      "id": "FP.CPI.TOTL.ZG",
+      "value": "Inflation, consumer prices (annual %)"
+    },
+    "country": {
+      "id": "CO",
+      "value": "Colombia"
+    },
+    "countryiso3code": "COL",
+    "date": "2016",
+    "value": 7.51346024627674,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+  },
+  {
+    "indicator": {
+      "id": "FP.CPI.TOTL.ZG",
+      "value": "Inflation, consumer prices (annual %)"
+    },
+    "country": {
+      "id": "CO",
+      "value": "Colombia"
+    },
+    "countryiso3code": "COL",
+    "date": "2015",
+    "value": 4.98983115849529,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+  },
+  {
+    "indicator": {
+      "id": "FP.CPI.TOTL.ZG",
+      "value": "Inflation, consumer prices (annual %)"
+    },
+    "country": {
+      "id": "CO",
+      "value": "Colombia"
+    },
+    "countryiso3code": "COL",
+    "date": "2014",
+    "value": 2.89883787761737,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+  },
+  {
+    "indicator": {
+      "id": "FP.CPI.TOTL.ZG",
+      "value": "Inflation, consumer prices (annual %)"
+    },
+    "country": {
+      "id": "CO",
+      "value": "Colombia"
+    },
+    "countryiso3code": "COL",
+    "date": "2013",
+    "value": 2.01699224310383,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+  },
+  {
+    "indicator": {
+      "id": "FP.CPI.TOTL.ZG",
+      "value": "Inflation, consumer prices (annual %)"
+    },
+    "country": {
+      "id": "CO",
+      "value": "Colombia"
+    },
+    "countryiso3code": "COL",
+    "date": "2012",
+    "value": 3.16930188840055,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+  },
+  {
+    "indicator": {
+      "id": "FP.CPI.TOTL.ZG",
+      "value": "Inflation, consumer prices (annual %)"
+    },
+    "country": {
+      "id": "CO",
+      "value": "Colombia"
+    },
+    "countryiso3code": "COL",
+    "date": "2011",
+    "value": 3.4150334477625,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+  },
+  {
+    "indicator": {
+      "id": "FP.CPI.TOTL.ZG",
+      "value": "Inflation, consumer prices (annual %)"
+    },
+    "country": {
+      "id": "CO",
+      "value": "Colombia"
+    },
+    "countryiso3code": "COL",
+    "date": "2010",
+    "value": 2.27200227892008,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+  },
+  {
+    "indicator": {
+      "id": "FP.CPI.TOTL.ZG",
+      "value": "Inflation, consumer prices (annual %)"
+    },
+    "country": {
+      "id": "CO",
+      "value": "Colombia"
+    },
+    "countryiso3code": "COL",
+    "date": "2009",
+    "value": 4.20251661216481,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+  },
+  {
+    "indicator": {
+      "id": "FP.CPI.TOTL.ZG",
+      "value": "Inflation, consumer prices (annual %)"
+    },
+    "country": {
+      "id": "CO",
+      "value": "Colombia"
+    },
+    "countryiso3code": "COL",
+    "date": "2008",
+    "value": 6.9968849555451,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+  },
+  {
+    "indicator": {
+      "id": "FP.CPI.TOTL.ZG",
+      "value": "Inflation, consumer prices (annual %)"
+    },
+    "country": {
+      "id": "CO",
+      "value": "Colombia"
+    },
+    "countryiso3code": "COL",
+    "date": "2007",
+    "value": 5.54438485815155,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+  },
+  {
+    "indicator": {
+      "id": "FP.CPI.TOTL.ZG",
+      "value": "Inflation, consumer prices (annual %)"
+    },
+    "country": {
+      "id": "CO",
+      "value": "Colombia"
+    },
+    "countryiso3code": "COL",
+    "date": "2006",
+    "value": 4.29342363628926,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+  },
+  {
+    "indicator": {
+      "id": "FP.CPI.TOTL.ZG",
+      "value": "Inflation, consumer prices (annual %)"
+    },
+    "country": {
+      "id": "CO",
+      "value": "Colombia"
+    },
+    "countryiso3code": "COL",
+    "date": "2005",
+    "value": 5.05101962689695,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+  },
+  {
+    "indicator": {
+      "id": "FP.CPI.TOTL.ZG",
+      "value": "Inflation, consumer prices (annual %)"
+    },
+    "country": {
+      "id": "CO",
+      "value": "Colombia"
+    },
+    "countryiso3code": "COL",
+    "date": "2004",
+    "value": 5.90402005546502,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+  },
+  {
+    "indicator": {
+      "id": "FP.CPI.TOTL.ZG",
+      "value": "Inflation, consumer prices (annual %)"
+    },
+    "country": {
+      "id": "CO",
+      "value": "Colombia"
+    },
+    "countryiso3code": "COL",
+    "date": "2003",
+    "value": 7.1297886294186,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+  },
+  {
+    "indicator": {
+      "id": "FP.CPI.TOTL.ZG",
+      "value": "Inflation, consumer prices (annual %)"
+    },
+    "country": {
+      "id": "CO",
+      "value": "Colombia"
+    },
+    "countryiso3code": "COL",
+    "date": "2002",
+    "value": 6.35150728778872,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+  },
+  {
+    "indicator": {
+      "id": "FP.CPI.TOTL.ZG",
+      "value": "Inflation, consumer prices (annual %)"
+    },
+    "country": {
+      "id": "CO",
+      "value": "Colombia"
+    },
+    "countryiso3code": "COL",
+    "date": "2001",
+    "value": 7.96556090304834,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+  },
+  {
+    "indicator": {
+      "id": "FP.CPI.TOTL.ZG",
+      "value": "Inflation, consumer prices (annual %)"
+    },
+    "country": {
+      "id": "CO",
+      "value": "Colombia"
+    },
+    "countryiso3code": "COL",
+    "date": "2000",
+    "value": 9.22534818585365,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+  },
+  {
+    "indicator": {
+      "id": "FP.CPI.TOTL.ZG",
+      "value": "Inflation, consumer prices (annual %)"
+    },
+    "country": {
+      "id": "MX",
+      "value": "Mexico"
+    },
+    "countryiso3code": "MEX",
+    "date": "2024",
+    "value": 4.72225588452931,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+  },
+  {
+    "indicator": {
+      "id": "FP.CPI.TOTL.ZG",
+      "value": "Inflation, consumer prices (annual %)"
+    },
+    "country": {
+      "id": "MX",
+      "value": "Mexico"
+    },
+    "countryiso3code": "MEX",
+    "date": "2023",
+    "value": 5.52796087314388,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+  },
+  {
+    "indicator": {
+      "id": "FP.CPI.TOTL.ZG",
+      "value": "Inflation, consumer prices (annual %)"
+    },
+    "country": {
+      "id": "MX",
+      "value": "Mexico"
+    },
+    "countryiso3code": "MEX",
+    "date": "2022",
+    "value": 7.89627619168549,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+  },
+  {
+    "indicator": {
+      "id": "FP.CPI.TOTL.ZG",
+      "value": "Inflation, consumer prices (annual %)"
+    },
+    "country": {
+      "id": "MX",
+      "value": "Mexico"
+    },
+    "countryiso3code": "MEX",
+    "date": "2021",
+    "value": 5.68920847683753,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+  },
+  {
+    "indicator": {
+      "id": "FP.CPI.TOTL.ZG",
+      "value": "Inflation, consumer prices (annual %)"
+    },
+    "country": {
+      "id": "MX",
+      "value": "Mexico"
+    },
+    "countryiso3code": "MEX",
+    "date": "2020",
+    "value": 3.39683415570006,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+  },
+  {
+    "indicator": {
+      "id": "FP.CPI.TOTL.ZG",
+      "value": "Inflation, consumer prices (annual %)"
+    },
+    "country": {
+      "id": "MX",
+      "value": "Mexico"
+    },
+    "countryiso3code": "MEX",
+    "date": "2019",
+    "value": 3.63596142127046,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+  },
+  {
+    "indicator": {
+      "id": "FP.CPI.TOTL.ZG",
+      "value": "Inflation, consumer prices (annual %)"
+    },
+    "country": {
+      "id": "MX",
+      "value": "Mexico"
+    },
+    "countryiso3code": "MEX",
+    "date": "2018",
+    "value": 4.8993501535655,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+  },
+  {
+    "indicator": {
+      "id": "FP.CPI.TOTL.ZG",
+      "value": "Inflation, consumer prices (annual %)"
+    },
+    "country": {
+      "id": "MX",
+      "value": "Mexico"
+    },
+    "countryiso3code": "MEX",
+    "date": "2017",
+    "value": 6.04145724018985,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+  },
+  {
+    "indicator": {
+      "id": "FP.CPI.TOTL.ZG",
+      "value": "Inflation, consumer prices (annual %)"
+    },
+    "country": {
+      "id": "MX",
+      "value": "Mexico"
+    },
+    "countryiso3code": "MEX",
+    "date": "2016",
+    "value": 2.8217078474766,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+  },
+  {
+    "indicator": {
+      "id": "FP.CPI.TOTL.ZG",
+      "value": "Inflation, consumer prices (annual %)"
+    },
+    "country": {
+      "id": "MX",
+      "value": "Mexico"
+    },
+    "countryiso3code": "MEX",
+    "date": "2015",
+    "value": 2.72064064964022,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+  },
+  {
+    "indicator": {
+      "id": "FP.CPI.TOTL.ZG",
+      "value": "Inflation, consumer prices (annual %)"
+    },
+    "country": {
+      "id": "MX",
+      "value": "Mexico"
+    },
+    "countryiso3code": "MEX",
+    "date": "2014",
+    "value": 4.01861608078678,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+  },
+  {
+    "indicator": {
+      "id": "FP.CPI.TOTL.ZG",
+      "value": "Inflation, consumer prices (annual %)"
+    },
+    "country": {
+      "id": "MX",
+      "value": "Mexico"
+    },
+    "countryiso3code": "MEX",
+    "date": "2013",
+    "value": 3.80639069747204,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+  },
+  {
+    "indicator": {
+      "id": "FP.CPI.TOTL.ZG",
+      "value": "Inflation, consumer prices (annual %)"
+    },
+    "country": {
+      "id": "MX",
+      "value": "Mexico"
+    },
+    "countryiso3code": "MEX",
+    "date": "2012",
+    "value": 4.11150981070289,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+  },
+  {
+    "indicator": {
+      "id": "FP.CPI.TOTL.ZG",
+      "value": "Inflation, consumer prices (annual %)"
+    },
+    "country": {
+      "id": "MX",
+      "value": "Mexico"
+    },
+    "countryiso3code": "MEX",
+    "date": "2011",
+    "value": 3.40737824605742,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+  },
+  {
+    "indicator": {
+      "id": "FP.CPI.TOTL.ZG",
+      "value": "Inflation, consumer prices (annual %)"
+    },
+    "country": {
+      "id": "MX",
+      "value": "Mexico"
+    },
+    "countryiso3code": "MEX",
+    "date": "2010",
+    "value": 4.15672722680173,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+  },
+  {
+    "indicator": {
+      "id": "FP.CPI.TOTL.ZG",
+      "value": "Inflation, consumer prices (annual %)"
+    },
+    "country": {
+      "id": "MX",
+      "value": "Mexico"
+    },
+    "countryiso3code": "MEX",
+    "date": "2009",
+    "value": 5.29735584228855,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+  },
+  {
+    "indicator": {
+      "id": "FP.CPI.TOTL.ZG",
+      "value": "Inflation, consumer prices (annual %)"
+    },
+    "country": {
+      "id": "MX",
+      "value": "Mexico"
+    },
+    "countryiso3code": "MEX",
+    "date": "2008",
+    "value": 5.12498274575896,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+  },
+  {
+    "indicator": {
+      "id": "FP.CPI.TOTL.ZG",
+      "value": "Inflation, consumer prices (annual %)"
+    },
+    "country": {
+      "id": "MX",
+      "value": "Mexico"
+    },
+    "countryiso3code": "MEX",
+    "date": "2007",
+    "value": 3.96684905458235,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+  },
+  {
+    "indicator": {
+      "id": "FP.CPI.TOTL.ZG",
+      "value": "Inflation, consumer prices (annual %)"
+    },
+    "country": {
+      "id": "MX",
+      "value": "Mexico"
+    },
+    "countryiso3code": "MEX",
+    "date": "2006",
+    "value": 3.62946762439132,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+  },
+  {
+    "indicator": {
+      "id": "FP.CPI.TOTL.ZG",
+      "value": "Inflation, consumer prices (annual %)"
+    },
+    "country": {
+      "id": "MX",
+      "value": "Mexico"
+    },
+    "countryiso3code": "MEX",
+    "date": "2005",
+    "value": 3.98805714597437,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+  },
+  {
+    "indicator": {
+      "id": "FP.CPI.TOTL.ZG",
+      "value": "Inflation, consumer prices (annual %)"
+    },
+    "country": {
+      "id": "MX",
+      "value": "Mexico"
+    },
+    "countryiso3code": "MEX",
+    "date": "2004",
+    "value": 4.68840884843142,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+  },
+  {
+    "indicator": {
+      "id": "FP.CPI.TOTL.ZG",
+      "value": "Inflation, consumer prices (annual %)"
+    },
+    "country": {
+      "id": "MX",
+      "value": "Mexico"
+    },
+    "countryiso3code": "MEX",
+    "date": "2003",
+    "value": 4.54690012118718,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+  },
+  {
+    "indicator": {
+      "id": "FP.CPI.TOTL.ZG",
+      "value": "Inflation, consumer prices (annual %)"
+    },
+    "country": {
+      "id": "MX",
+      "value": "Mexico"
+    },
+    "countryiso3code": "MEX",
+    "date": "2002",
+    "value": 5.03072733151295,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+  },
+  {
+    "indicator": {
+      "id": "FP.CPI.TOTL.ZG",
+      "value": "Inflation, consumer prices (annual %)"
+    },
+    "country": {
+      "id": "MX",
+      "value": "Mexico"
+    },
+    "countryiso3code": "MEX",
+    "date": "2001",
+    "value": 6.36773806235037,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+  },
+  {
+    "indicator": {
+      "id": "FP.CPI.TOTL.ZG",
+      "value": "Inflation, consumer prices (annual %)"
+    },
+    "country": {
+      "id": "MX",
+      "value": "Mexico"
+    },
+    "countryiso3code": "MEX",
+    "date": "2000",
+    "value": 9.49156149435402,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+  },
+  {
+    "indicator": {
+      "id": "SL.UEM.TOTL.ZS",
+      "value": "Unemployment, total (% of total labor force) (modeled ILO estimate)"
+    },
+    "country": {
+      "id": "AR",
+      "value": "Argentina"
+    },
+    "countryiso3code": "ARG",
+    "date": "2024",
+    "value": 7.15,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+  },
+  {
+    "indicator": {
+      "id": "SL.UEM.TOTL.ZS",
+      "value": "Unemployment, total (% of total labor force) (modeled ILO estimate)"
+    },
+    "country": {
+      "id": "AR",
+      "value": "Argentina"
+    },
+    "countryiso3code": "ARG",
+    "date": "2023",
+    "value": 6.139,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+  },
+  {
+    "indicator": {
+      "id": "SL.UEM.TOTL.ZS",
+      "value": "Unemployment, total (% of total labor force) (modeled ILO estimate)"
+    },
+    "country": {
+      "id": "AR",
+      "value": "Argentina"
+    },
+    "countryiso3code": "ARG",
+    "date": "2022",
+    "value": 6.805,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+  },
+  {
+    "indicator": {
+      "id": "SL.UEM.TOTL.ZS",
+      "value": "Unemployment, total (% of total labor force) (modeled ILO estimate)"
+    },
+    "country": {
+      "id": "AR",
+      "value": "Argentina"
+    },
+    "countryiso3code": "ARG",
+    "date": "2021",
+    "value": 8.736,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+  },
+  {
+    "indicator": {
+      "id": "SL.UEM.TOTL.ZS",
+      "value": "Unemployment, total (% of total labor force) (modeled ILO estimate)"
+    },
+    "country": {
+      "id": "AR",
+      "value": "Argentina"
+    },
+    "countryiso3code": "ARG",
+    "date": "2020",
+    "value": 11.461,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+  },
+  {
+    "indicator": {
+      "id": "SL.UEM.TOTL.ZS",
+      "value": "Unemployment, total (% of total labor force) (modeled ILO estimate)"
+    },
+    "country": {
+      "id": "AR",
+      "value": "Argentina"
+    },
+    "countryiso3code": "ARG",
+    "date": "2019",
+    "value": 9.843,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+  },
+  {
+    "indicator": {
+      "id": "SL.UEM.TOTL.ZS",
+      "value": "Unemployment, total (% of total labor force) (modeled ILO estimate)"
+    },
+    "country": {
+      "id": "AR",
+      "value": "Argentina"
+    },
+    "countryiso3code": "ARG",
+    "date": "2018",
+    "value": 9.22,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+  },
+  {
+    "indicator": {
+      "id": "SL.UEM.TOTL.ZS",
+      "value": "Unemployment, total (% of total labor force) (modeled ILO estimate)"
+    },
+    "country": {
+      "id": "AR",
+      "value": "Argentina"
+    },
+    "countryiso3code": "ARG",
+    "date": "2017",
+    "value": 8.347,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+  },
+  {
+    "indicator": {
+      "id": "SL.UEM.TOTL.ZS",
+      "value": "Unemployment, total (% of total labor force) (modeled ILO estimate)"
+    },
+    "country": {
+      "id": "AR",
+      "value": "Argentina"
+    },
+    "countryiso3code": "ARG",
+    "date": "2016",
+    "value": 8.088,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+  },
+  {
+    "indicator": {
+      "id": "SL.UEM.TOTL.ZS",
+      "value": "Unemployment, total (% of total labor force) (modeled ILO estimate)"
+    },
+    "country": {
+      "id": "AR",
+      "value": "Argentina"
+    },
+    "countryiso3code": "ARG",
+    "date": "2015",
+    "value": 7.577,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+  },
+  {
+    "indicator": {
+      "id": "SL.UEM.TOTL.ZS",
+      "value": "Unemployment, total (% of total labor force) (modeled ILO estimate)"
+    },
+    "country": {
+      "id": "AR",
+      "value": "Argentina"
+    },
+    "countryiso3code": "ARG",
+    "date": "2014",
+    "value": 7.268,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+  },
+  {
+    "indicator": {
+      "id": "SL.UEM.TOTL.ZS",
+      "value": "Unemployment, total (% of total labor force) (modeled ILO estimate)"
+    },
+    "country": {
+      "id": "AR",
+      "value": "Argentina"
+    },
+    "countryiso3code": "ARG",
+    "date": "2013",
+    "value": 7.1,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+  },
+  {
+    "indicator": {
+      "id": "SL.UEM.TOTL.ZS",
+      "value": "Unemployment, total (% of total labor force) (modeled ILO estimate)"
+    },
+    "country": {
+      "id": "AR",
+      "value": "Argentina"
+    },
+    "countryiso3code": "ARG",
+    "date": "2012",
+    "value": 7.217,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+  },
+  {
+    "indicator": {
+      "id": "SL.UEM.TOTL.ZS",
+      "value": "Unemployment, total (% of total labor force) (modeled ILO estimate)"
+    },
+    "country": {
+      "id": "AR",
+      "value": "Argentina"
+    },
+    "countryiso3code": "ARG",
+    "date": "2011",
+    "value": 7.18,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+  },
+  {
+    "indicator": {
+      "id": "SL.UEM.TOTL.ZS",
+      "value": "Unemployment, total (% of total labor force) (modeled ILO estimate)"
+    },
+    "country": {
+      "id": "AR",
+      "value": "Argentina"
+    },
+    "countryiso3code": "ARG",
+    "date": "2010",
+    "value": 7.714,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+  },
+  {
+    "indicator": {
+      "id": "SL.UEM.TOTL.ZS",
+      "value": "Unemployment, total (% of total labor force) (modeled ILO estimate)"
+    },
+    "country": {
+      "id": "AR",
+      "value": "Argentina"
+    },
+    "countryiso3code": "ARG",
+    "date": "2009",
+    "value": 8.645,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+  },
+  {
+    "indicator": {
+      "id": "SL.UEM.TOTL.ZS",
+      "value": "Unemployment, total (% of total labor force) (modeled ILO estimate)"
+    },
+    "country": {
+      "id": "AR",
+      "value": "Argentina"
+    },
+    "countryiso3code": "ARG",
+    "date": "2008",
+    "value": 7.837,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+  },
+  {
+    "indicator": {
+      "id": "SL.UEM.TOTL.ZS",
+      "value": "Unemployment, total (% of total labor force) (modeled ILO estimate)"
+    },
+    "country": {
+      "id": "AR",
+      "value": "Argentina"
+    },
+    "countryiso3code": "ARG",
+    "date": "2007",
+    "value": 8.47,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+  },
+  {
+    "indicator": {
+      "id": "SL.UEM.TOTL.ZS",
+      "value": "Unemployment, total (% of total labor force) (modeled ILO estimate)"
+    },
+    "country": {
+      "id": "AR",
+      "value": "Argentina"
+    },
+    "countryiso3code": "ARG",
+    "date": "2006",
+    "value": 10.078,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+  },
+  {
+    "indicator": {
+      "id": "SL.UEM.TOTL.ZS",
+      "value": "Unemployment, total (% of total labor force) (modeled ILO estimate)"
+    },
+    "country": {
+      "id": "AR",
+      "value": "Argentina"
+    },
+    "countryiso3code": "ARG",
+    "date": "2005",
+    "value": 11.506,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+  },
+  {
+    "indicator": {
+      "id": "SL.UEM.TOTL.ZS",
+      "value": "Unemployment, total (% of total labor force) (modeled ILO estimate)"
+    },
+    "country": {
+      "id": "AR",
+      "value": "Argentina"
+    },
+    "countryiso3code": "ARG",
+    "date": "2004",
+    "value": 13.522,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+  },
+  {
+    "indicator": {
+      "id": "SL.UEM.TOTL.ZS",
+      "value": "Unemployment, total (% of total labor force) (modeled ILO estimate)"
+    },
+    "country": {
+      "id": "AR",
+      "value": "Argentina"
+    },
+    "countryiso3code": "ARG",
+    "date": "2003",
+    "value": 15.36,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+  },
+  {
+    "indicator": {
+      "id": "SL.UEM.TOTL.ZS",
+      "value": "Unemployment, total (% of total labor force) (modeled ILO estimate)"
+    },
+    "country": {
+      "id": "AR",
+      "value": "Argentina"
+    },
+    "countryiso3code": "ARG",
+    "date": "2002",
+    "value": 19.59,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+  },
+  {
+    "indicator": {
+      "id": "SL.UEM.TOTL.ZS",
+      "value": "Unemployment, total (% of total labor force) (modeled ILO estimate)"
+    },
+    "country": {
+      "id": "AR",
+      "value": "Argentina"
+    },
+    "countryiso3code": "ARG",
+    "date": "2001",
+    "value": 17.32,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+  },
+  {
+    "indicator": {
+      "id": "SL.UEM.TOTL.ZS",
+      "value": "Unemployment, total (% of total labor force) (modeled ILO estimate)"
+    },
+    "country": {
+      "id": "AR",
+      "value": "Argentina"
+    },
+    "countryiso3code": "ARG",
+    "date": "2000",
+    "value": 15,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+  },
+  {
+    "indicator": {
+      "id": "SL.UEM.TOTL.ZS",
+      "value": "Unemployment, total (% of total labor force) (modeled ILO estimate)"
+    },
+    "country": {
+      "id": "BR",
+      "value": "Brazil"
+    },
+    "countryiso3code": "BRA",
+    "date": "2024",
+    "value": 6.801,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+  },
+  {
+    "indicator": {
+      "id": "SL.UEM.TOTL.ZS",
+      "value": "Unemployment, total (% of total labor force) (modeled ILO estimate)"
+    },
+    "country": {
+      "id": "BR",
+      "value": "Brazil"
+    },
+    "countryiso3code": "BRA",
+    "date": "2023",
+    "value": 7.947,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+  },
+  {
+    "indicator": {
+      "id": "SL.UEM.TOTL.ZS",
+      "value": "Unemployment, total (% of total labor force) (modeled ILO estimate)"
+    },
+    "country": {
+      "id": "BR",
+      "value": "Brazil"
+    },
+    "countryiso3code": "BRA",
+    "date": "2022",
+    "value": 9.231,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+  },
+  {
+    "indicator": {
+      "id": "SL.UEM.TOTL.ZS",
+      "value": "Unemployment, total (% of total labor force) (modeled ILO estimate)"
+    },
+    "country": {
+      "id": "BR",
+      "value": "Brazil"
+    },
+    "countryiso3code": "BRA",
+    "date": "2021",
+    "value": 13.158,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+  },
+  {
+    "indicator": {
+      "id": "SL.UEM.TOTL.ZS",
+      "value": "Unemployment, total (% of total labor force) (modeled ILO estimate)"
+    },
+    "country": {
+      "id": "BR",
+      "value": "Brazil"
+    },
+    "countryiso3code": "BRA",
+    "date": "2020",
+    "value": 13.697,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+  },
+  {
+    "indicator": {
+      "id": "SL.UEM.TOTL.ZS",
+      "value": "Unemployment, total (% of total labor force) (modeled ILO estimate)"
+    },
+    "country": {
+      "id": "BR",
+      "value": "Brazil"
+    },
+    "countryiso3code": "BRA",
+    "date": "2019",
+    "value": 11.936,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+  },
+  {
+    "indicator": {
+      "id": "SL.UEM.TOTL.ZS",
+      "value": "Unemployment, total (% of total labor force) (modeled ILO estimate)"
+    },
+    "country": {
+      "id": "BR",
+      "value": "Brazil"
+    },
+    "countryiso3code": "BRA",
+    "date": "2018",
+    "value": 12.329,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+  },
+  {
+    "indicator": {
+      "id": "SL.UEM.TOTL.ZS",
+      "value": "Unemployment, total (% of total labor force) (modeled ILO estimate)"
+    },
+    "country": {
+      "id": "BR",
+      "value": "Brazil"
+    },
+    "countryiso3code": "BRA",
+    "date": "2017",
+    "value": 12.792,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+  },
+  {
+    "indicator": {
+      "id": "SL.UEM.TOTL.ZS",
+      "value": "Unemployment, total (% of total labor force) (modeled ILO estimate)"
+    },
+    "country": {
+      "id": "BR",
+      "value": "Brazil"
+    },
+    "countryiso3code": "BRA",
+    "date": "2016",
+    "value": 11.58,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+  },
+  {
+    "indicator": {
+      "id": "SL.UEM.TOTL.ZS",
+      "value": "Unemployment, total (% of total labor force) (modeled ILO estimate)"
+    },
+    "country": {
+      "id": "BR",
+      "value": "Brazil"
+    },
+    "countryiso3code": "BRA",
+    "date": "2015",
+    "value": 8.538,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+  },
+  {
+    "indicator": {
+      "id": "SL.UEM.TOTL.ZS",
+      "value": "Unemployment, total (% of total labor force) (modeled ILO estimate)"
+    },
+    "country": {
+      "id": "BR",
+      "value": "Brazil"
+    },
+    "countryiso3code": "BRA",
+    "date": "2014",
+    "value": 6.755,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+  },
+  {
+    "indicator": {
+      "id": "SL.UEM.TOTL.ZS",
+      "value": "Unemployment, total (% of total labor force) (modeled ILO estimate)"
+    },
+    "country": {
+      "id": "BR",
+      "value": "Brazil"
+    },
+    "countryiso3code": "BRA",
+    "date": "2013",
+    "value": 7.071,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+  },
+  {
+    "indicator": {
+      "id": "SL.UEM.TOTL.ZS",
+      "value": "Unemployment, total (% of total labor force) (modeled ILO estimate)"
+    },
+    "country": {
+      "id": "BR",
+      "value": "Brazil"
+    },
+    "countryiso3code": "BRA",
+    "date": "2012",
+    "value": 7.251,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+  },
+  {
+    "indicator": {
+      "id": "SL.UEM.TOTL.ZS",
+      "value": "Unemployment, total (% of total labor force) (modeled ILO estimate)"
+    },
+    "country": {
+      "id": "BR",
+      "value": "Brazil"
+    },
+    "countryiso3code": "BRA",
+    "date": "2011",
+    "value": 7.578,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+  },
+  {
+    "indicator": {
+      "id": "SL.UEM.TOTL.ZS",
+      "value": "Unemployment, total (% of total labor force) (modeled ILO estimate)"
+    },
+    "country": {
+      "id": "BR",
+      "value": "Brazil"
+    },
+    "countryiso3code": "BRA",
+    "date": "2010",
+    "value": 8.42,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+  },
+  {
+    "indicator": {
+      "id": "SL.UEM.TOTL.ZS",
+      "value": "Unemployment, total (% of total labor force) (modeled ILO estimate)"
+    },
+    "country": {
+      "id": "BR",
+      "value": "Brazil"
+    },
+    "countryiso3code": "BRA",
+    "date": "2009",
+    "value": 9.419,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+  },
+  {
+    "indicator": {
+      "id": "SL.UEM.TOTL.ZS",
+      "value": "Unemployment, total (% of total labor force) (modeled ILO estimate)"
+    },
+    "country": {
+      "id": "BR",
+      "value": "Brazil"
+    },
+    "countryiso3code": "BRA",
+    "date": "2008",
+    "value": 8.268,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+  },
+  {
+    "indicator": {
+      "id": "SL.UEM.TOTL.ZS",
+      "value": "Unemployment, total (% of total labor force) (modeled ILO estimate)"
+    },
+    "country": {
+      "id": "BR",
+      "value": "Brazil"
+    },
+    "countryiso3code": "BRA",
+    "date": "2007",
+    "value": 9.28,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+  },
+  {
+    "indicator": {
+      "id": "SL.UEM.TOTL.ZS",
+      "value": "Unemployment, total (% of total labor force) (modeled ILO estimate)"
+    },
+    "country": {
+      "id": "BR",
+      "value": "Brazil"
+    },
+    "countryiso3code": "BRA",
+    "date": "2006",
+    "value": 9.692,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+  },
+  {
+    "indicator": {
+      "id": "SL.UEM.TOTL.ZS",
+      "value": "Unemployment, total (% of total labor force) (modeled ILO estimate)"
+    },
+    "country": {
+      "id": "BR",
+      "value": "Brazil"
+    },
+    "countryiso3code": "BRA",
+    "date": "2005",
+    "value": 10.551,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+  },
+  {
+    "indicator": {
+      "id": "SL.UEM.TOTL.ZS",
+      "value": "Unemployment, total (% of total labor force) (modeled ILO estimate)"
+    },
+    "country": {
+      "id": "BR",
+      "value": "Brazil"
+    },
+    "countryiso3code": "BRA",
+    "date": "2004",
+    "value": 10.072,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+  },
+  {
+    "indicator": {
+      "id": "SL.UEM.TOTL.ZS",
+      "value": "Unemployment, total (% of total labor force) (modeled ILO estimate)"
+    },
+    "country": {
+      "id": "BR",
+      "value": "Brazil"
+    },
+    "countryiso3code": "BRA",
+    "date": "2003",
+    "value": 11.168,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+  },
+  {
+    "indicator": {
+      "id": "SL.UEM.TOTL.ZS",
+      "value": "Unemployment, total (% of total labor force) (modeled ILO estimate)"
+    },
+    "country": {
+      "id": "BR",
+      "value": "Brazil"
+    },
+    "countryiso3code": "BRA",
+    "date": "2002",
+    "value": 10.641,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+  },
+  {
+    "indicator": {
+      "id": "SL.UEM.TOTL.ZS",
+      "value": "Unemployment, total (% of total labor force) (modeled ILO estimate)"
+    },
+    "country": {
+      "id": "BR",
+      "value": "Brazil"
+    },
+    "countryiso3code": "BRA",
+    "date": "2001",
+    "value": 10.649,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+  },
+  {
+    "indicator": {
+      "id": "SL.UEM.TOTL.ZS",
+      "value": "Unemployment, total (% of total labor force) (modeled ILO estimate)"
+    },
+    "country": {
+      "id": "BR",
+      "value": "Brazil"
+    },
+    "countryiso3code": "BRA",
+    "date": "2000",
+    "value": 10.889,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+  },
+  {
+    "indicator": {
+      "id": "SL.UEM.TOTL.ZS",
+      "value": "Unemployment, total (% of total labor force) (modeled ILO estimate)"
+    },
+    "country": {
+      "id": "CO",
+      "value": "Colombia"
+    },
+    "countryiso3code": "COL",
+    "date": "2024",
+    "value": 9.619,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+  },
+  {
+    "indicator": {
+      "id": "SL.UEM.TOTL.ZS",
+      "value": "Unemployment, total (% of total labor force) (modeled ILO estimate)"
+    },
+    "country": {
+      "id": "CO",
+      "value": "Colombia"
+    },
+    "countryiso3code": "COL",
+    "date": "2023",
+    "value": 9.591,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+  },
+  {
+    "indicator": {
+      "id": "SL.UEM.TOTL.ZS",
+      "value": "Unemployment, total (% of total labor force) (modeled ILO estimate)"
+    },
+    "country": {
+      "id": "CO",
+      "value": "Colombia"
+    },
+    "countryiso3code": "COL",
+    "date": "2022",
+    "value": 10.541,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+  },
+  {
+    "indicator": {
+      "id": "SL.UEM.TOTL.ZS",
+      "value": "Unemployment, total (% of total labor force) (modeled ILO estimate)"
+    },
+    "country": {
+      "id": "CO",
+      "value": "Colombia"
+    },
+    "countryiso3code": "COL",
+    "date": "2021",
+    "value": 13.898,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+  },
+  {
+    "indicator": {
+      "id": "SL.UEM.TOTL.ZS",
+      "value": "Unemployment, total (% of total labor force) (modeled ILO estimate)"
+    },
+    "country": {
+      "id": "CO",
+      "value": "Colombia"
+    },
+    "countryiso3code": "COL",
+    "date": "2020",
+    "value": 15.983,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+  },
+  {
+    "indicator": {
+      "id": "SL.UEM.TOTL.ZS",
+      "value": "Unemployment, total (% of total labor force) (modeled ILO estimate)"
+    },
+    "country": {
+      "id": "CO",
+      "value": "Colombia"
+    },
+    "countryiso3code": "COL",
+    "date": "2019",
+    "value": 10.28,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+  },
+  {
+    "indicator": {
+      "id": "SL.UEM.TOTL.ZS",
+      "value": "Unemployment, total (% of total labor force) (modeled ILO estimate)"
+    },
+    "country": {
+      "id": "CO",
+      "value": "Colombia"
+    },
+    "countryiso3code": "COL",
+    "date": "2018",
+    "value": 9.36,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+  },
+  {
+    "indicator": {
+      "id": "SL.UEM.TOTL.ZS",
+      "value": "Unemployment, total (% of total labor force) (modeled ILO estimate)"
+    },
+    "country": {
+      "id": "CO",
+      "value": "Colombia"
+    },
+    "countryiso3code": "COL",
+    "date": "2017",
+    "value": 9.086,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+  },
+  {
+    "indicator": {
+      "id": "SL.UEM.TOTL.ZS",
+      "value": "Unemployment, total (% of total labor force) (modeled ILO estimate)"
+    },
+    "country": {
+      "id": "CO",
+      "value": "Colombia"
+    },
+    "countryiso3code": "COL",
+    "date": "2016",
+    "value": 8.922,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+  },
+  {
+    "indicator": {
+      "id": "SL.UEM.TOTL.ZS",
+      "value": "Unemployment, total (% of total labor force) (modeled ILO estimate)"
+    },
+    "country": {
+      "id": "CO",
+      "value": "Colombia"
+    },
+    "countryiso3code": "COL",
+    "date": "2015",
+    "value": 8.572,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+  },
+  {
+    "indicator": {
+      "id": "SL.UEM.TOTL.ZS",
+      "value": "Unemployment, total (% of total labor force) (modeled ILO estimate)"
+    },
+    "country": {
+      "id": "CO",
+      "value": "Colombia"
+    },
+    "countryiso3code": "COL",
+    "date": "2014",
+    "value": 8.799,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+  },
+  {
+    "indicator": {
+      "id": "SL.UEM.TOTL.ZS",
+      "value": "Unemployment, total (% of total labor force) (modeled ILO estimate)"
+    },
+    "country": {
+      "id": "CO",
+      "value": "Colombia"
+    },
+    "countryiso3code": "COL",
+    "date": "2013",
+    "value": 9.246,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+  },
+  {
+    "indicator": {
+      "id": "SL.UEM.TOTL.ZS",
+      "value": "Unemployment, total (% of total labor force) (modeled ILO estimate)"
+    },
+    "country": {
+      "id": "CO",
+      "value": "Colombia"
+    },
+    "countryiso3code": "COL",
+    "date": "2012",
+    "value": 9.959,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+  },
+  {
+    "indicator": {
+      "id": "SL.UEM.TOTL.ZS",
+      "value": "Unemployment, total (% of total labor force) (modeled ILO estimate)"
+    },
+    "country": {
+      "id": "CO",
+      "value": "Colombia"
+    },
+    "countryiso3code": "COL",
+    "date": "2011",
+    "value": 10.288,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+  },
+  {
+    "indicator": {
+      "id": "SL.UEM.TOTL.ZS",
+      "value": "Unemployment, total (% of total labor force) (modeled ILO estimate)"
+    },
+    "country": {
+      "id": "CO",
+      "value": "Colombia"
+    },
+    "countryiso3code": "COL",
+    "date": "2010",
+    "value": 11.153,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+  },
+  {
+    "indicator": {
+      "id": "SL.UEM.TOTL.ZS",
+      "value": "Unemployment, total (% of total labor force) (modeled ILO estimate)"
+    },
+    "country": {
+      "id": "CO",
+      "value": "Colombia"
+    },
+    "countryiso3code": "COL",
+    "date": "2009",
+    "value": 12.066,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+  },
+  {
+    "indicator": {
+      "id": "SL.UEM.TOTL.ZS",
+      "value": "Unemployment, total (% of total labor force) (modeled ILO estimate)"
+    },
+    "country": {
+      "id": "CO",
+      "value": "Colombia"
+    },
+    "countryiso3code": "COL",
+    "date": "2008",
+    "value": 11.273,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+  },
+  {
+    "indicator": {
+      "id": "SL.UEM.TOTL.ZS",
+      "value": "Unemployment, total (% of total labor force) (modeled ILO estimate)"
+    },
+    "country": {
+      "id": "CO",
+      "value": "Colombia"
+    },
+    "countryiso3code": "COL",
+    "date": "2007",
+    "value": 11.204,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+  },
+  {
+    "indicator": {
+      "id": "SL.UEM.TOTL.ZS",
+      "value": "Unemployment, total (% of total labor force) (modeled ILO estimate)"
+    },
+    "country": {
+      "id": "CO",
+      "value": "Colombia"
+    },
+    "countryiso3code": "COL",
+    "date": "2006",
+    "value": 11.088,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+  },
+  {
+    "indicator": {
+      "id": "SL.UEM.TOTL.ZS",
+      "value": "Unemployment, total (% of total labor force) (modeled ILO estimate)"
+    },
+    "country": {
+      "id": "CO",
+      "value": "Colombia"
+    },
+    "countryiso3code": "COL",
+    "date": "2005",
+    "value": 11.062,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+  },
+  {
+    "indicator": {
+      "id": "SL.UEM.TOTL.ZS",
+      "value": "Unemployment, total (% of total labor force) (modeled ILO estimate)"
+    },
+    "country": {
+      "id": "CO",
+      "value": "Colombia"
+    },
+    "countryiso3code": "COL",
+    "date": "2004",
+    "value": 13.717,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+  },
+  {
+    "indicator": {
+      "id": "SL.UEM.TOTL.ZS",
+      "value": "Unemployment, total (% of total labor force) (modeled ILO estimate)"
+    },
+    "country": {
+      "id": "CO",
+      "value": "Colombia"
+    },
+    "countryiso3code": "COL",
+    "date": "2003",
+    "value": 13.221,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+  },
+  {
+    "indicator": {
+      "id": "SL.UEM.TOTL.ZS",
+      "value": "Unemployment, total (% of total labor force) (modeled ILO estimate)"
+    },
+    "country": {
+      "id": "CO",
+      "value": "Colombia"
+    },
+    "countryiso3code": "COL",
+    "date": "2002",
+    "value": 14.481,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+  },
+  {
+    "indicator": {
+      "id": "SL.UEM.TOTL.ZS",
+      "value": "Unemployment, total (% of total labor force) (modeled ILO estimate)"
+    },
+    "country": {
+      "id": "CO",
+      "value": "Colombia"
+    },
+    "countryiso3code": "COL",
+    "date": "2001",
+    "value": 15.04,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+  },
+  {
+    "indicator": {
+      "id": "SL.UEM.TOTL.ZS",
+      "value": "Unemployment, total (% of total labor force) (modeled ILO estimate)"
+    },
+    "country": {
+      "id": "CO",
+      "value": "Colombia"
+    },
+    "countryiso3code": "COL",
+    "date": "2000",
+    "value": 20.52,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+  },
+  {
+    "indicator": {
+      "id": "SL.UEM.TOTL.ZS",
+      "value": "Unemployment, total (% of total labor force) (modeled ILO estimate)"
+    },
+    "country": {
+      "id": "MX",
+      "value": "Mexico"
+    },
+    "countryiso3code": "MEX",
+    "date": "2024",
+    "value": 2.678,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+  },
+  {
+    "indicator": {
+      "id": "SL.UEM.TOTL.ZS",
+      "value": "Unemployment, total (% of total labor force) (modeled ILO estimate)"
+    },
+    "country": {
+      "id": "MX",
+      "value": "Mexico"
+    },
+    "countryiso3code": "MEX",
+    "date": "2023",
+    "value": 2.765,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+  },
+  {
+    "indicator": {
+      "id": "SL.UEM.TOTL.ZS",
+      "value": "Unemployment, total (% of total labor force) (modeled ILO estimate)"
+    },
+    "country": {
+      "id": "MX",
+      "value": "Mexico"
+    },
+    "countryiso3code": "MEX",
+    "date": "2022",
+    "value": 3.256,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+  },
+  {
+    "indicator": {
+      "id": "SL.UEM.TOTL.ZS",
+      "value": "Unemployment, total (% of total labor force) (modeled ILO estimate)"
+    },
+    "country": {
+      "id": "MX",
+      "value": "Mexico"
+    },
+    "countryiso3code": "MEX",
+    "date": "2021",
+    "value": 4.019,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+  },
+  {
+    "indicator": {
+      "id": "SL.UEM.TOTL.ZS",
+      "value": "Unemployment, total (% of total labor force) (modeled ILO estimate)"
+    },
+    "country": {
+      "id": "MX",
+      "value": "Mexico"
+    },
+    "countryiso3code": "MEX",
+    "date": "2020",
+    "value": 4.44,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+  },
+  {
+    "indicator": {
+      "id": "SL.UEM.TOTL.ZS",
+      "value": "Unemployment, total (% of total labor force) (modeled ILO estimate)"
+    },
+    "country": {
+      "id": "MX",
+      "value": "Mexico"
+    },
+    "countryiso3code": "MEX",
+    "date": "2019",
+    "value": 3.477,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+  },
+  {
+    "indicator": {
+      "id": "SL.UEM.TOTL.ZS",
+      "value": "Unemployment, total (% of total labor force) (modeled ILO estimate)"
+    },
+    "country": {
+      "id": "MX",
+      "value": "Mexico"
+    },
+    "countryiso3code": "MEX",
+    "date": "2018",
+    "value": 3.275,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+  },
+  {
+    "indicator": {
+      "id": "SL.UEM.TOTL.ZS",
+      "value": "Unemployment, total (% of total labor force) (modeled ILO estimate)"
+    },
+    "country": {
+      "id": "MX",
+      "value": "Mexico"
+    },
+    "countryiso3code": "MEX",
+    "date": "2017",
+    "value": 3.419,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+  },
+  {
+    "indicator": {
+      "id": "SL.UEM.TOTL.ZS",
+      "value": "Unemployment, total (% of total labor force) (modeled ILO estimate)"
+    },
+    "country": {
+      "id": "MX",
+      "value": "Mexico"
+    },
+    "countryiso3code": "MEX",
+    "date": "2016",
+    "value": 3.853,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+  },
+  {
+    "indicator": {
+      "id": "SL.UEM.TOTL.ZS",
+      "value": "Unemployment, total (% of total labor force) (modeled ILO estimate)"
+    },
+    "country": {
+      "id": "MX",
+      "value": "Mexico"
+    },
+    "countryiso3code": "MEX",
+    "date": "2015",
+    "value": 4.311,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+  },
+  {
+    "indicator": {
+      "id": "SL.UEM.TOTL.ZS",
+      "value": "Unemployment, total (% of total labor force) (modeled ILO estimate)"
+    },
+    "country": {
+      "id": "MX",
+      "value": "Mexico"
+    },
+    "countryiso3code": "MEX",
+    "date": "2014",
+    "value": 4.819,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+  },
+  {
+    "indicator": {
+      "id": "SL.UEM.TOTL.ZS",
+      "value": "Unemployment, total (% of total labor force) (modeled ILO estimate)"
+    },
+    "country": {
+      "id": "MX",
+      "value": "Mexico"
+    },
+    "countryiso3code": "MEX",
+    "date": "2013",
+    "value": 4.921,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+  },
+  {
+    "indicator": {
+      "id": "SL.UEM.TOTL.ZS",
+      "value": "Unemployment, total (% of total labor force) (modeled ILO estimate)"
+    },
+    "country": {
+      "id": "MX",
+      "value": "Mexico"
+    },
+    "countryiso3code": "MEX",
+    "date": "2012",
+    "value": 4.892,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+  },
+  {
+    "indicator": {
+      "id": "SL.UEM.TOTL.ZS",
+      "value": "Unemployment, total (% of total labor force) (modeled ILO estimate)"
+    },
+    "country": {
+      "id": "MX",
+      "value": "Mexico"
+    },
+    "countryiso3code": "MEX",
+    "date": "2011",
+    "value": 5.175,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+  },
+  {
+    "indicator": {
+      "id": "SL.UEM.TOTL.ZS",
+      "value": "Unemployment, total (% of total labor force) (modeled ILO estimate)"
+    },
+    "country": {
+      "id": "MX",
+      "value": "Mexico"
+    },
+    "countryiso3code": "MEX",
+    "date": "2010",
+    "value": 5.303,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+  },
+  {
+    "indicator": {
+      "id": "SL.UEM.TOTL.ZS",
+      "value": "Unemployment, total (% of total labor force) (modeled ILO estimate)"
+    },
+    "country": {
+      "id": "MX",
+      "value": "Mexico"
+    },
+    "countryiso3code": "MEX",
+    "date": "2009",
+    "value": 5.356,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+  },
+  {
+    "indicator": {
+      "id": "SL.UEM.TOTL.ZS",
+      "value": "Unemployment, total (% of total labor force) (modeled ILO estimate)"
+    },
+    "country": {
+      "id": "MX",
+      "value": "Mexico"
+    },
+    "countryiso3code": "MEX",
+    "date": "2008",
+    "value": 3.874,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+  },
+  {
+    "indicator": {
+      "id": "SL.UEM.TOTL.ZS",
+      "value": "Unemployment, total (% of total labor force) (modeled ILO estimate)"
+    },
+    "country": {
+      "id": "MX",
+      "value": "Mexico"
+    },
+    "countryiso3code": "MEX",
+    "date": "2007",
+    "value": 3.628,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+  },
+  {
+    "indicator": {
+      "id": "SL.UEM.TOTL.ZS",
+      "value": "Unemployment, total (% of total labor force) (modeled ILO estimate)"
+    },
+    "country": {
+      "id": "MX",
+      "value": "Mexico"
+    },
+    "countryiso3code": "MEX",
+    "date": "2006",
+    "value": 3.566,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+  },
+  {
+    "indicator": {
+      "id": "SL.UEM.TOTL.ZS",
+      "value": "Unemployment, total (% of total labor force) (modeled ILO estimate)"
+    },
+    "country": {
+      "id": "MX",
+      "value": "Mexico"
+    },
+    "countryiso3code": "MEX",
+    "date": "2005",
+    "value": 3.558,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+  },
+  {
+    "indicator": {
+      "id": "SL.UEM.TOTL.ZS",
+      "value": "Unemployment, total (% of total labor force) (modeled ILO estimate)"
+    },
+    "country": {
+      "id": "MX",
+      "value": "Mexico"
+    },
+    "countryiso3code": "MEX",
+    "date": "2004",
+    "value": 3.937,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+  },
+  {
+    "indicator": {
+      "id": "SL.UEM.TOTL.ZS",
+      "value": "Unemployment, total (% of total labor force) (modeled ILO estimate)"
+    },
+    "country": {
+      "id": "MX",
+      "value": "Mexico"
+    },
+    "countryiso3code": "MEX",
+    "date": "2003",
+    "value": 3.455,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+  },
+  {
+    "indicator": {
+      "id": "SL.UEM.TOTL.ZS",
+      "value": "Unemployment, total (% of total labor force) (modeled ILO estimate)"
+    },
+    "country": {
+      "id": "MX",
+      "value": "Mexico"
+    },
+    "countryiso3code": "MEX",
+    "date": "2002",
+    "value": 3.003,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+  },
+  {
+    "indicator": {
+      "id": "SL.UEM.TOTL.ZS",
+      "value": "Unemployment, total (% of total labor force) (modeled ILO estimate)"
+    },
+    "country": {
+      "id": "MX",
+      "value": "Mexico"
+    },
+    "countryiso3code": "MEX",
+    "date": "2001",
+    "value": 2.627,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
+  },
+  {
+    "indicator": {
+      "id": "SL.UEM.TOTL.ZS",
+      "value": "Unemployment, total (% of total labor force) (modeled ILO estimate)"
+    },
+    "country": {
+      "id": "MX",
+      "value": "Mexico"
+    },
+    "countryiso3code": "MEX",
+    "date": "2000",
+    "value": 2.646,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 1
   }
 ]

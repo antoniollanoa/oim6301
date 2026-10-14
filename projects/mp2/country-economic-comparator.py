@@ -118,7 +118,16 @@ def _():
 
     # File destination
     output_file = "projects/mp2/data/economic_data.json"
-    return
+    return (
+        base_url,
+        countries,
+        end_year,
+        indicators,
+        output_file,
+        records_per_page,
+        request_timeout,
+        start_year,
+    )
 
 
 @app.cell(hide_code=True)
@@ -126,6 +135,204 @@ def _(mo):
     mo.md(r"""
     ## 4. The Work
     """)
+    return
+
+
+@app.cell
+def _():
+    import requests as mp2_requests
+    import json as mp2_json
+    from pathlib import Path as MP2Path
+
+    return MP2Path, mp2_json, mp2_requests
+
+
+@app.cell
+def _(mp2_requests):
+    def fetch_world_bank_records(
+        api_url,
+        country_codes,
+        indicator_code,
+        first_year,
+        last_year,
+        page_size,
+        timeout_seconds,
+    ):
+        _url = (
+            f"{api_url.rstrip('/')}/country/"
+            f"{';'.join(country_codes)}/indicator/{indicator_code}"
+        )
+
+        _records = []
+        _page = 1
+        _pages = None
+        _total = None
+
+        while _pages is None or _page <= _pages:
+            _response = mp2_requests.get(
+                _url,
+                params={
+                    "format": "json",
+                    "date": f"{first_year}:{last_year}",
+                    "per_page": page_size,
+                    "page": _page,
+                },
+                timeout=timeout_seconds,
+            )
+            _response.raise_for_status()
+            _payload = _response.json()
+
+            if (
+                not isinstance(_payload, list)
+                or len(_payload) != 2
+                or not isinstance(_payload[0], dict)
+                or not isinstance(_payload[1], list)
+            ):
+                raise ValueError(
+                    f"Unexpected response for {indicator_code}, page {_page}."
+                )
+
+            _metadata, _page_records = _payload
+            _reported_page = int(_metadata["page"])
+            _reported_pages = int(_metadata["pages"])
+            _reported_total = int(_metadata["total"])
+
+            if _reported_page != _page:
+                raise ValueError("The API returned an unexpected page.")
+
+            if _pages is None:
+                _pages = _reported_pages
+                _total = _reported_total
+
+                if _pages < 1:
+                    raise ValueError("The API reported no result pages.")
+
+            elif _reported_pages != _pages or _reported_total != _total:
+                raise ValueError("API totals changed during pagination.")
+
+            for _page_record in _page_records:
+                _records.append(_page_record)
+
+            _page += 1
+
+        if len(_records) != _total:
+            raise ValueError(
+                f"{indicator_code}: expected {_total} records, "
+                f"received {len(_records)}."
+            )
+
+        return _records
+
+    return (fetch_world_bank_records,)
+
+
+@app.cell
+def _(
+    base_url,
+    countries,
+    end_year,
+    fetch_world_bank_records,
+    indicators,
+    records_per_page,
+    request_timeout,
+    start_year,
+):
+    mp2_fetched_records = []
+    economic_records = []
+    mp2_fetch_summary = {}
+
+    _country_codes = []
+    for _country_code in countries:
+        _country_codes.append(_country_code)
+
+    _expected_per_indicator = (
+        len(countries) * (end_year - start_year + 1)
+    )
+
+    for _indicator_code, _indicator_name in indicators.items():
+        _raw_records = fetch_world_bank_records(
+            base_url,
+            _country_codes,
+            _indicator_code,
+            start_year,
+            end_year,
+            records_per_page,
+            request_timeout,
+        )
+
+        _seen = {}
+        _missing_count = 0
+
+        for _record in _raw_records:
+            _country_code = _record["countryiso3code"]
+            _year = int(_record["date"])
+
+            if _country_code not in countries:
+                raise ValueError(f"Unexpected country: {_country_code}")
+
+            if not start_year <= _year <= end_year:
+                raise ValueError(f"Unexpected year: {_year}")
+
+            if _record["indicator"]["id"] != _indicator_code:
+                raise ValueError("The API returned an unexpected indicator.")
+
+            _key = (_country_code, _year)
+
+            if _key in _seen:
+                raise ValueError(
+                    f"Duplicate record: {_indicator_code}, {_key}"
+                )
+
+            _seen[_key] = True
+            _value = _record["value"]
+
+            if _value is None:
+                _missing_count += 1
+
+            mp2_fetched_records.append(_record)
+
+            economic_records.append({
+                "country_code": _country_code,
+                "country": countries[_country_code],
+                "year": _year,
+                "indicator_code": _indicator_code,
+                "indicator": _indicator_name,
+                "value": _value,
+            })
+
+        if len(_seen) != _expected_per_indicator:
+            raise ValueError(
+                f"{_indicator_name}: expected {_expected_per_indicator} "
+                f"country-year records, received {len(_seen)}."
+            )
+
+        mp2_fetch_summary[_indicator_name] = {
+            "records": len(_raw_records),
+            "missing_values": _missing_count,
+        }
+
+    mp2_fetch_summary
+    return (mp2_fetched_records,)
+
+
+@app.cell
+def _(MP2Path, mp2_fetched_records, mp2_json, output_file):
+    mp2_output_path = MP2Path(output_file)
+    mp2_output_path.parent.mkdir(parents=True, exist_ok=True)
+
+    with mp2_output_path.open("w", encoding="utf-8") as _json_file:
+        mp2_json.dump(
+            mp2_fetched_records,
+            _json_file,
+            indent=2,
+            ensure_ascii=False,
+            allow_nan=False,
+        )
+
+    print(
+        f"Saved {len(mp2_fetched_records)} fetched records to "
+        f"{mp2_output_path.resolve()}"
+    )
     return
 
 
