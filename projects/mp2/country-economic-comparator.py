@@ -78,5 +78,64 @@ def _(mo):
     return
 
 
+@app.cell(hide_code=True)
+def _(mo):
+    mo.md(r"""
+    ## 3. Inputs
+    """)
+    return
+
+
+@app.cell
+def _():
+    # Countries to analyze
+    countries = {
+        "ARG": "Argentina",
+        "BRA": "Brazil",
+        "COL": "Colombia",
+        "MEX": "Mexico",
+    }
+
+    # Economic indicator codes
+    gdp_indicator = "NY.GDP.MKTP.KD.ZG"
+    inflation_indicator = "FP.CPI.TOTL.ZG"
+    unemployment_indicator = "SL.UEM.TOTL.ZS"
+
+    indicators = {
+        gdp_indicator: "GDP Growth",
+        inflation_indicator: "Inflation",
+        unemployment_indicator: "Unemployment",
+    }
+
+    # Analysis period
+    start_year = 2000
+    end_year = 2024
+
+    # API settings
+    base_url = "https://api.worldbank.org/v2"
+    records_per_page = 50
+    request_timeout = 30
+
+    # File destination
+    output_file = "projects/mp2/data/economic_data.json"
+    return
+
+
+@app.cell(hide_code=True)
+def _(mo):
+    mo.md(r"""
+    ## 4. The Work
+    """)
+    return
+
+
+@app.cell(hide_code=True)
+def _(mo):
+    mo.md(r"""
+    ## 5. The Answer
+    """)
+    return
+
+
 if __name__ == "__main__":
     app.run()
