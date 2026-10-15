@@ -162,6 +162,15 @@ def _(mo):
 
     **C ·**
 
+    1. A **list**, because the lines are many of the same thing (order lines), and a list
+       can be added to, removed from and reordered.
+    2. A **set**, because this only asks which distinct customers have ordered, each once,
+       with no need to keep them in any order.
+    3. A **dictionary**, because each product name (the key) looks up one value, the units
+       sold.
+    4. A **tuple**, because it is one thing (one shipment) with three named parts that
+       must never change once recorded.
+
     **D ·**
 
     **G ·** The first result for `Babson Park` is in Florida, not Massachusetts. The Babson
