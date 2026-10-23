@@ -783,7 +783,7 @@ def _(requests):
     return
 
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""
     The first delete gave **200**, and it showed the message that got deleted. The
