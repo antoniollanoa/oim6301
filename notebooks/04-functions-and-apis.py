@@ -276,7 +276,7 @@ def _(holdings):
     return
 
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""
     `shares_result` holds `None`. The function does not use `return`, so Python gives
