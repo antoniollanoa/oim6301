@@ -122,11 +122,14 @@ def _():
         base_url,
         countries,
         end_year,
+        gdp_indicator,
         indicators,
+        inflation_indicator,
         output_file,
         records_per_page,
         request_timeout,
         start_year,
+        unemployment_indicator,
     )
 
 
@@ -272,6 +275,180 @@ def _(mo):
     mo.md(r"""
     ## 5. The Answer
     """)
+    return
+
+
+@app.cell
+def _(
+    countries,
+    gdp_indicator,
+    indicators,
+    inflation_indicator,
+    mp2_fetched_records,
+    unemployment_indicator,
+):
+    mp2_country_results = {}
+
+    for _country_code, _country_name in countries.items():
+        _averages = {}
+        _counts = {}
+
+        for _indicator_code in indicators:
+            _total = 0
+            _count = 0
+
+            for _record in mp2_fetched_records:
+                if (
+                    _record["countryiso3code"] == _country_code
+                    and _record["indicator"]["id"] == _indicator_code
+                    and _record["value"] is not None
+                ):
+                    _total += _record["value"]
+                    _count += 1
+
+            if _count == 0:
+                raise ValueError(
+                    f"No available {indicators[_indicator_code]} "
+                    f"data for {_country_name}."
+                )
+
+            _averages[_indicator_code] = _total / _count
+            _counts[_indicator_code] = _count
+
+        _squared_difference_total = 0
+
+        for _record in mp2_fetched_records:
+            if (
+                _record["countryiso3code"] == _country_code
+                and _record["indicator"]["id"] == gdp_indicator
+                and _record["value"] is not None
+            ):
+                _difference = (
+                    _record["value"] - _averages[gdp_indicator]
+                )
+                _squared_difference_total += _difference ** 2
+
+        _growth_sd = (
+            _squared_difference_total / _counts[gdp_indicator]
+        ) ** 0.5
+
+        mp2_country_results[_country_name] = {
+            "gdp_growth": _averages[gdp_indicator],
+            "inflation": _averages[inflation_indicator],
+            "unemployment": _averages[unemployment_indicator],
+            "growth_sd": _growth_sd,
+            "counts": _counts,
+        }
+    return (mp2_country_results,)
+
+
+@app.cell
+def _(
+    end_year,
+    gdp_indicator,
+    inflation_indicator,
+    mp2_country_results,
+    start_year,
+    unemployment_indicator,
+):
+    print(f"Economic comparison, {start_year}–{end_year}")
+    print("Average rates (%); growth SD in percentage points")
+    print()
+
+    print(
+        f"{'Country':<12}"
+        f"{'GDP growth':>12}"
+        f"{'Inflation':>12}"
+        f"{'Unemployment':>15}"
+        f"{'Growth SD':>12}"
+        f"{'Years G/I/U':>15}"
+    )
+    print("-" * 78)
+
+    for _country_name, _result in mp2_country_results.items():
+        _coverage = (
+            f"{_result['counts'][gdp_indicator]}/"
+            f"{_result['counts'][inflation_indicator]}/"
+            f"{_result['counts'][unemployment_indicator]}"
+        )
+
+        print(
+            f"{_country_name:<12}"
+            f"{_result['gdp_growth']:>12.2f}"
+            f"{_result['inflation']:>12.2f}"
+            f"{_result['unemployment']:>15.2f}"
+            f"{_result['growth_sd']:>12.2f}"
+            f"{_coverage:>15}"
+        )
+
+    print()
+    print("Lower Growth SD means GDP growth fluctuated less.")
+    return
+
+
+@app.cell
+def _(end_year, mp2_country_results, start_year):
+    mp2_best_growth = None
+    mp2_lowest_inflation = None
+    mp2_lowest_unemployment = None
+    mp2_lowest_growth_sd = None
+
+    mp2_growth_country = ""
+    mp2_inflation_country = ""
+    mp2_unemployment_country = ""
+    mp2_stability_country = ""
+
+    for _country_name, _result in mp2_country_results.items():
+        _growth = _result["gdp_growth"]
+        _inflation = _result["inflation"]
+        _unemployment = _result["unemployment"]
+        _stability = _result["growth_sd"]
+
+        if mp2_best_growth is None or _growth > mp2_best_growth:
+            mp2_best_growth = _growth
+            mp2_growth_country = _country_name
+        elif _growth == mp2_best_growth:
+            mp2_growth_country += f" and {_country_name}"
+
+        if (
+            mp2_lowest_inflation is None
+            or _inflation < mp2_lowest_inflation
+        ):
+            mp2_lowest_inflation = _inflation
+            mp2_inflation_country = _country_name
+        elif _inflation == mp2_lowest_inflation:
+            mp2_inflation_country += f" and {_country_name}"
+
+        if (
+            mp2_lowest_unemployment is None
+            or _unemployment < mp2_lowest_unemployment
+        ):
+            mp2_lowest_unemployment = _unemployment
+            mp2_unemployment_country = _country_name
+        elif _unemployment == mp2_lowest_unemployment:
+            mp2_unemployment_country += f" and {_country_name}"
+
+        if (
+            mp2_lowest_growth_sd is None
+            or _stability < mp2_lowest_growth_sd
+        ):
+            mp2_lowest_growth_sd = _stability
+            mp2_stability_country = _country_name
+        elif _stability == mp2_lowest_growth_sd:
+            mp2_stability_country += f" and {_country_name}"
+
+    print(
+        f"Using available data from {start_year} to {end_year}, "
+        f"{mp2_growth_country} had the highest average GDP growth "
+        f"({mp2_best_growth:.2f}%), "
+        f"{mp2_inflation_country} had the lowest average inflation "
+        f"({mp2_lowest_inflation:.2f}%), "
+        f"{mp2_unemployment_country} had the lowest average unemployment "
+        f"({mp2_lowest_unemployment:.2f}%), and "
+        f"{mp2_stability_country} had the most stable GDP growth "
+        f"(standard deviation {mp2_lowest_growth_sd:.2f} percentage points), "
+        f"showing different strengths relevant to business expansion."
+    )
     return
 
 
