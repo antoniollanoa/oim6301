@@ -118,7 +118,16 @@ def _():
 
     # File destination
     output_file = "projects/mp2/data/economic_data.json"
-    return
+    return (
+        base_url,
+        countries,
+        end_year,
+        indicators,
+        output_file,
+        records_per_page,
+        request_timeout,
+        start_year,
+    )
 
 
 @app.cell(hide_code=True)
@@ -135,7 +144,7 @@ def _():
     import json as mp2_json
     from pathlib import Path as MP2Path
 
-    return (mp2_requests,)
+    return MP2Path, mp2_json, mp2_requests
 
 
 @app.cell
@@ -190,6 +199,71 @@ def _(mp2_requests):
 
         return _records
 
+    return (fetch_world_bank_records,)
+
+
+@app.cell
+def _(
+    base_url,
+    countries,
+    end_year,
+    fetch_world_bank_records,
+    indicators,
+    records_per_page,
+    request_timeout,
+    start_year,
+):
+    mp2_fetched_records = []
+
+    _expected_records = (
+        len(countries) * (end_year - start_year + 1)
+    )
+
+    for _indicator_code in indicators:
+        _indicator_records = fetch_world_bank_records(
+            base_url,
+            countries,
+            _indicator_code,
+            start_year,
+            end_year,
+            records_per_page,
+            request_timeout,
+        )
+
+        if len(_indicator_records) != _expected_records:
+            raise ValueError(
+                f"Expected {_expected_records} records for "
+                f"{indicators[_indicator_code]}, "
+                f"but received {len(_indicator_records)}."
+            )
+
+        for _record in _indicator_records:
+            mp2_fetched_records.append(_record)
+
+        print(
+            f"{indicators[_indicator_code]}: "
+            f"{len(_indicator_records)} records fetched"
+        )
+    return (mp2_fetched_records,)
+
+
+@app.cell
+def _(MP2Path, mp2_fetched_records, mp2_json, output_file):
+    mp2_output_path = MP2Path(output_file)
+    mp2_output_path.parent.mkdir(parents=True, exist_ok=True)
+
+    with mp2_output_path.open("w", encoding="utf-8") as _file:
+        mp2_json.dump(
+            mp2_fetched_records,
+            _file,
+            indent=2,
+            allow_nan=False,
+        )
+
+    print(
+        f"Saved {len(mp2_fetched_records)} records to "
+        f"{mp2_output_path.resolve()}"
+    )
     return
 
 
