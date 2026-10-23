@@ -161,17 +161,23 @@ def _(mp2_requests):
         page_size,
         timeout_seconds,
     ):
+        # Join the country codes in the format the API expects.
+        # Example: ARG;BRA;COL;MEX
         _country_text = ";".join(country_codes)
+
+        # Build the URL for one economic indicator.
         _url = (
             f"{api_url}/country/{_country_text}"
             f"/indicator/{indicator_code}"
         )
 
+        # Start with an empty list and the first page.
         _records = []
         _page = 1
         _pages = 1
         _total = 0
 
+        # Keep requesting pages until all pages have been fetched.
         while _page <= _pages:
             _response = mp2_requests.get(
                 _url,
@@ -183,23 +189,33 @@ def _(mp2_requests):
                 },
                 timeout=timeout_seconds,
             )
+
+            # Stop with an error if the HTTP request failed.
             _response.raise_for_status()
+
+            # Convert the JSON response into Python lists and dictionaries.
             _data = _response.json()
 
+            # The API should return metadata followed by a list of records.
             if len(_data) != 2 or not isinstance(_data[1], list):
                 raise ValueError("The API did not return a list of records.")
 
+            # Read the number of pages and records reported by the API.
             _pages = int(_data[0]["pages"])
             _total = int(_data[0]["total"])
 
+            # Add each record from this page to our list.
             for _record in _data[1]:
                 _records.append(_record)
 
+            # Move to the next page.
             _page += 1
 
+        # Check that we fetched the number of records the API reported.
         if len(_records) != _total:
             raise ValueError("The number of fetched records is incorrect.")
 
+        # Send the complete list back to the code that called the function.
         return _records
 
     return (fetch_world_bank_records,)
@@ -216,12 +232,16 @@ def _(
     request_timeout,
     start_year,
 ):
+    # Store the original records returned by our function.
     mp2_fetched_records = []
 
+    # Each indicator should have one record per country per year.
+    # Adding 1 includes both the start year and the end year.
     _expected_records = (
         len(countries) * (end_year - start_year + 1)
     )
 
+    # Fetch each indicator separately.
     for _indicator_code in indicators:
         _indicator_records = fetch_world_bank_records(
             base_url,
@@ -233,6 +253,8 @@ def _(
             request_timeout,
         )
 
+        # Check that the country-year record count matches our inputs.
+        # Records with missing values still count as records.
         if len(_indicator_records) != _expected_records:
             raise ValueError(
                 f"Expected {_expected_records} records for "
@@ -240,6 +262,7 @@ def _(
                 f"but received {len(_indicator_records)}."
             )
 
+        # Combine this indicator's records with the other indicators.
         for _record in _indicator_records:
             mp2_fetched_records.append(_record)
 
@@ -252,9 +275,15 @@ def _(
 
 @app.cell
 def _(MP2Path, mp2_fetched_records, mp2_json, output_file):
+    # Use the destination from the Inputs cell.
     mp2_output_path = MP2Path(output_file)
+
+    # Create the destination folders if they do not already exist.
     mp2_output_path.parent.mkdir(parents=True, exist_ok=True)
 
+    # Open the file for writing and save the original fetched records.
+    # indent=2 makes the JSON easier to read.
+    # Missing values (None) are saved as JSON null.
     with mp2_output_path.open("w", encoding="utf-8") as _file:
         mp2_json.dump(
             mp2_fetched_records,
@@ -263,6 +292,7 @@ def _(MP2Path, mp2_fetched_records, mp2_json, output_file):
             allow_nan=False,
         )
 
+    # Print the full path so we can find the saved file.
     print(
         f"Saved {len(mp2_fetched_records)} records to "
         f"{mp2_output_path.resolve()}"
@@ -287,17 +317,21 @@ def _(
     mp2_fetched_records,
     unemployment_indicator,
 ):
+    # Store one results dictionary for each country.
     mp2_country_results = {}
 
     for _country_code, _country_name in countries.items():
         _averages = {}
         _counts = {}
 
+        # Calculate each indicator's average for this country.
         for _indicator_code in indicators:
             _total = 0
             _count = 0
 
             for _record in mp2_fetched_records:
+                # Use only this country's records for this indicator.
+                # Skip missing values instead of treating them as zero.
                 if (
                     _record["countryiso3code"] == _country_code
                     and _record["indicator"]["id"] == _indicator_code
@@ -306,15 +340,18 @@ def _(
                     _total += _record["value"]
                     _count += 1
 
+            # An average cannot be calculated without any values.
             if _count == 0:
                 raise ValueError(
                     f"No available {indicators[_indicator_code]} "
                     f"data for {_country_name}."
                 )
 
+            # Average = sum of available values / number of available values.
             _averages[_indicator_code] = _total / _count
             _counts[_indicator_code] = _count
 
+        # Measure how much annual GDP growth differed from its average.
         _squared_difference_total = 0
 
         for _record in mp2_fetched_records:
@@ -326,12 +363,18 @@ def _(
                 _difference = (
                     _record["value"] - _averages[gdp_indicator]
                 )
+
+                # Squaring prevents positive and negative differences
+                # from cancelling each other out.
                 _squared_difference_total += _difference ** 2
 
+        # Standard deviation is the square root of the average
+        # squared difference. Raising a number to 0.5 takes its square root.
         _growth_sd = (
             _squared_difference_total / _counts[gdp_indicator]
         ) ** 0.5
 
+        # Save this country's averages, stability measure, and data counts.
         mp2_country_results[_country_name] = {
             "gdp_growth": _averages[gdp_indicator],
             "inflation": _averages[inflation_indicator],
@@ -355,6 +398,8 @@ def _(
     print("Average rates (%); growth SD in percentage points")
     print()
 
+    # <12 left-aligns text in a column 12 characters wide.
+    # >12 right-aligns text in a column 12 characters wide.
     print(
         f"{'Country':<12}"
         f"{'GDP growth':>12}"
@@ -366,12 +411,15 @@ def _(
     print("-" * 78)
 
     for _country_name, _result in mp2_country_results.items():
+        # Show how many years contributed to each average:
+        # GDP growth / inflation / unemployment.
         _coverage = (
             f"{_result['counts'][gdp_indicator]}/"
             f"{_result['counts'][inflation_indicator]}/"
             f"{_result['counts'][unemployment_indicator]}"
         )
 
+        # .2f displays numbers with two decimal places.
         print(
             f"{_country_name:<12}"
             f"{_result['gdp_growth']:>12.2f}"
@@ -388,28 +436,35 @@ def _(
 
 @app.cell
 def _(end_year, mp2_country_results, start_year):
+    # None means we have not selected a result yet.
     mp2_best_growth = None
     mp2_lowest_inflation = None
     mp2_lowest_unemployment = None
     mp2_lowest_growth_sd = None
 
+    # These strings will hold the names of the leading countries.
     mp2_growth_country = ""
     mp2_inflation_country = ""
     mp2_unemployment_country = ""
     mp2_stability_country = ""
 
     for _country_name, _result in mp2_country_results.items():
+        # Give the current country's results shorter names.
         _growth = _result["gdp_growth"]
         _inflation = _result["inflation"]
         _unemployment = _result["unemployment"]
         _stability = _result["growth_sd"]
 
+        # Keep the highest average GDP growth.
+        # The first country becomes the initial leader.
         if mp2_best_growth is None or _growth > mp2_best_growth:
             mp2_best_growth = _growth
             mp2_growth_country = _country_name
         elif _growth == mp2_best_growth:
+            # Include both countries if their results are exactly equal.
             mp2_growth_country += f" and {_country_name}"
 
+        # Keep the lowest average inflation.
         if (
             mp2_lowest_inflation is None
             or _inflation < mp2_lowest_inflation
@@ -419,6 +474,7 @@ def _(end_year, mp2_country_results, start_year):
         elif _inflation == mp2_lowest_inflation:
             mp2_inflation_country += f" and {_country_name}"
 
+        # Keep the lowest average unemployment.
         if (
             mp2_lowest_unemployment is None
             or _unemployment < mp2_lowest_unemployment
@@ -428,6 +484,8 @@ def _(end_year, mp2_country_results, start_year):
         elif _unemployment == mp2_lowest_unemployment:
             mp2_unemployment_country += f" and {_country_name}"
 
+        # Keep the lowest GDP growth standard deviation.
+        # A lower value means annual growth fluctuated less.
         if (
             mp2_lowest_growth_sd is None
             or _stability < mp2_lowest_growth_sd
@@ -437,6 +495,8 @@ def _(end_year, mp2_country_results, start_year):
         elif _stability == mp2_lowest_growth_sd:
             mp2_stability_country += f" and {_country_name}"
 
+    # Print one sentence using the calculated names and numbers.
+    # The answer changes when the input data changes.
     print(
         f"Using available data from {start_year} to {end_year}, "
         f"{mp2_growth_country} had the highest average GDP growth "
