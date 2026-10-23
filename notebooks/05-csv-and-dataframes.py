@@ -511,6 +511,40 @@ def _(pl, town_table):
     return
 
 
+@app.cell
+def _(mo):
+    mo.md(r"""
+    **Going further.** My question: how many towns in each county have more than
+    30,000 people?
+    """)
+    return
+
+
+@app.cell
+def _(mo, town_table):
+    towns_over_30k = mo.sql(
+        f"""
+        SELECT county, COUNT(*) AS towns
+        FROM town_table
+        WHERE population > 30000
+        GROUP BY county
+        ORDER BY towns DESC
+        """
+    )
+    return
+
+
+@app.cell
+def _(pl, town_table):
+    (
+        town_table.filter(pl.col("population") > 30_000)
+        .group_by("county")
+        .agg(pl.len().alias("towns"))
+        .sort("towns", descending=True)
+    )
+    return
+
+
 @app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""
@@ -560,6 +594,53 @@ def _(mo):
     *Check yourself: somebody who has not seen this notebook can say what each axis measures.*
 
     **Going further.** Color the bars or dots by a column with `color=`, and explain what the colors add.
+    """)
+    return
+
+
+@app.cell
+def _(alt, mo, pl, town_table):
+    county_income = (
+        town_table.group_by("county")
+        .agg(pl.col("income_per_capita_dollars").mean().alias("avg_income"))
+        .sort("avg_income", descending=True)
+    )
+
+    income_chart = mo.ui.altair_chart(
+        county_income.plot.bar(
+            y=alt.Y("county", sort="-x", title="County"),
+            x=alt.X("avg_income", title="Average income per person ($)"),
+        ).properties(title="Average income per person, by Massachusetts county")
+    )
+    income_chart
+    return
+
+
+@app.cell
+def _(alt, mo, pl, town_table):
+    colored_chart = mo.ui.altair_chart(
+        town_table.filter(pl.col("population") > 20_000)
+        .plot.point()
+        .encode(
+            x=alt.X("income_per_capita_dollars", title="Income per person ($)"),
+            y=alt.Y("average_single_family_bill_dollars", title="Average tax bill ($)"),
+            color=alt.Color("county", title="County"),
+            tooltip=["name", "county", "income_per_capita_dollars", "average_single_family_bill_dollars"],
+        )
+        .properties(title="Income vs. tax bill, towns over 20,000 people")
+    )
+    colored_chart
+    return
+
+
+@app.cell
+def _(mo):
+    mo.md(r"""
+    The color shows which county each town is in. Without color, the chart would only
+    show if income and tax bill go up together. With color, we can also see if towns
+    from the same county sit close together on the chart, or if they are spread out.
+    For example, this can show if one county tends to have higher taxes than others,
+    even at the same income level.
     """)
     return
 
