@@ -633,7 +633,7 @@ def _(alt, mo, pl, town_table):
     return
 
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""
     The color shows which county each town is in. Without color, the chart would only
