@@ -118,19 +118,7 @@ def _():
 
     # File destination
     output_file = "projects/mp2/data/economic_data.json"
-    return (
-        base_url,
-        countries,
-        end_year,
-        gdp_indicator,
-        indicators,
-        inflation_indicator,
-        output_file,
-        records_per_page,
-        request_timeout,
-        start_year,
-        unemployment_indicator,
-    )
+    return
 
 
 @app.cell(hide_code=True)
@@ -147,7 +135,7 @@ def _():
     import json as mp2_json
     from pathlib import Path as MP2Path
 
-    return MP2Path, mp2_json, mp2_requests
+    return (mp2_requests,)
 
 
 @app.cell
@@ -161,17 +149,18 @@ def _(mp2_requests):
         page_size,
         timeout_seconds,
     ):
+        _country_text = ";".join(country_codes)
         _url = (
-            f"{api_url.rstrip('/')}/country/"
-            f"{';'.join(country_codes)}/indicator/{indicator_code}"
+            f"{api_url}/country/{_country_text}"
+            f"/indicator/{indicator_code}"
         )
 
         _records = []
         _page = 1
-        _pages = None
-        _total = None
+        _pages = 1
+        _total = 0
 
-        while _pages is None or _page <= _pages:
+        while _page <= _pages:
             _response = mp2_requests.get(
                 _url,
                 params={
@@ -183,159 +172,24 @@ def _(mp2_requests):
                 timeout=timeout_seconds,
             )
             _response.raise_for_status()
-            _payload = _response.json()
+            _data = _response.json()
 
-            if (
-                not isinstance(_payload, list)
-                or len(_payload) != 2
-                or not isinstance(_payload[0], dict)
-                or not isinstance(_payload[1], list)
-            ):
-                raise ValueError(
-                    f"Unexpected response for {indicator_code}, page {_page}."
-                )
+            if len(_data) != 2 or not isinstance(_data[1], list):
+                raise ValueError("The API did not return a list of records.")
 
-            _metadata, _page_records = _payload
-            _reported_page = int(_metadata["page"])
-            _reported_pages = int(_metadata["pages"])
-            _reported_total = int(_metadata["total"])
+            _pages = int(_data[0]["pages"])
+            _total = int(_data[0]["total"])
 
-            if _reported_page != _page:
-                raise ValueError("The API returned an unexpected page.")
-
-            if _pages is None:
-                _pages = _reported_pages
-                _total = _reported_total
-
-                if _pages < 1:
-                    raise ValueError("The API reported no result pages.")
-
-            elif _reported_pages != _pages or _reported_total != _total:
-                raise ValueError("API totals changed during pagination.")
-
-            for _page_record in _page_records:
-                _records.append(_page_record)
+            for _record in _data[1]:
+                _records.append(_record)
 
             _page += 1
 
         if len(_records) != _total:
-            raise ValueError(
-                f"{indicator_code}: expected {_total} records, "
-                f"received {len(_records)}."
-            )
+            raise ValueError("The number of fetched records is incorrect.")
 
         return _records
 
-    return (fetch_world_bank_records,)
-
-
-@app.cell
-def _(
-    base_url,
-    countries,
-    end_year,
-    fetch_world_bank_records,
-    indicators,
-    records_per_page,
-    request_timeout,
-    start_year,
-):
-    mp2_fetched_records = []
-    economic_records = []
-    mp2_fetch_summary = {}
-
-    _country_codes = []
-    for _country_code in countries:
-        _country_codes.append(_country_code)
-
-    _expected_per_indicator = (
-        len(countries) * (end_year - start_year + 1)
-    )
-
-    for _indicator_code, _indicator_name in indicators.items():
-        _raw_records = fetch_world_bank_records(
-            base_url,
-            _country_codes,
-            _indicator_code,
-            start_year,
-            end_year,
-            records_per_page,
-            request_timeout,
-        )
-
-        _seen = {}
-        _missing_count = 0
-
-        for _record in _raw_records:
-            _country_code = _record["countryiso3code"]
-            _year = int(_record["date"])
-
-            if _country_code not in countries:
-                raise ValueError(f"Unexpected country: {_country_code}")
-
-            if not start_year <= _year <= end_year:
-                raise ValueError(f"Unexpected year: {_year}")
-
-            if _record["indicator"]["id"] != _indicator_code:
-                raise ValueError("The API returned an unexpected indicator.")
-
-            _key = (_country_code, _year)
-
-            if _key in _seen:
-                raise ValueError(
-                    f"Duplicate record: {_indicator_code}, {_key}"
-                )
-
-            _seen[_key] = True
-            _value = _record["value"]
-
-            if _value is None:
-                _missing_count += 1
-
-            mp2_fetched_records.append(_record)
-
-            economic_records.append({
-                "country_code": _country_code,
-                "country": countries[_country_code],
-                "year": _year,
-                "indicator_code": _indicator_code,
-                "indicator": _indicator_name,
-                "value": _value,
-            })
-
-        if len(_seen) != _expected_per_indicator:
-            raise ValueError(
-                f"{_indicator_name}: expected {_expected_per_indicator} "
-                f"country-year records, received {len(_seen)}."
-            )
-
-        mp2_fetch_summary[_indicator_name] = {
-            "records": len(_raw_records),
-            "missing_values": _missing_count,
-        }
-
-    mp2_fetch_summary
-    return economic_records, mp2_fetched_records
-
-
-@app.cell
-def _(MP2Path, mp2_fetched_records, mp2_json, output_file):
-    mp2_output_path = MP2Path(output_file)
-    mp2_output_path.parent.mkdir(parents=True, exist_ok=True)
-
-    with mp2_output_path.open("w", encoding="utf-8") as _json_file:
-        mp2_json.dump(
-            mp2_fetched_records,
-            _json_file,
-            indent=2,
-            ensure_ascii=False,
-            allow_nan=False,
-        )
-
-    print(
-        f"Saved {len(mp2_fetched_records)} fetched records to "
-        f"{mp2_output_path.resolve()}"
-    )
     return
 
 
@@ -344,186 +198,6 @@ def _(mo):
     mo.md(r"""
     ## 5. The Answer
     """)
-    return
-
-
-@app.cell
-def _(
-    countries,
-    economic_records,
-    end_year,
-    gdp_indicator,
-    indicators,
-    inflation_indicator,
-    start_year,
-    unemployment_indicator,
-):
-    mp2_country_results = {}
-
-    for _country_code, _country_name in countries.items():
-        _values_by_indicator = {}
-
-        for _indicator_code in indicators:
-            _values_by_indicator[_indicator_code] = []
-
-        for _record in economic_records:
-            if (
-                _record["country_code"] == _country_code
-                and start_year <= _record["year"] <= end_year
-                and _record["value"] is not None
-            ):
-                _values_by_indicator[_record["indicator_code"]].append(
-                    _record["value"]
-                )
-
-        _averages = {}
-        _counts = {}
-
-        for _indicator_code, _values in _values_by_indicator.items():
-            if not _values:
-                raise ValueError(
-                    f"No available data for {_country_name}: "
-                    f"{indicators[_indicator_code]}"
-                )
-
-            _value_total = 0
-
-            for _value in _values:
-                _value_total += _value
-
-            _averages[_indicator_code] = _value_total / len(_values)
-            _counts[_indicator_code] = len(_values)
-
-        _growth_values = _values_by_indicator[gdp_indicator]
-        _growth_average = _averages[gdp_indicator]
-
-        if len(_growth_values) < 2:
-            raise ValueError(
-                f"Not enough GDP growth data for {_country_name}."
-            )
-
-        _squared_difference_total = 0
-
-        for _growth_value in _growth_values:
-            _squared_difference_total += (
-                _growth_value - _growth_average
-            ) ** 2
-
-        _growth_sd = (
-            _squared_difference_total / len(_growth_values)
-        ) ** 0.5
-
-        mp2_country_results[_country_code] = {
-            "country": _country_name,
-            "gdp_growth": _growth_average,
-            "inflation": _averages[inflation_indicator],
-            "unemployment": _averages[unemployment_indicator],
-            "growth_sd": _growth_sd,
-            "counts": _counts,
-        }
-    return (mp2_country_results,)
-
-
-@app.cell
-def _(
-    end_year,
-    gdp_indicator,
-    inflation_indicator,
-    mp2_country_results,
-    start_year,
-    unemployment_indicator,
-):
-    print(f"Economic comparison, {start_year}–{end_year}")
-    print("Period averages (%); GDP growth SD in percentage points")
-    print()
-
-    print(
-        f"{'Country':<12}"
-        f"{'GDP growth':>13}"
-        f"{'Inflation':>13}"
-        f"{'Unemployment':>15}"
-        f"{'Growth SD':>12}"
-        f"{'Years G/I/U':>15}"
-    )
-    print("-" * 80)
-
-    for _result in mp2_country_results.values():
-        _year_counts = (
-            f"{_result['counts'][gdp_indicator]}/"
-            f"{_result['counts'][inflation_indicator]}/"
-            f"{_result['counts'][unemployment_indicator]}"
-        )
-
-        print(
-            f"{_result['country']:<12}"
-            f"{_result['gdp_growth']:>13.2f}"
-            f"{_result['inflation']:>13.2f}"
-            f"{_result['unemployment']:>15.2f}"
-            f"{_result['growth_sd']:>12.2f}"
-            f"{_year_counts:>15}"
-        )
-
-    print()
-    print("Lower Growth SD means annual GDP growth fluctuated less.")
-    return
-
-
-@app.function
-def mp2_find_leaders(results, metric, highest=False):
-    _best_value = None
-    _leader_names = []
-
-    for _result in results.values():
-        _value = _result[metric]
-
-        if (
-            _best_value is None
-            or (highest and _value > _best_value)
-            or (not highest and _value < _best_value)
-        ):
-            _best_value = _value
-            _leader_names = [_result["country"]]
-
-        elif _value == _best_value:
-            _leader_names.append(_result["country"])
-
-    if _best_value is None:
-        raise ValueError("No results are available.")
-
-    return " and ".join(_leader_names), _best_value
-
-
-@app.cell
-def _(end_year, mp2_country_results, start_year):
-    mp2_growth_leaders, mp2_best_growth = mp2_find_leaders(
-        mp2_country_results, "gdp_growth", highest=True
-    )
-
-    mp2_inflation_leaders, mp2_lowest_inflation = mp2_find_leaders(
-        mp2_country_results, "inflation"
-    )
-
-    mp2_employment_leaders, mp2_lowest_unemployment = mp2_find_leaders(
-        mp2_country_results, "unemployment"
-    )
-
-    mp2_stability_leaders, mp2_lowest_growth_sd = mp2_find_leaders(
-        mp2_country_results, "growth_sd"
-    )
-
-    print(
-        f"Across available observations from {start_year} to {end_year}, "
-        f"{mp2_growth_leaders} recorded the highest average GDP growth "
-        f"({mp2_best_growth:.2f}%), "
-        f"{mp2_inflation_leaders} the lowest average inflation "
-        f"({mp2_lowest_inflation:.2f}%), "
-        f"{mp2_employment_leaders} the lowest average unemployment "
-        f"({mp2_lowest_unemployment:.2f}%), and "
-        f"{mp2_stability_leaders} the most stable GDP growth "
-        f"(standard deviation {mp2_lowest_growth_sd:.2f} percentage points), "
-        f"highlighting different economic strengths to consider "
-        f"when evaluating business expansion."
-    )
     return
 
 
