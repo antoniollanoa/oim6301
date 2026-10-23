@@ -411,7 +411,7 @@ def _(pl, town_table):
     return
 
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""
     **Going further.** My question: among towns with more than 20,000 people, which
