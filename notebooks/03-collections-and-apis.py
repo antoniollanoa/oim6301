@@ -553,7 +553,7 @@ def _(holdings):
     return
 
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""
     **The line you would not have written yet:** `for _symbol, _shares, _price in holdings:`
@@ -657,7 +657,7 @@ def _(requests):
     print(babson_url)
     babson_reply = requests.get(babson_url, timeout=10)
     babson_reply.status_code
-    return (babson_reply,)
+    return babson_reply, babson_url
 
 
 @app.cell(hide_code=True)
@@ -841,10 +841,85 @@ def _(mo):
     return
 
 
+@app.cell
+def _(babson_url, requests):
+    daily_url = babson_url + "&daily=temperature_2m_max,temperature_2m_min"
+    daily_reply = requests.get(daily_url, timeout=10)
+    daily_weather = daily_reply.json()
+
+    daily_dates = daily_weather["daily"]["time"]
+    daily_highs = daily_weather["daily"]["temperature_2m_max"]
+    daily_lows = daily_weather["daily"]["temperature_2m_min"]
+
+    forecast_table = []
+    for day_index in range(len(daily_dates)):
+        forecast_table.append({
+            "date": daily_dates[day_index],
+            "high": daily_highs[day_index],
+            "low": daily_lows[day_index],
+        })
+
+    forecast_table
+    return
+
+
+@app.cell
+def _(mo):
+    mo.md(r"""
+    This is what the code does, in simple steps:
+
+    - The `daily` part of the weather reply gives three separate lists: one for dates,
+      one for the high of each day, and one for the low of each day. The same position
+      in each list goes together, so the first date goes with the first high and the
+      first low. This is risky, because if one list ever got out of order, the wrong
+      numbers would get matched.
+    - To fix this, the code builds one dictionary per day, with three keys: `date`,
+      `high`, and `low`. Each dictionary holds everything about one day, so there is no
+      way to mix up the days.
+    - `range(len(daily_dates))` just counts from 0 up to the number of days, so the
+      loop can pick out the same position from all three lists at once.
+    - `forecast_table` ends up as a list of dictionaries, which is what we called a
+      **table** earlier in the course: one row per day.
+    """)
+    return
+
+
 @app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""
     > **Advanced · I · A second API.** Kraken, a cryptocurrency exchange, publishes prices with no key: `https://api.kraken.com/0/public/Ticker?pair=XBTUSD`. Request it, then change the pair to `XBTUSX`. Compare the status code and the reply with Open-Meteo's misspelled search. Both answer 200 to a request that failed, and each shows the failure in its own way.
+    """)
+    return
+
+
+@app.cell
+def _(requests):
+    kraken_good_reply = requests.get("https://api.kraken.com/0/public/Ticker?pair=XBTUSD", timeout=10)
+    kraken_good_reply.status_code, kraken_good_reply.json()
+    return
+
+
+@app.cell
+def _(requests):
+    kraken_bad_reply = requests.get("https://api.kraken.com/0/public/Ticker?pair=XBTUSX", timeout=10)
+    kraken_bad_reply.status_code, kraken_bad_reply.json()
+    return
+
+
+@app.cell(hide_code=True)
+def _(mo):
+    mo.md(r"""
+    Both the Open-Meteo search and Kraken give status **200** even when something
+    went wrong. They do not use **400**. But they show the problem in different ways:
+
+    - Open-Meteo, with the wrong spelling, gave back a reply with **no `results` key at
+      all**. There was no error message, just nothing there.
+    - Kraken, with the wrong pair name, gave back a reply with an **`error` list that
+      says what is wrong**: `"EQuery:Unknown asset pair"`.
+
+    So both say 200, but you still need to open the reply and check it. One service
+    tells you what went wrong in words. The other just leaves out the part you wanted,
+    and you have to notice it is missing.
     """)
     return
 
