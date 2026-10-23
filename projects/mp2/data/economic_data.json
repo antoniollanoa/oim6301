@@ -9,22 +9,6 @@
       "value": "Argentina"
     },
     "countryiso3code": "ARG",
-    "date": "2024",
-    "value": -1.34293072157739,
-    "unit": "",
-    "obs_status": "",
-    "decimal": 1
-  },
-  {
-    "indicator": {
-      "id": "NY.GDP.MKTP.KD.ZG",
-      "value": "GDP growth (annual %)"
-    },
-    "country": {
-      "id": "AR",
-      "value": "Argentina"
-    },
-    "countryiso3code": "ARG",
     "date": "2023",
     "value": -1.85578803046339,
     "unit": "",
@@ -395,22 +379,6 @@
     "countryiso3code": "ARG",
     "date": "2000",
     "value": -0.78899893905691,
-    "unit": "",
-    "obs_status": "",
-    "decimal": 1
-  },
-  {
-    "indicator": {
-      "id": "NY.GDP.MKTP.KD.ZG",
-      "value": "GDP growth (annual %)"
-    },
-    "country": {
-      "id": "BR",
-      "value": "Brazil"
-    },
-    "countryiso3code": "BRA",
-    "date": "2024",
-    "value": 3.41931516501906,
     "unit": "",
     "obs_status": "",
     "decimal": 1
@@ -809,22 +777,6 @@
       "value": "Colombia"
     },
     "countryiso3code": "COL",
-    "date": "2024",
-    "value": 1.49330728771066,
-    "unit": "",
-    "obs_status": "",
-    "decimal": 1
-  },
-  {
-    "indicator": {
-      "id": "NY.GDP.MKTP.KD.ZG",
-      "value": "GDP growth (annual %)"
-    },
-    "country": {
-      "id": "CO",
-      "value": "Colombia"
-    },
-    "countryiso3code": "COL",
     "date": "2023",
     "value": 0.841819555752039,
     "unit": "",
@@ -1195,22 +1147,6 @@
     "countryiso3code": "COL",
     "date": "2000",
     "value": 2.92486148176778,
-    "unit": "",
-    "obs_status": "",
-    "decimal": 1
-  },
-  {
-    "indicator": {
-      "id": "NY.GDP.MKTP.KD.ZG",
-      "value": "GDP growth (annual %)"
-    },
-    "country": {
-      "id": "MX",
-      "value": "Mexico"
-    },
-    "countryiso3code": "MEX",
-    "date": "2024",
-    "value": 1.35057631384696,
     "unit": "",
     "obs_status": "",
     "decimal": 1
@@ -1609,22 +1545,6 @@
       "value": "Argentina"
     },
     "countryiso3code": "ARG",
-    "date": "2024",
-    "value": 219.883929014578,
-    "unit": "",
-    "obs_status": "",
-    "decimal": 1
-  },
-  {
-    "indicator": {
-      "id": "FP.CPI.TOTL.ZG",
-      "value": "Inflation, consumer prices (annual %)"
-    },
-    "country": {
-      "id": "AR",
-      "value": "Argentina"
-    },
-    "countryiso3code": "ARG",
     "date": "2023",
     "value": 133.488935594175,
     "unit": "",
@@ -1995,22 +1915,6 @@
     "countryiso3code": "ARG",
     "date": "2000",
     "value": null,
-    "unit": "",
-    "obs_status": "",
-    "decimal": 1
-  },
-  {
-    "indicator": {
-      "id": "FP.CPI.TOTL.ZG",
-      "value": "Inflation, consumer prices (annual %)"
-    },
-    "country": {
-      "id": "BR",
-      "value": "Brazil"
-    },
-    "countryiso3code": "BRA",
-    "date": "2024",
-    "value": 4.36746407652336,
     "unit": "",
     "obs_status": "",
     "decimal": 1
@@ -2409,22 +2313,6 @@
       "value": "Colombia"
     },
     "countryiso3code": "COL",
-    "date": "2024",
-    "value": 6.60908593728228,
-    "unit": "",
-    "obs_status": "",
-    "decimal": 1
-  },
-  {
-    "indicator": {
-      "id": "FP.CPI.TOTL.ZG",
-      "value": "Inflation, consumer prices (annual %)"
-    },
-    "country": {
-      "id": "CO",
-      "value": "Colombia"
-    },
-    "countryiso3code": "COL",
     "date": "2023",
     "value": 11.7359044948689,
     "unit": "",
@@ -2795,22 +2683,6 @@
     "countryiso3code": "COL",
     "date": "2000",
     "value": 9.22534818585365,
-    "unit": "",
-    "obs_status": "",
-    "decimal": 1
-  },
-  {
-    "indicator": {
-      "id": "FP.CPI.TOTL.ZG",
-      "value": "Inflation, consumer prices (annual %)"
-    },
-    "country": {
-      "id": "MX",
-      "value": "Mexico"
-    },
-    "countryiso3code": "MEX",
-    "date": "2024",
-    "value": 4.72225588452931,
     "unit": "",
     "obs_status": "",
     "decimal": 1
@@ -3209,22 +3081,6 @@
       "value": "Argentina"
     },
     "countryiso3code": "ARG",
-    "date": "2024",
-    "value": 7.15,
-    "unit": "",
-    "obs_status": "",
-    "decimal": 1
-  },
-  {
-    "indicator": {
-      "id": "SL.UEM.TOTL.ZS",
-      "value": "Unemployment, total (% of total labor force) (modeled ILO estimate)"
-    },
-    "country": {
-      "id": "AR",
-      "value": "Argentina"
-    },
-    "countryiso3code": "ARG",
     "date": "2023",
     "value": 6.139,
     "unit": "",
@@ -3595,22 +3451,6 @@
     "countryiso3code": "ARG",
     "date": "2000",
     "value": 15,
-    "unit": "",
-    "obs_status": "",
-    "decimal": 1
-  },
-  {
-    "indicator": {
-      "id": "SL.UEM.TOTL.ZS",
-      "value": "Unemployment, total (% of total labor force) (modeled ILO estimate)"
-    },
-    "country": {
-      "id": "BR",
-      "value": "Brazil"
-    },
-    "countryiso3code": "BRA",
-    "date": "2024",
-    "value": 6.801,
     "unit": "",
     "obs_status": "",
     "decimal": 1
@@ -4009,22 +3849,6 @@
       "value": "Colombia"
     },
     "countryiso3code": "COL",
-    "date": "2024",
-    "value": 9.619,
-    "unit": "",
-    "obs_status": "",
-    "decimal": 1
-  },
-  {
-    "indicator": {
-      "id": "SL.UEM.TOTL.ZS",
-      "value": "Unemployment, total (% of total labor force) (modeled ILO estimate)"
-    },
-    "country": {
-      "id": "CO",
-      "value": "Colombia"
-    },
-    "countryiso3code": "COL",
     "date": "2023",
     "value": 9.591,
     "unit": "",
@@ -4395,22 +4219,6 @@
     "countryiso3code": "COL",
     "date": "2000",
     "value": 20.52,
-    "unit": "",
-    "obs_status": "",
-    "decimal": 1
-  },
-  {
-    "indicator": {
-      "id": "SL.UEM.TOTL.ZS",
-      "value": "Unemployment, total (% of total labor force) (modeled ILO estimate)"
-    },
-    "country": {
-      "id": "MX",
-      "value": "Mexico"
-    },
-    "countryiso3code": "MEX",
-    "date": "2024",
-    "value": 2.678,
     "unit": "",
     "obs_status": "",
     "decimal": 1

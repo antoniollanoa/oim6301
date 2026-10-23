@@ -109,7 +109,7 @@ def _():
 
     # Analysis period
     start_year = 2000
-    end_year = 2024
+    end_year = 2023
 
     # API settings
     base_url = "https://api.worldbank.org/v2"
@@ -706,8 +706,8 @@ def _(mo):
     I will change `end_year` from 2024 to 2023 in the Inputs cell.
 
     I expect the notebook to exclude the 2024 records and use the period
-    2000–2023. This includes 24 years instead of 25, so I expect 96 records
-    per indicator and 288 records in total.
+    2000–2023. This includes 24 years instead of 25, so I expect records
+    per indicator and records in total to decrease.
 
     The number of available values used in each average will decrease by
     one if that country's 2024 value was available. If it was missing,
@@ -717,6 +717,29 @@ def _(mo):
     2024 will no longer be included. I cannot predict whether each value
     will increase or decrease without examining the 2024 values.
     The countries identified in the answer sentence may also change.
+    """)
+    return
+
+
+@app.cell(hide_code=True)
+def _(mo):
+    mo.md(r"""
+    ### What Happened
+
+    After changing `end_year` to 2023 and running the notebook, it fetched
+    `96` records per indicator and `288` records in total.
+
+    For `Colombia`, average GDP growth changed from `3.58%` to
+    `3.67%`.
+
+    The answer sentence `kept the same leading countries.`
+
+    The check in Section 6 showed `PASS`.
+
+    My prediction matched the results because the number of records per indicator
+    and the total number of records decreased as expected.
+    Reducing `end_year` shortened the date range, so fewer records were fetched.
+    Colombia’s average GDP growth also shifted slightly because the calculation no longer included 2024.
     """)
     return
 
