@@ -111,6 +111,9 @@ def _():
     start_year = 2000
     end_year = 2023
 
+    # Number of years in each period for the Going Further comparison.
+    comparison_years = 5
+
     # API settings
     base_url = "https://api.worldbank.org/v2"
     records_per_page = 50
@@ -120,6 +123,7 @@ def _():
     output_file = "projects/mp2/data/economic_data.json"
     return (
         base_url,
+        comparison_years,
         countries,
         end_year,
         gdp_indicator,
@@ -740,6 +744,279 @@ def _(mo):
     and the total number of records decreased as expected.
     Reducing `end_year` shortened the date range, so fewer records were fetched.
     Colombia’s average GDP growth also shifted slightly because the calculation no longer included 2024.
+    """)
+    return
+
+
+@app.cell(hide_code=True)
+def _(mo):
+    mo.md(r"""
+    ## 9. Going Further
+
+    For this extension, I compared each country's average GDP growth in
+    the first five years with its average in the last five years of the
+    selected period.
+
+    The main result table shows averages across the whole period, which
+    can hide changes over time. This comparison helps show whether growth
+    was higher or lower in the later period.
+
+    I used the records already fetched from the World Bank API. Missing
+    values are excluded, and the table shows how many values were used.
+    The difference between the two averages is measured in percentage points.
+
+    Comparing GDP growth in the first and last five years shows how each
+    country's economic performance changed over time. A graph makes these
+    differences easier to see than a single average for the whole period.
+    This can help business analysts identify changes worth investigating
+    before making expansion decisions, although GDP growth alone is not
+    enough to choose an investment location.
+    """)
+    return
+
+
+@app.cell
+def _(
+    comparison_years,
+    countries,
+    end_year,
+    gdp_indicator,
+    mp2_fetched_records,
+    start_year,
+):
+    # Require two separate periods with enough years.
+    if comparison_years < 1:
+        raise ValueError("comparison_years must be at least 1.")
+
+    if end_year - start_year + 1 < comparison_years * 2:
+        raise ValueError("The date range is too short for two separate periods.")
+
+    # Find the boundaries of the two periods.
+    mp2_first_period_end = start_year + comparison_years - 1
+    mp2_last_period_start = end_year - comparison_years + 1
+
+    mp2_growth_comparison = {}
+
+    for _country_code, _country_name in countries.items():
+        _first_total = 0
+        _first_count = 0
+        _last_total = 0
+        _last_count = 0
+
+        for _record in mp2_fetched_records:
+            # Use only this country's available GDP growth values.
+            if (
+                _record["countryiso3code"] == _country_code
+                and _record["indicator"]["id"] == gdp_indicator
+                and _record["value"] is not None
+            ):
+                _year = int(_record["date"])
+
+                # Collect values from the first period.
+                if start_year <= _year <= mp2_first_period_end:
+                    _first_total += _record["value"]
+                    _first_count += 1
+
+                # Collect values from the last period.
+                if mp2_last_period_start <= _year <= end_year:
+                    _last_total += _record["value"]
+                    _last_count += 1
+
+        if _first_count == 0 or _last_count == 0:
+            raise ValueError(
+                f"Missing GDP growth data for one period: {_country_name}"
+            )
+
+        _first_average = _first_total / _first_count
+        _last_average = _last_total / _last_count
+
+        # A positive difference means higher growth in the later period.
+        _difference = _last_average - _first_average
+
+        mp2_growth_comparison[_country_name] = {
+            "first_average": _first_average,
+            "last_average": _last_average,
+            "difference": _difference,
+            "first_count": _first_count,
+            "last_count": _last_count,
+        }
+    return mp2_first_period_end, mp2_growth_comparison, mp2_last_period_start
+
+
+@app.cell
+def _(
+    end_year,
+    mp2_first_period_end,
+    mp2_growth_comparison,
+    mp2_last_period_start,
+    start_year,
+):
+    print("GDP growth: first period compared with last period")
+    print(f"First period: {start_year}–{mp2_first_period_end}")
+    print(f"Last period:  {mp2_last_period_start}–{end_year}")
+    print()
+
+    print(
+        f"{'Country':<12}"
+        f"{'First avg %':>14}"
+        f"{'Last avg %':>14}"
+        f"{'Change (pp)':>14}"
+        f"{'Years used':>14}"
+    )
+    print("-" * 68)
+
+    for _country_name, _result in mp2_growth_comparison.items():
+        _counts = (
+            f"{_result['first_count']}/{_result['last_count']}"
+        )
+
+        print(
+            f"{_country_name:<12}"
+            f"{_result['first_average']:>14.2f}"
+            f"{_result['last_average']:>14.2f}"
+            f"{_result['difference']:>+14.2f}"
+            f"{_counts:>14}"
+        )
+
+    print()
+    print("Findings:")
+
+    for _country_name, _result in mp2_growth_comparison.items():
+        if _result["difference"] > 0:
+            _direction = "higher"
+        elif _result["difference"] < 0:
+            _direction = "lower"
+        else:
+            _direction = "unchanged"
+
+        print(
+            f"{_country_name}: average GDP growth was {_direction} "
+            f"in the last period "
+            f"({_result['first_average']:.2f}% compared with "
+            f"{_result['last_average']:.2f}%)."
+        )
+    return
+
+
+@app.cell
+def _():
+    import matplotlib.pyplot as mp2_plt
+
+    return (mp2_plt,)
+
+
+@app.cell
+def _(
+    comparison_years,
+    end_year,
+    mp2_first_period_end,
+    mp2_growth_comparison,
+    mp2_last_period_start,
+    mp2_plt,
+    start_year,
+):
+    # Prepare the country names, averages, and bar positions.
+    mp2_graph_countries = []
+    mp2_graph_first = []
+    mp2_graph_last = []
+    mp2_graph_first_positions = []
+    mp2_graph_last_positions = []
+    mp2_graph_label_positions = []
+
+    _position = 0
+
+    for _country_name, _result in mp2_growth_comparison.items():
+        mp2_graph_countries.append(_country_name)
+        mp2_graph_first.append(_result["first_average"])
+        mp2_graph_last.append(_result["last_average"])
+
+        # Place the two bars next to each other.
+        mp2_graph_first_positions.append(_position - 0.2)
+        mp2_graph_last_positions.append(_position + 0.2)
+        mp2_graph_label_positions.append(_position)
+
+        _position += 1
+
+    # Create the figure and its plotting area.
+    mp2_graph_figure, mp2_graph_axes = mp2_plt.subplots(figsize=(9, 5))
+
+    # Draw yellow bars for the first period.
+    mp2_first_bars = mp2_graph_axes.bar(
+        mp2_graph_first_positions,
+        mp2_graph_first,
+        width=0.4,
+        color="gold",
+        label=f"{start_year}–{mp2_first_period_end}",
+    )
+
+    # Draw blue bars for the last period.
+    mp2_last_bars = mp2_graph_axes.bar(
+        mp2_graph_last_positions,
+        mp2_graph_last,
+        width=0.4,
+        color="royalblue",
+        label=f"{mp2_last_period_start}–{end_year}",
+    )
+
+    # Display each bar's value with two decimal places.
+    mp2_graph_axes.bar_label(mp2_first_bars, fmt="%.2f", padding=3)
+    mp2_graph_axes.bar_label(mp2_last_bars, fmt="%.2f", padding=3)
+
+    # Leave extra space for the value labels.
+    mp2_graph_axes.margins(y=0.15)
+
+    # Label each pair of bars with the country name.
+    mp2_graph_axes.set_xticks(mp2_graph_label_positions)
+    mp2_graph_axes.set_xticklabels(mp2_graph_countries)
+
+    mp2_graph_axes.set_ylabel("Average annual GDP growth (%)")
+
+    # Update the title automatically when comparison_years changes.
+    mp2_graph_axes.set_title(
+        f"GDP Growth: First {comparison_years} Years "
+        f"vs Last {comparison_years} Years"
+    )
+
+    # Explain the colors and mark zero.
+    mp2_graph_axes.legend()
+    mp2_graph_axes.axhline(0, color="black", linewidth=0.8)
+
+    # Adjust spacing and display the graph in Marimo.
+    mp2_graph_figure.tight_layout()
+    mp2_graph_figure
+    return
+
+
+@app.cell(hide_code=True)
+def _(mo):
+    mo.md(r"""
+    ### What I Found
+
+    For `Brazil`, average GDP growth changed from `3.15%` in
+    `2000-2004 period` to `1.79%` in `2019-2023 period`, a difference of
+    `1.36` percentage points.
+
+    This shows that the average for the whole period does not tell us
+    whether growth was higher or lower in more recent years. However,
+    this comparison alone does not explain why growth changed.
+
+    The calculation, comparison table, and printed findings are in the
+    above `Going Further` section of this notebook.
+
+    I also added a bar chart to compare the two periods visually.
+    Each country has two bars showing its average GDP growth in the first
+    and last five years. The graph uses the same calculated averages as
+    the comparison table and updates when the inputs change.
+    """)
+    return
+
+
+@app.cell(hide_code=True)
+def _(mo):
+    mo.md(r"""
+    ## Time Spent
+
+    `8`.
     """)
     return
 
