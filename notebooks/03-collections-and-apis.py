@@ -863,7 +863,7 @@ def _(babson_url, requests):
     return
 
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""
     This is what the code does, in simple steps:

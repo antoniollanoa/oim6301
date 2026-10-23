@@ -192,12 +192,98 @@ def _(mo):
     return
 
 
+@app.cell
+def _(holdings, retirement_holdings):
+    def count_shares(portfolio):
+        """Return the total number of shares in a portfolio."""
+        total_shares = 0
+        for symbol, shares, price in portfolio:
+            total_shares = total_shares + shares
+        return total_shares
+
+    count_shares(holdings), count_shares(retirement_holdings)
+    return
+
+
+@app.cell
+def _(holdings, retirement_holdings):
+    def find_largest(portfolio):
+        """Return the ticker and cost of the holding that cost the most."""
+        largest_symbol = None
+        largest_cost = 0
+        for symbol, shares, price in portfolio:
+            cost = shares * price
+            if cost > largest_cost:
+                largest_cost = cost
+                largest_symbol = symbol
+        return (largest_symbol, largest_cost)
+
+    find_largest(holdings), find_largest(retirement_holdings)
+    return
+
+
+@app.cell
+def _(holdings):
+    def find_n_largest(portfolio, n):
+        """Return the n largest holdings, largest first, as a list of (symbol, cost)."""
+        remaining = []
+        for symbol, shares, price in portfolio:
+            remaining.append((symbol, shares * price))
+
+        result = []
+        count = 0
+        while count < n and len(remaining) > 0:
+            largest_symbol = None
+            largest_cost = 0
+            largest_position = 0
+            position = 0
+            for item_symbol, item_cost in remaining:
+                if item_cost > largest_cost:
+                    largest_cost = item_cost
+                    largest_symbol = item_symbol
+                    largest_position = position
+                position = position + 1
+            result.append((largest_symbol, largest_cost))
+            remaining.pop(largest_position)
+            count = count + 1
+
+        return result
+
+    find_n_largest(holdings, 3)
+    return
+
+
 @app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""
     ## ✏️ B · Without `return`
 
     Copy `count_shares` into a new cell under a new name, and put `print(...)` where the `return` was. Call it and keep the result in a name. In a markdown cell under it, answer: what does that name hold, and what could the next cell do with it?
+    """)
+    return
+
+
+@app.cell
+def _(holdings):
+    def print_shares(portfolio):
+        """Print the total number of shares in a portfolio, instead of returning it."""
+        total_shares = 0
+        for symbol, shares, price in portfolio:
+            total_shares = total_shares + shares
+        print(total_shares)
+
+    shares_result = print_shares(holdings)
+    return
+
+
+@app.cell
+def _(mo):
+    mo.md(r"""
+    `shares_result` holds `None`. The function does not use `return`, so Python gives
+    back nothing, and "nothing" in Python is written `None`. The function still prints
+    the number on the screen, but that number is not saved anywhere, so the next cell
+    cannot use it. If a next cell tried `shares_result + 10`, it would fail, because you
+    cannot add a number to `None`.
     """)
     return
 
@@ -337,6 +423,61 @@ def _(mo):
     return
 
 
+@app.cell
+def _(requests):
+    def get_temperature(town):
+        place_reply = requests.get(
+            "https://geocoding-api.open-meteo.com/v1/search",
+            params={"name": town, "count": 1},
+            timeout=10,
+        )
+        place = place_reply.json()["results"][0]
+        weather_reply = requests.get(
+            "https://api.open-meteo.com/v1/forecast",
+            params={
+                "latitude": place["latitude"],
+                "longitude": place["longitude"],
+                "current": "temperature_2m",
+                "temperature_unit": "fahrenheit",
+            },
+            timeout=10,
+        )
+        return weather_reply.json()["current"]["temperature_2m"]
+
+    get_temperature("Wellesley")
+    return
+
+
+@app.cell
+def _(requests):
+    def get_temperature_in_state(town, state):
+        place_reply = requests.get(
+            "https://geocoding-api.open-meteo.com/v1/search",
+            params={"name": town, "count": 10},
+            timeout=10,
+        )
+        places = place_reply.json()["results"]
+        chosen_place = None
+        for place in places:
+            if place["admin1"] == state:
+                chosen_place = place
+                break
+        weather_reply = requests.get(
+            "https://api.open-meteo.com/v1/forecast",
+            params={
+                "latitude": chosen_place["latitude"],
+                "longitude": chosen_place["longitude"],
+                "current": "temperature_2m",
+                "temperature_unit": "fahrenheit",
+            },
+            timeout=10,
+        )
+        return weather_reply.json()["current"]["temperature_2m"]
+
+    get_temperature_in_state("Babson Park", "Massachusetts")
+    return
+
+
 @app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""
@@ -346,6 +487,19 @@ def _(mo):
 
     *Check yourself: Dover, Wellesley, Cohasset, Needham, Westwood.*
     """)
+    return
+
+
+@app.cell
+def _(requests):
+    top_income_reply = requests.get(
+        "https://oim.zhili.dev/ma/towns",
+        params={"county": "Norfolk", "sort": "income", "order": "desc", "per_page": 5},
+        timeout=10,
+    )
+    top_income_towns = top_income_reply.json()["items"]
+    for town in top_income_towns:
+        print(town["name"])
     return
 
 
@@ -362,6 +516,62 @@ def _(mo):
 
     **Going further.** Write `town_history(name)`, which takes a town's name, makes both requests, and returns the history.
     """)
+    return
+
+
+@app.cell
+def _(requests):
+    wellesley_town_reply = requests.get(
+        "https://oim.zhili.dev/ma/towns",
+        params={"name": "Wellesley"},
+        timeout=10,
+    )
+    wellesley_town = wellesley_town_reply.json()["items"][0]
+    wellesley_dor_code = wellesley_town["dor_code"]
+    wellesley_dor_code
+    return (wellesley_dor_code,)
+
+
+@app.cell
+def _(requests, wellesley_dor_code):
+    wellesley_history_reply = requests.get(
+        f"https://oim.zhili.dev/ma/towns/{wellesley_dor_code}/history",
+        params={"from_year": 2026, "to_year": 2026},
+        timeout=10,
+    )
+    wellesley_history = wellesley_history_reply.json()
+    wellesley_history
+    return (wellesley_history,)
+
+
+@app.cell
+def _(wellesley_history):
+    wellesley_year = wellesley_history["years"][0]
+    average_value = wellesley_year["average_single_family_value_dollars"]
+    tax_rate = wellesley_year["residential_rate_per_thousand"]
+    computed_bill = average_value * tax_rate / 1000
+    reply_bill = wellesley_year["average_single_family_bill_dollars"]
+    computed_bill, reply_bill
+    return
+
+
+@app.cell
+def _(requests):
+    def town_history(name):
+        town_reply = requests.get(
+            "https://oim.zhili.dev/ma/towns",
+            params={"name": name},
+            timeout=10,
+        )
+        town = town_reply.json()["items"][0]
+        dor_code = town["dor_code"]
+        history_reply = requests.get(
+            f"https://oim.zhili.dev/ma/towns/{dor_code}/history",
+            timeout=10,
+        )
+        return history_reply.json()
+
+    town_history("Wellesley")
     return
 
 
@@ -446,6 +656,42 @@ def _(mo):
     return
 
 
+@app.cell
+def _(get_page):
+    def get_all_towns():
+        first_page = get_page(1)
+        all_towns = first_page["items"]
+        pages = first_page["pagination"]["pages"]
+        for page_number in range(2, pages + 1):
+            next_page = get_page(page_number)
+            all_towns = all_towns + next_page["items"]
+        return all_towns
+
+    all_towns = get_all_towns()
+    len(all_towns), all_towns[0]["name"], all_towns[-1]["name"]
+    return (all_towns,)
+
+
+@app.cell
+def _(all_towns):
+    highest_bill_town = None
+    highest_bill = 0
+    lowest_bill_town = None
+    lowest_bill = None
+    for town_item in all_towns:
+        bill = town_item["average_single_family_bill_dollars"]
+        if bill > highest_bill:
+            highest_bill = bill
+            highest_bill_town = town_item["name"]
+        if lowest_bill is None or bill < lowest_bill:
+            lowest_bill = bill
+            lowest_bill_town = town_item["name"]
+
+    print(f"Highest: {highest_bill_town}, ${highest_bill:,}")
+    print(f"Lowest: {lowest_bill_town}, ${lowest_bill:,}")
+    return
+
+
 @app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""
@@ -504,7 +750,6 @@ def _(requests):
         timeout=10,
     )
     board_reply.status_code, board_reply.json()
-
     return
 
 
@@ -512,6 +757,40 @@ def _(requests):
 def _(mo):
     mo.md(r"""
     > **Advanced · G · Take it down.** `requests.delete` on the same address, with the same header, removes your line. Run it twice and compare the two replies.
+    """)
+    return
+
+
+@app.cell
+def _(requests):
+    delete_reply_1 = requests.delete(
+        "https://oim.zhili.dev/message",
+        headers={"x-token": "antoniollanoa"},
+        timeout=10,
+    )
+    delete_reply_1.status_code, delete_reply_1.json()
+    return
+
+
+@app.cell
+def _(requests):
+    delete_reply_2 = requests.delete(
+        "https://oim.zhili.dev/message",
+        headers={"x-token": "antoniollanoa"},
+        timeout=10,
+    )
+    delete_reply_2.status_code, delete_reply_2.json()
+    return
+
+
+@app.cell
+def _(mo):
+    mo.md(r"""
+    The first delete gave **200**, and it showed the message that got deleted. The
+    second delete gave **404**, with `"No message to delete"`. This makes sense: after
+    the first delete, there was nothing left on the board for me, so the second try had
+    nothing to remove. The server tells you this with a different status code, not just
+    the same answer twice.
     """)
     return
 
