@@ -232,7 +232,6 @@ def _(
     request_timeout,
     start_year,
 ):
-    # Store the original records returned by our function.
     mp2_fetched_records = []
 
     # Each indicator should have one record per country per year.
@@ -275,7 +274,6 @@ def _(
 
 @app.cell
 def _(MP2Path, mp2_fetched_records, mp2_json, output_file):
-    # Use the destination from the Inputs cell.
     mp2_output_path = MP2Path(output_file)
 
     # Create the destination folders if they do not already exist.
@@ -317,7 +315,6 @@ def _(
     mp2_fetched_records,
     unemployment_indicator,
 ):
-    # Store one results dictionary for each country.
     mp2_country_results = {}
 
     for _country_code, _country_name in countries.items():
@@ -398,8 +395,6 @@ def _(
     print("Average rates (%); growth SD in percentage points")
     print()
 
-    # <12 left-aligns text in a column 12 characters wide.
-    # >12 right-aligns text in a column 12 characters wide.
     print(
         f"{'Country':<12}"
         f"{'GDP growth':>12}"
@@ -419,7 +414,6 @@ def _(
             f"{_result['counts'][unemployment_indicator]}"
         )
 
-        # .2f displays numbers with two decimal places.
         print(
             f"{_country_name:<12}"
             f"{_result['gdp_growth']:>12.2f}"
@@ -436,7 +430,6 @@ def _(
 
 @app.cell
 def _(end_year, mp2_country_results, start_year):
-    # None means we have not selected a result yet.
     mp2_best_growth = None
     mp2_lowest_inflation = None
     mp2_lowest_unemployment = None
@@ -509,6 +502,114 @@ def _(end_year, mp2_country_results, start_year):
         f"(standard deviation {mp2_lowest_growth_sd:.2f} percentage points), "
         f"showing different strengths relevant to business expansion."
     )
+    return
+
+
+@app.cell(hide_code=True)
+def _(mo):
+    mo.md(r"""
+    ## 6. How I Know These Numbers Are Right?
+
+    I check the first country's average GDP growth a second way. Instead of
+    using the records collected earlier, I request each year's GDP growth
+    separately from the World Bank API and calculate the average again.
+
+    The code prints both averages, the number of available years, and whether
+    the results agree. Missing values are excluded in both calculations.
+    """)
+    return
+
+
+@app.cell
+def _(
+    base_url,
+    countries,
+    end_year,
+    gdp_indicator,
+    mp2_country_results,
+    mp2_requests,
+    request_timeout,
+    start_year,
+):
+    # Select the first country from the Inputs dictionary.
+    mp2_check_country_code = ""
+
+    for _country_code in countries:
+        mp2_check_country_code = _country_code
+        break
+
+    mp2_check_country_name = countries[mp2_check_country_code]
+
+    # Get the average already calculated for the result table.
+    mp2_original_average = (
+        mp2_country_results[mp2_check_country_name]["gdp_growth"]
+    )
+
+    # Calculate a second average using separate requests for each year.
+    mp2_check_total = 0
+    mp2_check_count = 0
+
+    for _year in range(start_year, end_year + 1):
+        _url = (
+            f"{base_url}/country/{mp2_check_country_code}"
+            f"/indicator/{gdp_indicator}"
+        )
+
+        _response = mp2_requests.get(
+            _url,
+            params={
+                "format": "json",
+                "date": _year,
+            },
+            timeout=request_timeout,
+        )
+        _response.raise_for_status()
+        _reply = _response.json()
+
+        # One country, one indicator, and one year should give one record.
+        if (
+            len(_reply) != 2
+            or not isinstance(_reply[1], list)
+            or len(_reply[1]) != 1
+        ):
+            raise ValueError(f"Unexpected API response for {_year}.")
+
+        for _record in _reply[1]:
+            # Skip missing values, just as the original calculation does.
+            if _record["value"] is not None:
+                mp2_check_total += _record["value"]
+                mp2_check_count += 1
+
+    if mp2_check_count == 0:
+        raise ValueError("No values were available for the check.")
+
+    mp2_second_average = mp2_check_total / mp2_check_count
+
+    # Also compare the number of values used in each calculation.
+    mp2_original_count = (
+        mp2_country_results[mp2_check_country_name]["counts"][gdp_indicator]
+    )
+
+    # Allow a tiny difference caused by decimal arithmetic.
+    mp2_check_passed = (
+        abs(mp2_original_average - mp2_second_average) < 0.000001
+        and mp2_original_count == mp2_check_count
+    )
+
+    # Show both numbers and the result of the check.
+    print(
+        f"Checking {mp2_check_country_name}'s average GDP growth, "
+        f"{start_year}–{end_year}"
+    )
+    print(f"Original average:      {mp2_original_average:.6f}%")
+    print(f"Second average:        {mp2_second_average:.6f}%")
+    print(f"Original years used:   {mp2_original_count}")
+    print(f"Second years used:     {mp2_check_count}")
+
+    if mp2_check_passed:
+        print("PASS: The two averages and their year counts agree.")
+    else:
+        print("FAIL: The results differ and need investigation.")
     return
 
 
