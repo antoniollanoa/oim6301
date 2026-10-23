@@ -511,7 +511,7 @@ def _(pl, town_table):
     return
 
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""
     **Going further.** My question: how many towns in each county have more than
