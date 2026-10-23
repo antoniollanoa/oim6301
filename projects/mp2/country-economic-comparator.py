@@ -613,5 +613,29 @@ def _(
     return
 
 
+@app.cell(hide_code=True)
+def _(mo):
+    mo.md(r"""
+    ## 7. Working With the Agent
+
+    One suggestion I did not accept as-is was the use of list and dictionary
+    comprehensions. These put several steps into one line, but the assignment
+    requires explicit `for` loops when processing lists. I also found loops
+    easier to understand and explain.
+
+    I asked for this part to be revised using separate steps. In Section 5,
+    The Answer, Cell 1, the calculation now goes through the records, adds
+    the available values, counts them, and divides the total by the count.
+    Missing values are skipped instead of being counted as zero.
+
+    I checked the revised cell against the assignment instructions to confirm
+    that it uses explicit loops. Section 6 provides an additional check of
+    the calculation by requesting each year's GDP growth separately and
+    printing the new average beside the original average. This lets me check
+    whether the change still produces the same result.
+    """)
+    return
+
+
 if __name__ == "__main__":
     app.run()
