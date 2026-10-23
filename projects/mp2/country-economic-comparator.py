@@ -994,7 +994,7 @@ def _(mo):
 
     For `Brazil`, average GDP growth changed from `3.15%` in
     `2000-2004 period` to `1.79%` in `2019-2023 period`, a difference of
-    `1.36` percentage points.
+    `1.35` percentage points.
 
     This shows that the average for the whole period does not tell us
     whether growth was higher or lower in more recent years. However,
@@ -1016,7 +1016,7 @@ def _(mo):
     mo.md(r"""
     ## Time Spent
 
-    `8`.
+    `8` hours.
     """)
     return
 
