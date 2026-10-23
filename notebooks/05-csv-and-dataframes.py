@@ -219,6 +219,50 @@ def _(towns_from_file):
     return
 
 
+@app.cell
+def _(towns_from_file):
+    # 2
+    # input: towns_from_file, a list of dictionaries
+    # output: the name of the smallest town and the name of the largest town, by population
+
+    smallest_town = None
+    smallest_population = None
+    largest_town = None
+    largest_population = 0
+
+    for town2 in towns_from_file:
+        population = int(town2["population"])
+        if smallest_population is None or population < smallest_population:
+            smallest_population = population
+            smallest_town = town2["name"]
+        if population > largest_population:
+            largest_population = population
+            largest_town = town2["name"]
+
+    smallest_town, smallest_population, largest_town, largest_population
+    return
+
+
+@app.cell
+def _(towns_from_file):
+     # Going further
+    # input: towns_from_file, a list of dictionaries
+    # output: the town with the most expensive average home, for each county
+
+    best_town_by_county = {}
+    best_value_by_county = {}
+
+    for town3 in towns_from_file:
+        county3 = town3["county"]
+        value3 = int(town3["average_single_family_value_dollars"])
+        if county3 not in best_value_by_county or value3 > best_value_by_county[county3]:
+            best_value_by_county[county3] = value3
+            best_town_by_county[county3] = town3["name"]
+
+    best_town_by_county
+    return
+
+
 @app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""
@@ -336,6 +380,55 @@ def _(mo):
 
     **Going further.** Ask the towns a question of your own that needs `.filter()`, `.group_by()` and `.sort()` together.
     """)
+    return
+
+
+@app.cell
+def _(pl, town_table):
+    town_counts_by_county = (
+        town_table.group_by("county")
+        .agg(pl.len().alias("towns"))
+        .sort("towns", descending=True)
+    )
+    town_counts_by_county
+    return (town_counts_by_county,)
+
+
+@app.cell
+def _(ma_counties, pl, town_counts_by_county):
+    server_county_counts = pl.DataFrame(ma_counties).select("name", "towns")
+    town_counts_by_county.sort("county"), server_county_counts.sort("name")
+    return
+
+
+@app.cell
+def _(pl, town_table):
+    (
+        town_table.filter(pl.col("population") > 50_000)
+        .sort("average_single_family_bill_dollars", descending=True)
+        .head(5)
+    )
+    return
+
+
+@app.cell
+def _(mo):
+    mo.md(r"""
+    **Going further.** My question: among towns with more than 20,000 people, which
+    county has the highest average income per person?
+    """)
+    return
+
+
+@app.cell
+def _(pl, town_table):
+    (
+        town_table.filter(pl.col("population") > 20_000)
+        .group_by("county")
+        .agg(pl.col("income_per_capita_dollars").mean().alias("avg_income"))
+        .sort("avg_income", descending=True)
+        .head(1)
+    )
     return
 
 
