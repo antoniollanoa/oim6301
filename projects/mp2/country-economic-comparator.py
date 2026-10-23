@@ -161,23 +161,23 @@ def _(mp2_requests):
         page_size,
         timeout_seconds,
     ):
-        # Join the country codes in the format the API expects.
+        # Combine the country codes into the format the API expects.
         # Example: ARG;BRA;COL;MEX
         _country_text = ";".join(country_codes)
 
-        # Build the URL for one economic indicator.
+        # Build the URL for one indicator.
         _url = (
             f"{api_url}/country/{_country_text}"
             f"/indicator/{indicator_code}"
         )
 
-        # Start with an empty list and the first page.
+        # Prepare an empty list and start with page 1.
         _records = []
         _page = 1
         _pages = 1
         _total = 0
 
-        # Keep requesting pages until all pages have been fetched.
+        # Request each page until all pages have been collected.
         while _page <= _pages:
             _response = mp2_requests.get(
                 _url,
@@ -190,17 +190,22 @@ def _(mp2_requests):
                 timeout=timeout_seconds,
             )
 
-            # Stop with an error if the HTTP request failed.
+            # Stop if the HTTP request failed.
             _response.raise_for_status()
 
-            # Convert the JSON response into Python lists and dictionaries.
+            # Convert the reply into Python lists and dictionaries.
             _data = _response.json()
 
-            # The API should return metadata followed by a list of records.
-            if len(_data) != 2 or not isinstance(_data[1], list):
-                raise ValueError("The API did not return a list of records.")
+            # A normal reply contains metadata and a list of records.
+            if (
+                not isinstance(_data, list)
+                or len(_data) != 2
+                or not isinstance(_data[0], dict)
+                or not isinstance(_data[1], list)
+            ):
+                raise ValueError("The API did not return the expected data.")
 
-            # Read the number of pages and records reported by the API.
+            # Read the page count and record total from the metadata.
             _pages = int(_data[0]["pages"])
             _total = int(_data[0]["total"])
 
@@ -208,14 +213,15 @@ def _(mp2_requests):
             for _record in _data[1]:
                 _records.append(_record)
 
-            # Move to the next page.
             _page += 1
 
-        # Check that we fetched the number of records the API reported.
+        # Compare our collected count with the API's reported total.
         if len(_records) != _total:
-            raise ValueError("The number of fetched records is incorrect.")
+            raise ValueError(
+                f"The API reported {_total} records, "
+                f"but we collected {len(_records)}."
+            )
 
-        # Send the complete list back to the code that called the function.
         return _records
 
     return (fetch_world_bank_records,)
@@ -232,16 +238,16 @@ def _(
     request_timeout,
     start_year,
 ):
+    # Store the original records returned by our fetch function.
     mp2_fetched_records = []
 
     # Each indicator should have one record per country per year.
-    # Adding 1 includes both the start year and the end year.
     _expected_records = (
         len(countries) * (end_year - start_year + 1)
     )
 
-    # Fetch each indicator separately.
     for _indicator_code in indicators:
+        # Fetch one indicator for all selected countries and years.
         _indicator_records = fetch_world_bank_records(
             base_url,
             countries,
@@ -252,8 +258,7 @@ def _(
             request_timeout,
         )
 
-        # Check that the country-year record count matches our inputs.
-        # Records with missing values still count as records.
+        # Missing values still count as records.
         if len(_indicator_records) != _expected_records:
             raise ValueError(
                 f"Expected {_expected_records} records for "
@@ -261,7 +266,7 @@ def _(
                 f"but received {len(_indicator_records)}."
             )
 
-        # Combine this indicator's records with the other indicators.
+        # Add this indicator's records to the combined list.
         for _record in _indicator_records:
             mp2_fetched_records.append(_record)
 
@@ -269,28 +274,45 @@ def _(
             f"{indicators[_indicator_code]}: "
             f"{len(_indicator_records)} records fetched"
         )
+
+    print(f"Total records collected: {len(mp2_fetched_records)}")
     return (mp2_fetched_records,)
 
 
 @app.cell
-def _(MP2Path, mp2_fetched_records, mp2_json, output_file):
-    mp2_output_path = MP2Path(output_file)
+def _(MP2Path, mp2_json):
+    def save_world_bank_records(records, file_path):
+        # Convert the destination into a Path object.
+        _path = MP2Path(file_path)
 
-    # Create the destination folders if they do not already exist.
-    mp2_output_path.parent.mkdir(parents=True, exist_ok=True)
+        # Create any missing folders.
+        _path.parent.mkdir(parents=True, exist_ok=True)
 
-    # Open the file for writing and save the original fetched records.
-    # indent=2 makes the JSON easier to read.
-    # Missing values (None) are saved as JSON null.
-    with mp2_output_path.open("w", encoding="utf-8") as _file:
-        mp2_json.dump(
-            mp2_fetched_records,
-            _file,
-            indent=2,
-            allow_nan=False,
-        )
+        # Save the original records as readable JSON.
+        # Missing Python values (None) become JSON null.
+        with _path.open("w", encoding="utf-8") as _file:
+            mp2_json.dump(
+                records,
+                _file,
+                indent=2,
+                allow_nan=False,
+            )
 
-    # Print the full path so we can find the saved file.
+        # Return the path so we can display the file's location.
+        return _path
+
+    return (save_world_bank_records,)
+
+
+@app.cell
+def _(mp2_fetched_records, output_file, save_world_bank_records):
+    # Save the records using the destination from Inputs.
+    mp2_output_path = save_world_bank_records(
+        mp2_fetched_records,
+        output_file,
+    )
+
+    # Show how many records were saved and the full file location.
     print(
         f"Saved {len(mp2_fetched_records)} records to "
         f"{mp2_output_path.resolve()}"
@@ -633,6 +655,68 @@ def _(mo):
     the calculation by requesting each year's GDP growth separately and
     printing the new average beside the original average. This lets me check
     whether the change still produces the same result.
+    """)
+    return
+
+
+@app.cell(hide_code=True)
+def _(mo):
+    mo.md(r"""
+    ## 8. Reading It Back
+
+    ### Function 1: fetch_world_bank_records
+
+    This function takes the API address, country codes, indicator code,
+    start and end years, page size, and request timeout as inputs.
+
+    It requests the data from the World Bank API. If the results cover
+    several pages, it requests each page and collects the records.
+    It returns one list containing all the fetched records for that indicator.
+
+    One line I needed explained was:
+
+    `_country_text = ";".join(country_codes)`
+
+    This combines the country codes into one string with semicolons between
+    them. For example, it produces `ARG;BRA;COL;MEX`, which is the format
+    used in the API request.
+
+    ### Function 2: save_world_bank_records
+
+    This function takes the fetched records and the destination file path
+    as inputs. It creates any missing folders and saves the records in
+    JSON format. It returns the path of the saved file.
+
+    One line I needed explained was:
+
+    `_path.parent.mkdir(parents=True, exist_ok=True)`
+
+    This creates the folder where the file will be saved. It also creates
+    any missing parent folders and does not raise an error just because
+    the folder already exists.
+    """)
+    return
+
+
+@app.cell(hide_code=True)
+def _(mo):
+    mo.md(r"""
+    ### Prediction
+
+    I will change `end_year` from 2024 to 2023 in the Inputs cell.
+
+    I expect the notebook to exclude the 2024 records and use the period
+    2000–2023. This includes 24 years instead of 25, so I expect 96 records
+    per indicator and 288 records in total.
+
+    The number of available values used in each average will decrease by
+    one if that country's 2024 value was available. If it was missing,
+    the count will stay the same.
+
+    The averages and GDP growth standard deviations may change because
+    2024 will no longer be included. I cannot predict whether each value
+    will increase or decrease without examining the 2024 values.
+    The countries identified in the answer sentence may also change.
     """)
     return
 
