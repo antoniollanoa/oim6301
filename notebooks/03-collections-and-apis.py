@@ -171,7 +171,11 @@ def _(mo):
     4. A **tuple**, because it is one thing (one shipment) with three named parts that
        must never change once recorded.
 
-    **D ·**
+    **D ·** I would rather work with the list of dictionaries. A dictionary reads by
+    name — `holding["Shares"]` says what it is — while a tuple reads by position, so
+    `holding[1]` only makes sense if I remember that shares come second. For a quick,
+    one-off calculation a tuple is fine, but a dictionary is easier to check back on
+    later, or to hand to somebody else.
 
     **G ·** The first result for `Babson Park` is in Florida, not Massachusetts. The Babson
     Park next to Babson College (in Wellesley, MA) is the *second* result. Code that
@@ -536,6 +540,51 @@ def _():
         ("TSLA", 150, 255.70),
     ]
     holdings
+    return (holdings,)
+
+
+@app.cell
+def _(holdings):
+    total_portfolio_cost_2 = 0
+    for _symbol, _shares, _price in holdings:
+        total_portfolio_cost_2 = total_portfolio_cost_2 + _shares * _price
+
+    print(f"Total cost to buy the whole portfolio: ${total_portfolio_cost_2:,.2f}")
+    return
+
+
+@app.cell
+def _(mo):
+    mo.md(r"""
+    **The line you would not have written yet:** `for _symbol, _shares, _price in holdings:`
+
+    Each item in `holdings` is a tuple of three values, like `("AAPL", 100, 173.93)`. Three
+    names on the left of `in`, separated by commas, catch the three parts of each tuple
+    at once — the same **unpacking** used for `.items()` in Section 1 and for
+    `first_holding` in Section 2. Without unpacking, the loop would hand you one whole
+    tuple at a time, and you would have to write `_holding[1] * _holding[2]` instead of
+    the clearer `_shares * _price`.
+
+    The names start with `_` so they stay private to this cell, the same reason
+    `_field` and `_value` did in Section 1.
+    """)
+    return
+
+
+@app.cell
+def _(holdings):
+    holding_costs = {}
+    for _symbol2, _shares2, _price2 in holdings:
+        holding_costs[_symbol2] = _shares2 * _price2
+
+    largest_holding_symbol = None
+    largest_holding_cost = 0
+    for _symbol3 in holding_costs:
+        if holding_costs[_symbol3] > largest_holding_cost:
+            largest_holding_cost = holding_costs[_symbol3]
+            largest_holding_symbol = _symbol3
+
+    print(f"{largest_holding_symbol}, ${largest_holding_cost:,.2f}")
     return
 
 
