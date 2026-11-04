@@ -217,8 +217,12 @@ def _(mo):
        capacity of eight. Each class exceeds capacity by one reservation.
        These are the only two classes that break the capacity rule.
 
-    2. Exactly two bookings for class 5 were recorded at
-       November 12, 2025, at 6:15 p.m., after the class started at 6 p.m.
+    2. Exactly two bookings for class 5 were recorded on November 12, 2025,
+       at 6:15 p.m., after the class started at 6 p.m. Their composite keys are:
+
+       - `member_id = 9`, `class_id = 5`
+       - `member_id = 2`, `class_id = 5`
+
        These are the only two booking records that break the booking-time rule.
 
     The table constraints allow these records to load because checking

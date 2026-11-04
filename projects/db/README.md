@@ -36,7 +36,7 @@ To keep the project simple, the gym charges per class. Monthly memberships, paym
 
 1. How many bookings does each class have, including classes with no bookings?
 2. Which members have never booked a class?
-3. Which class start hours have the most attended bookings?
+3. Which days of the week have the most attended bookings?
 4. For each coach, how many attended bookings and how much revenue from attended bookings are associated with their classes? This question uses Coaches, Classes, and Bookings.
 5. For each workout, how many attended bookings and how much revenue from attended bookings are associated with its classes? This question uses Workouts, Classes, and Bookings.
 6. Which members have the most no-shows?
