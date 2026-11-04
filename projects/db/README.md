@@ -100,3 +100,18 @@ erDiagram
 
 ## 4. Design Choices
 
+### 1. Choosing the member key
+
+I chose an invented `member_id` as the primary key instead of the gym’s membership number. This keeps the links between tables stable if the gym changes its membership numbering system. The membership number is still unique, so two members cannot share it.
+
+### 2. Optional relationships
+
+A member can have no bookings because someone may register before booking their first class. A class can also have no bookings because staff may schedule it before anyone reserves a place. Keeping these records helps the gym identify members who have not participated and classes with no bookings.
+
+### 3. Rules that require other rows
+
+Class capacity cannot be checked using one booking row alone. We must count all non-cancelled bookings for the class and compare that count with the class’s capacity. We must also compare each booking’s date and time with the start time stored in its class record. These rules require queries because a simple constraint on one booking row cannot check them.
+
+### 4. Something I checked in the design
+
+I checked the two-column primary key in Bookings using a small example. Member 1 can book classes 101 and 102, and member 2 can also book class 101. However, member 1 cannot have a second booking for class 101. This matches the rule that each member can have only one booking record per class.
