@@ -46,7 +46,7 @@ def _(database, duckdb):
     return (ask,)
 
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md("""
     ## 1. The Tables
@@ -173,7 +173,7 @@ def _(data_folder, database, duckdb):
     return
 
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md("""
     ## 2. The Data
@@ -252,7 +252,7 @@ def _(mo):
     return
 
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md("""
     ## 3. A Look at the Data
@@ -308,7 +308,7 @@ def _(mo):
     return
 
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md("""
     ## 4. Row Counts
@@ -376,7 +376,7 @@ def _(row_counts):
     return
 
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md("""
     ## 5. A Row It Refuses
@@ -433,7 +433,7 @@ def _(mo):
     return
 
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md("""
     ## 6. Answers You Already Knew
@@ -545,7 +545,7 @@ def _(late_bookings_result):
     return
 
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md("""
     ## 7. A View
