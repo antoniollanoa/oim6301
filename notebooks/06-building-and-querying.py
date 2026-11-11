@@ -494,7 +494,7 @@ def _(ask):
         FROM towns
         WHERE average_single_family_bill_dollars > 10000
         GROUP BY county
-        HAVING count(*) > 5
+        -- HAVING count(*) > 5 AND county LIKE '%sex'
         ORDER BY towns DESC
     """)
     return
