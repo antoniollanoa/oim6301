@@ -510,5 +510,15 @@ def _(mo):
     return
 
 
+@app.cell(hide_code=True)
+def _(mo):
+    mo.md(r"""
+    ## 5. Time Spent
+
+    10 hours.
+    """)
+    return
+
+
 if __name__ == "__main__":
     app.run()
