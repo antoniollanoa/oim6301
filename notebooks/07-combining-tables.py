@@ -15,7 +15,7 @@
 
 import marimo
 
-__generated_with = "0.25.1"
+__generated_with = "0.24.2"
 app = marimo.App(width="medium", sql_output="polars")
 
 
@@ -277,6 +277,18 @@ def _(mo):
     return
 
 
+@app.cell
+def _(ask, northwind_database):
+    ask(northwind_database, """
+        SELECT t.TerritoryID, t.TerritoryDescription
+        FROM territories AS t
+        LEFT JOIN employee_territories AS et ON et.TerritoryID = t.TerritoryID
+        WHERE et.TerritoryID IS NULL
+        ORDER BY t.TerritoryDescription
+    """)
+    return
+
+
 @app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""
@@ -378,6 +390,17 @@ def _(mo):
     return
 
 
+@app.cell
+def _(ask, northwind_database):
+    ask(northwind_database, """
+        SELECT ShipCountry, sum(Freight) AS total_freight
+        FROM orders
+        GROUP BY ShipCountry
+        ORDER BY total_freight DESC
+    """)
+    return
+
+
 @app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""
@@ -394,6 +417,33 @@ def _(mo):
     *Check yourself: Beverages first, with about 13,375,939, and all eight, added before rounding, give 63,856,337.63.*
 
     **Going further.** Compute revenue by category for each year, and find the category that grew the most.
+    """)
+    return
+
+
+@app.cell
+def _(ask, northwind_database):
+    ask(northwind_database, """
+        SELECT cat.CategoryName,
+               sum(d.UnitPrice * d.Quantity * (1 - d.Discount)) AS revenue
+        FROM orders AS o
+        JOIN order_details AS d ON d.OrderID = o.OrderID
+        JOIN products AS p ON p.ProductID = d.ProductID
+        JOIN categories AS cat ON cat.CategoryID = p.CategoryID
+        WHERE o.ShipCountry = 'USA'
+        GROUP BY cat.CategoryName
+        ORDER BY revenue DESC
+    """)
+    return
+
+
+@app.cell
+def _(ask, northwind_database):
+    ask(northwind_database, """
+        SELECT sum(d.UnitPrice * d.Quantity * (1 - d.Discount)) AS usa_revenue
+        FROM orders AS o
+        JOIN order_details AS d ON d.OrderID = o.OrderID
+        WHERE o.ShipCountry = 'USA'
     """)
     return
 
@@ -470,6 +520,61 @@ def _(mo):
     return
 
 
+@app.cell
+def _(ask_server):
+    ask_server("""
+        SELECT
+            (SELECT COUNT(*) FROM Sales.SalesOrderHeader) AS orders,
+            (SELECT COUNT(*) FROM Sales.SalesOrderDetail) AS order_lines,
+            (SELECT COUNT(*)
+             FROM Sales.SalesOrderHeader AS h
+             JOIN Sales.SalesOrderDetail AS d ON d.SalesOrderID = h.SalesOrderID) AS joined
+    """)
+    return
+
+
+@app.cell
+def _(mo):
+    mo.md(r"""
+    The join has exactly as many rows as `Sales.SalesOrderDetail` because every `SalesOrderID` in `SalesOrderDetail` has exactly one matching row in `SalesOrderHeader` (an order line always belongs to one order), and the join matches on that key. So each of the 121,317 lines finds its one header row, and the join has 121,317 rows too — the same reason `orders` and `order_details` behaved this way in Northwind.
+    """)
+    return
+
+
+@app.cell
+def _(ask_server):
+    ask_server("""
+        SELECT
+            (SELECT SUM(Freight) FROM Sales.SalesOrderHeader) AS freight,
+            (SELECT SUM(h.Freight)
+             FROM Sales.SalesOrderHeader AS h
+             JOIN Sales.SalesOrderDetail AS d ON d.SalesOrderID = h.SalesOrderID) AS freight_after_the_join
+    """)
+    return
+
+
+@app.cell
+def _(ask_server):
+    ask_server("""
+        SELECT COUNT(*) AS customers_never_ordered
+        FROM Sales.Customer AS c
+        LEFT JOIN Sales.SalesOrderHeader AS h ON h.CustomerID = c.CustomerID
+        WHERE h.SalesOrderID IS NULL
+    """)
+    return
+
+
+@app.cell
+def _(ask_server):
+    ask_server("""
+        SELECT COUNT(*) AS products_never_sold
+        FROM Production.Product AS p
+        LEFT JOIN Sales.SalesOrderDetail AS d ON d.ProductID = p.ProductID
+        WHERE d.SalesOrderDetailID IS NULL
+    """)
+    return
+
+
 @app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""
@@ -498,6 +603,19 @@ def _(mo):
     return
 
 
+@app.cell
+def _(ask, northwind_database):
+    ask(northwind_database, """
+        SELECT t.TerritoryID, t.TerritoryDescription,
+               COUNT(et.EmployeeID) AS employees
+        FROM territories AS t
+        LEFT JOIN employee_territories AS et ON et.TerritoryID = t.TerritoryID
+        GROUP BY t.TerritoryID, t.TerritoryDescription
+        ORDER BY employees DESC
+    """)
+    return
+
+
 @app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""
@@ -510,6 +628,18 @@ def _(mo):
     **In the project:** like scenario A's question 6 and scenario D's question 6, and the note under scenario C's questions.
 
     **Going further.** Add each employee's total freight, and check it against `orders` alone.
+    """)
+    return
+
+
+@app.cell
+def _(ask, northwind_database):
+    ask(northwind_database, """
+        SELECT e.EmployeeID, e.FirstName, e.LastName,
+               (SELECT COUNT(*) FROM orders AS o WHERE o.EmployeeID = e.EmployeeID) AS orders,
+               (SELECT COUNT(*) FROM employee_territories AS et WHERE et.EmployeeID = e.EmployeeID) AS territories
+        FROM employees AS e
+        ORDER BY orders DESC
     """)
     return
 
@@ -530,6 +660,21 @@ def _(mo):
     return
 
 
+@app.cell
+def _(ask, northwind_database):
+    ask(northwind_database, """
+        SELECT s.CompanyName,
+               COUNT(*) AS orders,
+               sum(o.Freight) AS total_freight
+        FROM orders AS o
+        JOIN shippers AS s ON s.ShipperID = o.ShipVia
+        WHERE o.OrderDate >= DATE '2023-10-28' - INTERVAL 90 DAY
+        GROUP BY s.CompanyName
+        ORDER BY orders DESC
+    """)
+    return
+
+
 @app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""
@@ -542,6 +687,55 @@ def _(mo):
     **In the project:** like scenario A's question 4 and scenario C's question 3.
 
     **Going further.** The products whose revenue is above the average of their own category.
+    """)
+    return
+
+
+@app.cell
+def _(ask, northwind_database):
+    ask(northwind_database, """
+        SELECT CategoryName, revenue
+        FROM (
+            SELECT cat.CategoryName,
+                   sum(d.UnitPrice * d.Quantity * (1 - d.Discount)) AS revenue
+            FROM order_details AS d
+            JOIN products AS p ON p.ProductID = d.ProductID
+            JOIN categories AS cat ON cat.CategoryID = p.CategoryID
+            GROUP BY cat.CategoryName
+        ) AS category_revenue
+        WHERE revenue > (SELECT avg(revenue) FROM (
+            SELECT sum(d.UnitPrice * d.Quantity * (1 - d.Discount)) AS revenue
+            FROM order_details AS d
+            JOIN products AS p ON p.ProductID = d.ProductID
+            GROUP BY p.CategoryID
+        ) AS category_totals)
+        ORDER BY revenue DESC
+    """)
+    return
+
+
+@app.cell(hide_code=True)
+def _(mo):
+    mo.md(r"""
+    # Northwind Question
+
+    Which customer has placed the most orders?
+    """)
+    return
+
+
+@app.cell
+def _(ask, northwind_database):
+    ask(northwind_database, """
+    SELECT
+        c.CompanyName,
+        COUNT(o.OrderID) AS TotalOrders
+    FROM customers c
+    JOIN orders o
+        ON c.CustomerID = o.CustomerID
+    GROUP BY c.CustomerID, c.CompanyName
+    ORDER BY TotalOrders DESC
+    LIMIT 1
     """)
     return
 
