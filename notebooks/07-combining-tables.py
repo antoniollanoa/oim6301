@@ -216,6 +216,71 @@ def _(mo):
     return
 
 
+@app.cell
+def _(ask, towns_database):
+    #1.
+
+    ask(towns_database, """
+        SELECT COUNT(*) AS joined_rows
+        FROM towns AS t
+        JOIN counties AS c ON t.county = c.name
+    """)
+    return
+
+
+@app.cell
+def _(ask, towns_database):
+    #2.
+
+    ask(towns_database, """
+        SELECT
+            t.name AS town,
+            t.county,
+            t.population AS town_population,
+            c.population AS county_population,
+            ROUND(100.0 * t.population / c.population, 1) AS county_share_pct
+        FROM towns AS t
+        JOIN counties AS c ON t.county = c.name
+        ORDER BY 100.0 * t.population / c.population DESC
+        LIMIT 5
+    """)
+    return
+
+
+@app.cell(hide_code=True)
+def _(mo):
+    mo.md(r"""
+    3. The join returns **351 rows** because every town matches exactly one
+    county. That gives one row per town, so the join has the same number
+    of rows as `towns`.
+
+    Nantucket is the only town in Nantucket County, so the town and county
+    populations are equal in the dataset. Dividing the town population by
+    the county population gives exactly 1, or **100%**.
+    """)
+    return
+
+
+@app.cell
+def _(ask, towns_database):
+    #Going further.
+
+    ask(towns_database, """
+        SELECT
+            c.name AS county,
+            t.name AS town,
+            ROUND(100.0 * t.population / c.population, 1) AS county_share_pct
+        FROM towns AS t
+        JOIN counties AS c ON t.county = c.name
+        QUALIFY ROW_NUMBER() OVER (
+            PARTITION BY c.name
+            ORDER BY t.population DESC, t.name
+        ) = 1
+        ORDER BY county
+    """)
+    return
+
+
 @app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""
