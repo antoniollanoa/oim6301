@@ -100,7 +100,7 @@ def _(mo, pl, requests):
         town_rows = pl.DataFrame(_records).select(town_columns)
 
     county_rows.shape, town_rows.shape
-    return
+    return (town_rows,)
 
 
 @app.cell(hide_code=True)
@@ -220,6 +220,8 @@ def _(mo):
 
 @app.cell
 def _(database, duckdb):
+    #1.
+
     with duckdb.connect(database) as _con:
         _con.execute("""
             CREATE TABLE IF NOT EXISTS town_bills (
@@ -241,12 +243,16 @@ def _(database, duckdb):
 
 @app.cell
 def _(ask):
+    #2.
+
     ask("SELECT * FROM town_bills ORDER BY fiscal_year")
     return
 
 
 @app.cell
 def _(database, duckdb):
+    #3.
+
     try:
         with duckdb.connect(database) as _con:
             _con.execute("""
@@ -260,6 +266,8 @@ def _(database, duckdb):
 
 @app.cell
 def _(database, duckdb):
+    #4.
+
     try:
         with duckdb.connect(database) as _con:
             _con.execute("""
@@ -268,6 +276,14 @@ def _(database, duckdb):
             """)
     except duckdb.ConstraintException as _error:
         print(str(_error))
+    return
+
+
+@app.cell(hide_code=True)
+def _(mo):
+    mo.md(r"""
+    ### Going Further
+    """)
     return
 
 
@@ -514,6 +530,77 @@ def _(mo):
     return
 
 
+@app.cell
+def _(ask):
+    ask("""
+        SELECT t.county, count(*) AS towns_counted, c.towns AS towns_reported
+        FROM towns AS t
+        JOIN counties AS c ON c.name = t.county
+        GROUP BY t.county, c.towns
+        ORDER BY towns_counted DESC
+    """)
+    return
+
+
+@app.cell
+def _(ask):
+    ask("SELECT sum(towns) AS total_towns FROM (SELECT county, count(*) AS towns FROM towns GROUP BY county)")
+    return
+
+
+@app.cell
+def _(mo):
+    mo.md(r"""
+    The sum has to equal the number of rows in `towns` because `GROUP BY county` puts
+    every row into exactly one group, the group for its own county. No row is left out
+    and no row is counted twice. So adding up the count from every group gives back the
+    total number of rows in the whole table, which is 351.
+    """)
+    return
+
+
+@app.cell
+def _(ask):
+    ask("""
+        SELECT
+            county,
+            sum(population) AS total_population,
+            sum(CASE WHEN average_single_family_bill_dollars > 10000 THEN population ELSE 0 END)
+                AS population_in_high_bill_towns,
+            round(
+                sum(CASE WHEN average_single_family_bill_dollars > 10000 THEN population ELSE 0 END)
+                * 100.0 / sum(population), 1
+            ) AS high_bill_share_percent
+        FROM towns
+        GROUP BY county
+        ORDER BY total_population DESC
+    """)
+    return
+
+
+@app.cell
+def _(ask):
+    ask("""
+        SELECT county, round(avg(income_per_capita_dollars), 0) AS avg_income
+        FROM towns
+        GROUP BY county
+        ORDER BY avg_income DESC
+        LIMIT 5
+    """)
+    return
+
+
+@app.cell
+def _(pl, town_rows):
+    (
+        town_rows.group_by("county")
+        .agg(pl.col("income_per_capita_dollars").mean().round(0).alias("avg_income"))
+        .sort("avg_income", descending=True)
+        .head(5)
+    )
+    return
+
+
 @app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""
@@ -562,7 +649,7 @@ def _(ask, mo, requests):
         _path.write_bytes(_reply.content)
     orders_file = _path.as_posix()
     ask(f"SELECT count(*) AS orders FROM '{orders_file}'")
-    return
+    return (orders_file,)
 
 
 @app.cell(hide_code=True)
@@ -572,6 +659,35 @@ def _(mo):
     2. For each country, the number of orders and the total of `Freight`, the most freight first. *Check yourself: USA with 2,328 orders and 573,251 in freight, then Germany with 2,193 and 537,189.75, then France with 1,778 and 442,055.75.*
 
     **Going further.** Rank the countries by freight per order instead, and see which countries move.
+    """)
+    return
+
+
+@app.cell
+def _(ask, orders_file):
+    ask(f"SELECT count(DISTINCT ShipCountry) AS countries FROM '{orders_file}'")
+    return
+
+
+@app.cell
+def _(ask, orders_file):
+    ask(f"""
+        SELECT ShipCountry, count(*) AS orders, sum(Freight) AS total_freight
+        FROM '{orders_file}'
+        GROUP BY ShipCountry
+        ORDER BY total_freight DESC
+    """)
+    return
+
+
+@app.cell
+def _(ask, orders_file):
+    ask(f"""
+        SELECT ShipCountry, count(*) AS orders, sum(Freight) AS total_freight,
+               round(sum(Freight) / count(*), 2) AS freight_per_order
+        FROM '{orders_file}'
+        GROUP BY ShipCountry
+        ORDER BY freight_per_order DESC
     """)
     return
 
