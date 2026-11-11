@@ -7,8 +7,22 @@ app = marimo.App(width="medium")
 @app.cell
 def _():
     import marimo as mo
+    import duckdb
 
-    return (mo,)
+    as_of = "2026-10-31"
+    database = mo.notebook_dir() / "database.duckdb"
+
+    def ask(sql):
+        with duckdb.connect(database, read_only=True) as _con:
+            return _con.sql(sql).pl()
+
+    return ask, mo
+
+
+@app.cell
+def _(ask):
+    ask("SHOW TABLES")
+    return
 
 
 @app.cell(hide_code=True)
